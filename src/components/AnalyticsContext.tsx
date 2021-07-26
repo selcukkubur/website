@@ -46,7 +46,7 @@ export const Provider = ({ children }: ProviderProps) => {
 
   useEffect(() => {
     if (!experimentId) return;
-    if (!identifyTraits) return setIdentifyTraits({});
+    if (!identifyTraits) return setIdentifyTraits((traits) => ({ ...traits }));
 
     analyticsJS()?.identify(undefined, identifyTraits);
     analyticsJS()?.page();
