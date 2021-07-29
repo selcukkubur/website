@@ -1,10 +1,8 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, BoxProps } from "@chakra-ui/react";
 
-interface ContainerProps {
-  children: React.ReactNode;
+interface ContainerProps extends BoxProps {
   maxWidth?: number;
-  [x: string]: any;
 }
 
 const Container = ({ children, maxWidth, ...other }: ContainerProps) => (

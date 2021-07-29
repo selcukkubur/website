@@ -7,6 +7,7 @@ import {
   status,
   help,
   providers,
+  developersGuideNotifications,
 } from "constants/urls";
 
 export default [
@@ -61,6 +62,10 @@ export default [
         isExternalLink: true,
         icon: "HelpCenterIcon",
         className: "helpIcon",
+      },
+      {
+        title: "Developers Guide To Notifications",
+        link: developersGuideNotifications,
       },
     ],
   },

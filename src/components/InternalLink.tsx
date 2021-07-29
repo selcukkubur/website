@@ -1,14 +1,14 @@
+import { chakra, LinkProps } from "@chakra-ui/react";
 import Link from "next/link";
 
-interface InternalLinkProps {
+interface InternalLinkProps extends LinkProps {
   to: string;
-  children: React.ReactNode;
 }
 
 const InternalLink = ({ to, children, ...otherProps }: InternalLinkProps) => {
   return (
-    <Link href={to} {...otherProps}>
-      <a>{children}</a>
+    <Link href={to} passHref>
+      <chakra.a {...otherProps}>{children}</chakra.a>
     </Link>
   );
 };

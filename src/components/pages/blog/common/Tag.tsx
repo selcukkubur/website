@@ -16,13 +16,14 @@ const colorMap: ColorProps = {
   "NOTIFICATIONS LANDSCAPE": { color: "#F19301", bg: "#FDF4DD" },
   "NEWS & UPDATES": { color: "#F19301", bg: "#FDF4DD" },
   "LIVE STREAMING": { color: "#9122C2", bg: "#EEE0F7" },
+  "USER EXPERIENCE": { color: "#F19301", bg: "#FDF4DD" },
 };
 
 const BlogPostTag = ({ tag }: { tag: string }) => {
   return (
     <Tag
-      color={colorMap[tag]["color"]}
-      bg={colorMap[tag]["bg"]}
+      color={colorMap[tag]?.["color"]}
+      bg={colorMap[tag]?.["bg"]}
       p={2}
       fontSize="11px"
       fontWeight="500"

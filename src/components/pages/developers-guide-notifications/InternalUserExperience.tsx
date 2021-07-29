@@ -1,0 +1,115 @@
+import { Heading, Paragraph, Image, Example } from "./components";
+
+import internalUserExperience from "../../../../public/images/pages/guides/developers-guide-notifications/internal-user-experience.jpg";
+
+const InternalUserExperience = () => (
+  <>
+    <Image
+      src={internalUserExperience}
+      alt="Internal User Experience Requirements"
+    />
+    <Heading>API First</Heading>
+    <Paragraph>
+      The nature of application-to-human communications (aka notifications) is
+      that they will need to be triggered from code. For that reason it’s
+      important that as many features as possible that you offer in your system
+      are able to be performed via an API.
+    </Paragraph>
+    <Example>
+      While today your only notification use case may be a simple email, as your
+      product grows more sophisticated additional notification use cases will
+      almost certainly surface. A good API is the best way to ensure you will be
+      able to execute on use cases you have not yet defined.
+    </Example>
+    <Heading>Great Documentation</Heading>
+    <Paragraph>
+      It’s important that both your engineering team and non-technical users are
+      able to effectively and efficiently use your notification system at any
+      point in the user journey. Making sure all of the common use cases are
+      property documented is essential to accomplishing this.
+    </Paragraph>
+    <Example>
+      At some point in the development of your application you will come across
+      a notification use case that you did not originally think of. Maybe a new
+      notificaiton channel will emerge as important, or a new feature will
+      emerge that requires a sophisticated notification flow. An API that is
+      well documented is the best way to guarantee that your product team will
+      figure out new ways to delight your users and deliver on use-cases that
+      you have not yet thought of.
+    </Example>
+    <Heading>Data/Analytics</Heading>
+    <Paragraph>
+      Your internal team needs the ability to view relevant data associated with
+      your application’s notifications. They need to be able to answer questions
+      around open rate, engagement rate, success rate, and other success
+      criteria for different notifications across channels.
+    </Paragraph>
+    <Example>
+      Notifications are an essential piece to effectively engaging your users.
+      Having good data and analytics will allow you to invest more heavily in
+      the channels and notifications that are working while fixing or dropping
+      the ones that aren’t.
+    </Example>
+    <Heading>Robust Logs</Heading>
+    <Paragraph>
+      Your team needs to ensure that deliverability is being achieved, because a
+      message that does not make it to its destination is sure to fail in it’s
+      goal. Logs need to not only serve the purpose of verifying deliverability,
+      but should also make it easy to diagnose any deliverability issues quickly
+      and efficiently.
+    </Paragraph>
+    <Example>
+      Notifications are an essential piece to effectively engage your users.
+      Having good data and analytics will allow you to invest more heavily in
+      the channels and notifications that work while fixing or dropping the ones
+      that don’t.
+    </Example>
+    <Heading>Editing & Designing Notifications</Heading>
+    <Paragraph>
+      As engineers we would prefer if all work was done via APIs, but actually
+      designing the look and feel for notifications across various channels is
+      better suited for a web-based design tool. Not only does this allow for
+      more granular control of the design, but it also allows non-technical team
+      members to easily edit messages without needing to involve engineering.
+    </Paragraph>
+    <Example>
+      If you have a UI to build message templates that can be properly rendered
+      across various channels such as email, SMS, and push you will dramatically
+      increase your teams agility (no longer need to deploy backend code to make
+      copy changes to notifications) as well as remove a big burden from your
+      engineering team (needing to respond to requests from marketing/content to
+      change/update notifications).
+    </Example>
+    <Heading>Provider Abstraction</Heading>
+    <Paragraph>
+      Abstracting the underlying email/SMS/push providers has several benefits.
+      First it allows your developers to always interface with a consistent API,
+      regardless of whether the underlying vendor changes at some point.
+      Secondly, it creates the flexibility to use different providers for
+      different use cases.
+    </Paragraph>
+    <Example>
+      Some SMS providers are dramatically cheaper in certain regions than others
+      and certain email providers have much better deliverability in certain
+      regions than others. With provider abstraction you could utilize the best
+      provider for the job rather than relying on a single provider for all your
+      users/use cases.
+    </Example>
+    <Heading>Centralization</Heading>
+    <Paragraph>
+      As your product and your engineering team grows, there will inevitably be
+      different product teams with different focuses. Allowing every team to use
+      the same notification system will not only help with your product velocity
+      but will create a more consistent user experience for your users across
+      the different areas of your product.
+    </Paragraph>
+    <Example>
+      If your backend engineering team is using one system to create
+      notifications and your growth engineering team is using another it will be
+      nearly impossible to avoid a disjointed UX as well as tech debt associated
+      with the different systems.
+    </Example>
+  </>
+);
+
+export default InternalUserExperience;
