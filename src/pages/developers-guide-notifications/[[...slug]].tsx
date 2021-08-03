@@ -38,7 +38,7 @@ const DevelopersGuideNotifications = ({ slug }: { slug?: [PAGE_PATH] }) => {
 
   const pageTitle = "Startup Guide To Notifications | Courier";
   const pageDescription =
-    "Everything you need to know to build a great notification experience for your application";
+    "A complete guide for developers who are building out a notification system for their application. This guide covers the internal user experience, end user experience, and techincal requirements for building a notification system.";
   const pageUrl = `https://www.courier.com/developers-guide-notifications${
     path && `/${path}`
   }`;
