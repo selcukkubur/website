@@ -2,7 +2,6 @@ import { Box, Heading, Text } from "@chakra-ui/react";
 import ButtonCTAGradient from "components/buttons/CTAGradient";
 import { signup } from "constants/urls";
 import Container from "components/Container";
-import Experiment from "components/Experiment";
 
 const Hero = () => (
   <Container>
@@ -15,14 +14,7 @@ const Hero = () => (
           w={{ base: "100%", md: "75%", lg: "55%", xl: "55%" }}
           mx="auto"
         >
-          <Experiment name="Homepage Hero Copy">
-            <Experiment.Variant>
-              Your Complete Communication Stack
-            </Experiment.Variant>
-            <Experiment.Variant>
-              API For App-To-User Communication
-            </Experiment.Variant>
-          </Experiment>
+          API For App-To-User Communication
         </Heading>
         <Text
           textAlign="center"
