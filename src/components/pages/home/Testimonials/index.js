@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import { Box, Heading, Text, Image, Flex, IconButton } from "@chakra-ui/react";
+import { Box, Heading, Text, Flex, IconButton } from "@chakra-ui/react";
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 import testimonials from "./data";
 import slideSettings from "./sliderSettings";
+import Image from "next/image";
 
 export default class PreviousNextMethods extends Component {
   constructor(props) {
@@ -45,7 +46,11 @@ export default class PreviousNextMethods extends Component {
                 display={{ base: "none", xl: "block" }}
                 mr={{ base: 0, xl: 16 }}
               >
-                <Image src={"/images/testiquote.svg"} />
+                <Image
+                  src={"/images/testiquote.svg"}
+                  width={"116px"}
+                  height={"89px"}
+                />
               </Box>
               <Flex mr={{ base: 0, xl: 16 }}>
                 <IconButton
@@ -84,12 +89,17 @@ export default class PreviousNextMethods extends Component {
                     position="relative"
                   >
                     <Flex>
-                      <Image
-                        src={testimonial.Image.url}
-                        w={"72px"}
-                        h={"72px"}
-                        borderRadius="12px"
-                      />
+                      <Box
+                        sx={{
+                          img: { borderRadius: "12px" },
+                        }}
+                      >
+                        <Image
+                          src={testimonial.Image.url}
+                          width={"72px"}
+                          height={"72px"}
+                        />
+                      </Box>
                       <Flex ml={"24px"} direction="column">
                         <Heading variant="subh1" w={"fit-content"}>
                           {testimonial.Name}
@@ -102,12 +112,13 @@ export default class PreviousNextMethods extends Component {
                     <Text textAlign="left" mt={"32px"}>
                       {testimonial.Comment}
                     </Text>
-                    <Image
-                      src={testimonial.CompanyLogo.url}
-                      mt={"32px"}
-                      position="absolute"
-                      bottom="32px"
-                    />
+                    <Box mt={"32px"} position="absolute" bottom="32px">
+                      <Image
+                        src={testimonial.CompanyLogo.url}
+                        width={testimonial.CompanyLogo.width}
+                        height={testimonial.CompanyLogo.height}
+                      />
+                    </Box>
                   </Box>
                 </div>
               ))}

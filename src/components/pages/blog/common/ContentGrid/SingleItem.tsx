@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Flex, Avatar } from "@chakra-ui/react";
+import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import InternalLink from "components/InternalLink";
 import ParseData from "../../common/ParseData";
 import BlogTag from "../../common/Tag";
@@ -50,12 +50,21 @@ const SingleItem = ({ data }: { data: any }) => {
         {excerpt}
       </Text>
       <Flex mt={5} color="secondary.dark">
-        <Avatar
-          name={authorName}
-          src={authorAvatar}
-          height="40px"
-          width="40px"
-        />
+        <Box
+          sx={{
+            img: {
+              borderRadius: "50%",
+              objectFit: "cover",
+            },
+          }}
+        >
+          <Image
+            alt={authorName}
+            src={`https://${authorAvatar}?w=40&h=40`}
+            height="40px"
+            width="40px"
+          />
+        </Box>
         <Box ml={3}>
           <Text variant="body3">{authorName}</Text>
           <Text opacity="0.4" mt={0} variant="smallbody2">

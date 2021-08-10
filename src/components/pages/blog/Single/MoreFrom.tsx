@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Box, SimpleGrid, Text, Avatar, Flex } from "@chakra-ui/react";
+import { Heading, Box, SimpleGrid, Text, Flex } from "@chakra-ui/react";
 import ParseData from "components/pages/blog/common/ParseData";
 import InternalLink from "components/InternalLink";
 import BlogTag from "components/pages/blog/common/Tag";
@@ -47,12 +47,21 @@ const PostSummary = ({ data, tagName }: { data: any; tagName: any }) => {
         {excerpt}
       </Text>
       <Flex mt={5} color="secondary.dark">
-        <Avatar
-          name={authorName}
-          src={`${authorAvatar}?w=40`}
-          height="40px"
-          width="40px"
-        />
+        <Box
+          sx={{
+            img: {
+              borderRadius: "50%",
+              objectFit: "cover",
+            },
+          }}
+        >
+          <Image
+            alt={authorName}
+            src={`https://${authorAvatar}?w=40&h=40`}
+            height="40px"
+            width="40px"
+          />
+        </Box>
         <Box ml={3}>
           <Text variant="body3">{authorName}</Text>
           <Text opacity="0.4" mt={0} variant="smallbody2">

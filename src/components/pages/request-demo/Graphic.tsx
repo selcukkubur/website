@@ -48,7 +48,9 @@ const Graphic = () => (
             </Text>
           </ListItem>
           <ListItem>
-            <Text variant="body2">Create powerful routing and workflow rules</Text>
+            <Text variant="body2">
+              Create powerful routing and workflow rules
+            </Text>
           </ListItem>
         </UnorderedList>
       </Box>

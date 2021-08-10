@@ -11,6 +11,8 @@ export default [
     CompanyLogo: {
       url:
         "https://images.ctfassets.net/1r5gva7rn062/3jONOIGeUQuQmmSXfDlIUT/96e2b9908e2a3a8ded5b999d090c7154/BlissfullyColor.svg",
+      width: "122px",
+      height: "30px",
     },
   },
   {
@@ -25,6 +27,8 @@ export default [
     CompanyLogo: {
       url:
         "https://images.ctfassets.net/1r5gva7rn062/4PWlKNKfWOSoAbvPMzZTQp/7b0c5f0334a4a9b7f1e3f09b7750cc44/BlueCrewColor.svg",
+      width: "147px",
+      height: "26px",
     },
   },
   {
@@ -39,6 +43,8 @@ export default [
     CompanyLogo: {
       url:
         "https://images.ctfassets.net/1r5gva7rn062/6Dq4MnYJtKVJgAHvaj8N88/fdfa02205a769f6b08b7acca6fb5b1c5/LatticeColor.svg",
+      width: "126px",
+      height: "23px",
     },
   },
   {
@@ -53,6 +59,8 @@ export default [
     CompanyLogo: {
       url:
         "https://images.ctfassets.net/1r5gva7rn062/3jONOIGeUQuQmmSXfDlIUT/96e2b9908e2a3a8ded5b999d090c7154/BlissfullyColor.svg",
+      width: "122px",
+      height: "30px",
     },
   },
   {
@@ -67,6 +75,8 @@ export default [
     CompanyLogo: {
       url:
         "https://images.ctfassets.net/1r5gva7rn062/4PWlKNKfWOSoAbvPMzZTQp/7b0c5f0334a4a9b7f1e3f09b7750cc44/BlueCrewColor.svg",
+      width: "147px",
+      height: "26px",
     },
   },
 ];

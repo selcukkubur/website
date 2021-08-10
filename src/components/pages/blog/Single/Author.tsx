@@ -1,5 +1,6 @@
-import { Flex, Box, Text, Avatar } from "@chakra-ui/react";
+import { Flex, Box, Text } from "@chakra-ui/react";
 import dayjs from "dayjs";
+import Image from "next/image";
 
 const Author = ({
   name,
@@ -11,7 +12,21 @@ const Author = ({
   publishDate: Date;
 }) => (
   <Flex color="secondary.dark">
-    <Avatar name={name} src={`${avatar}?w=48&h=48`} />
+    <Box
+      sx={{
+        img: {
+          borderRadius: "50%",
+          objectFit: "cover",
+        },
+      }}
+    >
+      <Image
+        alt={name}
+        src={`${avatar}?w=48&h=48`}
+        width="48px"
+        height="48px"
+      />
+    </Box>
     <Box ml={3}>
       <Text>{name}</Text>
       <Text opacity="0.4" mt={1} variant="body3">
