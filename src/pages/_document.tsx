@@ -26,6 +26,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <script dangerouslySetInnerHTML={{ __html: this.renderSnippet() }} />
           <link
             rel="preload"
             href="/fonts/Gellix/Gellix-ExtraBold.ttf"
@@ -64,7 +65,6 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-        <script dangerouslySetInnerHTML={{ __html: this.renderSnippet() }} />
       </Html>
     );
   }

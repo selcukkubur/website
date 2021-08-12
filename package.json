@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "next lint",
     "dev": "next dev",
-    "build": "next build && next-sitemap",
+    "build": "next build",
     "start": "next start",
     "prettify": "prettier --write src/",
     "prepare": "husky install"
@@ -32,7 +32,6 @@
     "next": "^11.0.0",
     "next-pwa": "^5.2.15",
     "next-seo": "^4.24.0",
-    "next-sitemap": "^1.6.140",
     "raw-loader": "^4.0.2",
     "react": "^17.0.2",
     "react-code-blocks": "^0.0.9-0",

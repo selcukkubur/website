@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import { Box, Text, Flex, CircularProgress } from "@chakra-ui/react";
+import { Box, Text, Image, Flex, CircularProgress } from "@chakra-ui/react";
 import MessageIcon from "./icons/Message";
 import PushIcon from "./icons/Push";
 import SMSIcon from "./icons/SMS";
@@ -13,7 +13,6 @@ const channelImages = [
     name: "Email",
     image: "/images/pages/home/hero/email.png",
     width: "506px",
-    height: "470px",
     ml: { xl: "90px", "2xl": "100px" },
     mt: "20px",
   },
@@ -21,7 +20,6 @@ const channelImages = [
     name: "SMS",
     image: "/images/pages/home/hero/sms.png",
     width: "302px",
-    height: "509px",
     ml: { base: "170px", "2xl": "170px" },
     mt: "0px",
   },
@@ -29,7 +27,6 @@ const channelImages = [
     name: "Push",
     image: "/images/pages/home/hero/push.png",
     width: "302px",
-    height: "509px",
     ml: { base: "170px", "2xl": "170px" },
     mt: "0px",
   },
@@ -37,7 +34,6 @@ const channelImages = [
     name: "Chat",
     image: "/images/pages/home/hero/chat.png",
     width: "544px",
-    height: "358px",
     ml: { base: "70px", "2xl": "80px" },
     mt: "20px",
   },
@@ -132,10 +128,12 @@ export default class PreviousNextMethods extends Component {
           mt={{ base: "-180px", xl: "-500px" }}
         >
           <Box position="absolute">
-            <picture>
-              <source srcSet="data;" media="(max-width: 1279px)" />
-              <NextImage src={BannerSlideBgImage} width={1063} height={648} />
-            </picture>
+            <NextImage
+              src={BannerSlideBgImage}
+              priority
+              width={1063}
+              height={648}
+            />
           </Box>
           <Box w={"100%"} h="648px" pt={"19px"}>
             <Box
@@ -215,21 +213,14 @@ export default class PreviousNextMethods extends Component {
                   }}
                 >
                   {channelImages.map((channel) => (
-                    <Box
+                    <Image
+                      src={channel.image}
+                      w={channel.width}
                       maxW={channel.width}
                       ml={channel.ml}
                       mt={channel.mt}
                       key={channel.name}
-                    >
-                      <picture>
-                        <source srcSet="data;" media="(max-width: 1279px)" />
-                        <NextImage
-                          src={channel.image}
-                          width={channel.width}
-                          height={channel.height}
-                        />
-                      </picture>
-                    </Box>
+                    />
                   ))}
                 </Slider>
               </Flex>

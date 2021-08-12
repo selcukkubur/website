@@ -1,54 +1,33 @@
-import { Box, Heading, Text, Flex } from "@chakra-ui/react";
+import { Box, Heading, Text, Flex, Image } from "@chakra-ui/react";
 import Container from "components/Container";
-import Image from "next/image";
 
 interface NotificationProps {
   title: string;
-  icon: {
-    url: string;
-    width: string;
-    height: string;
-  };
+  icon: string;
   description: string;
 }
 
 const notificationPoints = [
   {
-    icon: {
-      url: "/images/pages/home/notification-system/integrateIcon.svg",
-      width: "84px",
-      height: "52px",
-    },
+    icon: "/images/pages/home/notification-system/integrateIcon.svg",
     title: "Integrate your channels",
     description:
       "Access all your notification channels through a single API –– and add new ones in minutes.",
   },
   {
-    icon: {
-      url: "/images/pages/home/notification-system/designIcon.svg",
-      width: "61px",
-      height: "52px",
-    },
+    icon: "/images/pages/home/notification-system/designIcon.svg",
     title: "Design your notification",
     description:
       "Drag and drop content blocks, add your own custom code, or do a mix of both.",
   },
   {
-    icon: {
-      url: "/images/pages/home/notification-system/orchestrate.svg",
-      width: "71px",
-      height: "52px",
-    },
+    icon: "/images/pages/home/notification-system/orchestrate.svg",
     title: "Orchestrate your workflow",
     description:
       "Trigger notifications based on user actions, while respecting their preferences and your rules.",
   },
   {
-    icon: {
-      url: "/images/pages/home/notification-system/collectRealTime.svg",
-      width: "58px",
-      height: "52px",
-    },
+    icon: "/images/pages/home/notification-system/collectRealTime.svg",
     title: "Collect real-time insights",
     description:
       "Quickly access relevant cross-channel stats including delivery status and engagement data.",
@@ -60,7 +39,7 @@ const NotificationPoint = ({ title, icon, description }: NotificationProps) => (
     w={{ base: "100%", md: "48%", xl: "23%" }}
     mb={{ base: "62px", md: "4" }}
   >
-    <Image src={icon.url} height={icon.height} width={icon.width} />
+    <Image src={icon} h="52px" />
     <Heading variant="subh1" mt={"32px"}>
       {title}
     </Heading>
