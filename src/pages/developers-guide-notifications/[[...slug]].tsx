@@ -9,6 +9,7 @@ import Hero from "components/pages/developers-guide-notifications/Hero";
 import TableOfContents, {
   PAGE_COMPONENTS,
   PAGE_TITLES,
+  PAGE_DESCRIPTIONS,
   PAGE_PATH,
 } from "components/pages/developers-guide-notifications/TableOfContents";
 import heroPattern from "../../../public/images/pages/guides/hero-pattern.svg";
@@ -37,8 +38,7 @@ const DevelopersGuideNotifications = ({ slug }: { slug?: [PAGE_PATH] }) => {
   const path = slug?.[0] || "";
 
   const pageTitle = "Startup Guide To Notifications | Courier";
-  const pageDescription =
-    "A complete guide for developers who are building out a notification system for their application. This guide covers the internal user experience, end user experience, and techincal requirements for building a notification system.";
+  const pageDescription = PAGE_DESCRIPTIONS[path];
   const pageUrl = `https://www.courier.com/developers-guide-notifications${
     path && `/${path}`
   }`;
@@ -77,7 +77,7 @@ const DevelopersGuideNotifications = ({ slug }: { slug?: [PAGE_PATH] }) => {
         alignItems="flex-start"
       >
         <TableOfContents />
-        <Box color="#1A202C" flex={1} mb="60px">
+        <Box color="#1A202C" flex={1} mb="60px" id="content">
           <Heading
             as="h2"
             variant="h4"

@@ -24,6 +24,16 @@ export const PAGE_TITLES: Record<PAGE_PATH, string> = {
   "technical-requirements": "Technical Requirements",
 };
 
+export const PAGE_DESCRIPTIONS: Record<PAGE_PATH, string> = {
+  "": "A complete guide for developers who are building out a notification system for their application. This guide covers the internal user experience, end user experience, and techincal requirements for building a notification system.",
+  "end-user-experience-requirements":
+    "A complete guide for developers who are building out a notification system for their application. This guide covers the internal user experience, end user experience, and techincal requirements for building a notification system.",
+  "internal-user-experience-requirements":
+    "A complete guide for developers who are building out a notification system for their application. This guide covers the internal user experience, end user experience, and techincal requirements for building a notification system.",
+  "technical-requirements":
+    "A complete guide for developers who are building out a notification system for their application. This guide covers the internal user experience, end user experience, and techincal requirements for building a notification system.",
+};
+
 const TableOfContents = () => {
   const router = useRouter();
   const slug = router.query.slug?.[0] || "";
@@ -47,7 +57,7 @@ const TableOfContents = () => {
           return (
             <ListItem key={path} my={3}>
               <InternalLink
-                to={router.pathname.replace("[[...slug]]", path)}
+                to={`${router.pathname.replace("[[...slug]]", path)}#content`}
                 color={active ? "secondary.dark" : "rgba(26, 32, 44, 0.5)"}
                 _hover={{ color: "secondary.dark" }}
               >
