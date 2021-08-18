@@ -1,4 +1,4 @@
-import DesktopAnimation from "./animation";
+import DesktopAnimation from "./HeroAnimation";
 import MobileImage from "./MobileImage";
 
 const HeroAnimation = () => (
