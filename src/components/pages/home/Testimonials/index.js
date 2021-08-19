@@ -107,6 +107,8 @@ export default class PreviousNextMethods extends Component {
                       mt={"32px"}
                       position="absolute"
                       bottom="32px"
+                      width={testimonial.CompanyLogo.width}
+                      height={testimonial.CompanyLogo.height}
                     />
                   </Box>
                 </div>
