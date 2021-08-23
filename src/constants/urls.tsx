@@ -26,6 +26,7 @@ const urls = {
   signup: "https://app.courier.com/signup",
   requestDemo: "/request-demo",
   developersGuideNotifications: "/developers-guide-notifications",
+  security: "https://security.courier.com",
 };
 
 export let {
@@ -56,4 +57,5 @@ export let {
   signup,
   requestDemo,
   developersGuideNotifications,
+  security,
 } = urls;

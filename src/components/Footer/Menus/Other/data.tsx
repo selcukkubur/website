@@ -10,6 +10,7 @@ import {
   apiReference,
   providers,
   libraries,
+  security,
 } from "constants/urls";
 
 export default [
@@ -40,6 +41,9 @@ export default [
   },
   {
     title: "Company",
-    items: [{ title: "Careers", link: careers, linkType: "external" }],
+    items: [
+      { title: "Careers", link: careers, linkType: "external" },
+      { title: "Security", link: security, linkType: "external" },
+    ],
   },
 ];
