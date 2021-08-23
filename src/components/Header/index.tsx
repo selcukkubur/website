@@ -39,7 +39,7 @@ const Header = ({ headerPlain, noHeaderBoxShadow }: Props) => {
       w={"100%"}
       color={stickyHeader || plainHeader ? "secondary.dark" : "white"}
       justify="center"
-      backgroundColor={stickyHeader || plainHeader ? "white" : "transparent"}
+      backgroundColor={stickyHeader ? "white" : "transparent"}
       position="fixed"
       top="0"
       p="15px 0 17px"
