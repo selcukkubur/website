@@ -89,7 +89,7 @@ const CustomerStoryPage = ({ customerStory }: CustomerStoryProps) => {
         {customerStory.fields.conclusion}
       </Section>
 
-      <Footer noBanner />
+      <Footer cta="none" />
     </>
   );
 };
