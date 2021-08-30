@@ -2,7 +2,8 @@ import { Flex, Heading, Text, Box, Tag } from "@chakra-ui/react";
 import TextButton from "components/buttons/TextButton";
 import InternalLink from "components/InternalLink";
 import { documentation } from "constants/urls";
-import CodeBox from "./CodeBox";
+import CodeBox from "components/common/CodeBox";
+import data from "./data";
 import Container from "components/Container";
 
 const APIOptions = () => (
@@ -12,7 +13,14 @@ const APIOptions = () => (
         pt={{ base: "92px", lg: "132px" }}
         flexDirection={{ base: "column-reverse", lg: "row" }}
       >
-        <CodeBox />
+        <CodeBox
+          examples={data}
+          mt={{ base: "42px", lg: 0 }}
+          mr={{ base: 0, lg: "62px" }}
+          mb={"92px"}
+          w={{ base: "100%", lg: "400px", xl: "55%" }}
+          minW={{ base: 0, md: "582px" }}
+        />
         <Box
           w={{ base: "100%", lg: "60%", xl: "45%" }}
           mt={{ base: "62px", lg: 0 }}

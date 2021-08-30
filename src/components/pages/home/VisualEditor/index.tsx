@@ -2,8 +2,7 @@ import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import IconsLeft from "./IconsLeft";
 import IconsRight from "./IconsRight";
 import Container from "components/Container";
-import Image from "next/image";
-import visualEditor from "../../../../../public/images/pages/home/visual-editor/visualEditor.svg";
+import HeroAnimation from "./HeroAnimation";
 
 const VisualEditor = () => (
   <Box bg="#FCECE2">
@@ -18,11 +17,8 @@ const VisualEditor = () => (
         </Text>
         <Flex justify="center">
           <IconsLeft />
-          <Box pb={{ base: "42px", lg: "132px" }} mt={3}>
-            <Image
-              src={visualEditor}
-              alt={"Visual editor for creating notifications"}
-            />
+          <Box pt="32px" pb={{ base: "42px", lg: "132px" }}>
+            <HeroAnimation />
           </Box>
           <IconsRight />
         </Flex>

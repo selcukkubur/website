@@ -1,7 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import Header from "components/Header/index";
 import Hero from "components/pages/home/Hero";
-import HeroAnimation from "components/pages/home/HeroAnimation";
 import TrustedBy from "components/pages/home/TrustedBy/index";
 import NotificationSystem from "components/pages/home/NotificationSystem";
 import VisualEditor from "components/pages/home/VisualEditor/index";
@@ -47,7 +46,6 @@ const Home = () => {
         <Header />
         <Hero />
       </Box>
-      <HeroAnimation />
       <TrustedBy />
       <Box position="relative">
         <NotificationSystem />

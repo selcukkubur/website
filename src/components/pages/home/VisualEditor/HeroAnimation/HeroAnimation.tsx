@@ -13,7 +13,7 @@ import PushIcon from "./icons/Push";
 import SMSIcon from "./icons/SMS";
 import ChatIcon from "./icons/Chat";
 import NextImage from "next/image";
-import BannerSlideBgImage from "../../../../../public/images/bannersliderBgNew@2x.png";
+import BannerSlideBgImage from "../../../../../../public/images/bannersliderBgNew@2x.png";
 
 const ChakraSlider = chakra(Slider);
 
@@ -62,9 +62,8 @@ const HeroAnimation = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const sliderRef = useRef<Slider>(null);
-  const intervalRef: React.MutableRefObject<NodeJS.Timeout | null> = useRef(
-    null
-  );
+  const intervalRef: React.MutableRefObject<NodeJS.Timeout | null> =
+    useRef(null);
 
   const startProgressBar = useCallback(() => {
     if (intervalRef.current) clearInterval(intervalRef.current);
@@ -121,11 +120,7 @@ const HeroAnimation = () => {
       w="100%"
       display={{ base: "none", xl: "block" }}
     >
-      <Box
-        backgroundSize="100% 100%"
-        mx="auto"
-        mt={{ base: "-180px", xl: "-500px" }}
-      >
+      <Box backgroundSize="100% 100%" mx="auto">
         <Box position="absolute">
           <NextImage
             src={BannerSlideBgImage}
