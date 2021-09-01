@@ -67,7 +67,7 @@ const CodeBox = ({ examples, ...props }: CodeBoxProps) => (
             background="hsla(0,0%,100%,.08)"
             mr={3}
             mb={3}
-            key={example.languageCode}
+            key={example.languageName}
           >
             {example.languageName}
           </Tab>
@@ -75,7 +75,7 @@ const CodeBox = ({ examples, ...props }: CodeBoxProps) => (
       </TabList>
       <TabPanels flex="1" minH={0}>
         {examples.map((example) => (
-          <TabPanel p="0" h="100%" key={example.languageCode}>
+          <TabPanel p="0" h="100%" key={example.languageName}>
             <Highlight
               {...defaultProps}
               theme={theme}

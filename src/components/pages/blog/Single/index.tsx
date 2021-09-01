@@ -120,8 +120,8 @@ const SingleBlogContent = ({
         />
         <SocialShare slug={slug} title={title} />
       </Flex>
-      {contentMd ? (
-        <MarkdownContent assets={assets} content={contentMd} />
+      {contentMd || !content ? (
+        <MarkdownContent assets={assets} content={contentMd || ""} />
       ) : (
         <RichContent
           content={content.json.content}

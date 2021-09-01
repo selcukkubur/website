@@ -15,7 +15,7 @@ const Author = ({
     <Box ml={3}>
       <Text>{name}</Text>
       <Text opacity="0.4" mt={1} variant="body3">
-        {dayjs(publishDate).format("MMMM DD, YYYY")}
+        {publishDate ? dayjs(publishDate).format("MMMM DD, YYYY") : "draft"}
       </Text>
     </Box>
   </Flex>
