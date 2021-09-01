@@ -7,7 +7,10 @@ import Form from "components/pages/request-demo/Form";
 const RequestDemo = () => {
   return (
     <>
-      <NextSeo title="Request Demo" description="Request Courier Demo" />
+      <NextSeo
+        title="Request Demo"
+        description="Courier is critical notification infrastructure for your application. Request a demo of our API and web platform."
+      />
       <Flex direction={{ base: "column", lg: "row" }} minH="100vh">
         <Graphic />
         <Form />

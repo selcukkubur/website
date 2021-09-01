@@ -15,7 +15,7 @@ const About = () => {
     <>
       <NextSeo
         title="About Us"
-        description="Our mission is to make software to human communication delightful. Courier’s API and Studio enable to the right user at the right time."
+        description="Courier is a developer tools startup based in San Francisco. Our mission is to make software to human communication delightful."
       />
       <Box overflow="hidden">
         <Box

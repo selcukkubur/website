@@ -21,7 +21,7 @@ const Blog = ({ feedContent }: { feedContent: any }) => {
     <>
       <NextSeo
         title="Blog"
-        description="Latest posts from Courier.com's blog."
+        description="Latest posts from the Courier developer blog."
       />
       <Header headerPlain />
       <Hero />

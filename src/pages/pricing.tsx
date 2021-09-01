@@ -11,7 +11,10 @@ import { NextSeo } from "next-seo";
 const Pricing = () => {
   return (
     <>
-      <NextSeo title="Pricing" description="Learn more about our pricing." />
+      <NextSeo
+        title="Pricing"
+        description="Courier provides 3 pricing tiers: Developer (free), Business (pay-as-you-go) and Enterprise (contract)."
+      />
       <Box
         mb={8}
         background={`url('/banner-pattern.svg') no-repeat, linear-gradient(270deg,#9121c2,#ff5e5e)`}

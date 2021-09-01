@@ -19,7 +19,7 @@ const Home = () => {
     <>
       <NextSeo
         title="Multi-Channel Notification API & Platform"
-        description="Courier is the smartest way to design and deliver notifications. Design once, and deliver to any channel – email, Slack, SMS, push, and more – through one API."
+        description="Courier is a notification API built for developers. Design once, and deliver to any channel – email, Slack, SMS, push, and more – all through a single API."
       />
       <Box
         mb={8}

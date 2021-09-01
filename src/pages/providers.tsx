@@ -11,7 +11,7 @@ const ProvidersPage = () => {
     <>
       <NextSeo
         title="Providers"
-        description="This page contains the list of providers supported by Courier."
+        description="Courier supports over 40 providers across email, SMS, push notifications, and chat. Providers include Twilio, SendGrid, Postmark, Slack, Microsoft Teams and more."
       />
       <Box
         mb={8}
