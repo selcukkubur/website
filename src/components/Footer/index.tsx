@@ -5,11 +5,19 @@ import Menus from "./Menus/index";
 import Credit from "./Credit";
 import Container from "components/Container";
 
-const Footer = ({ cta }: { cta: "none" | "banner" | "newsletter" }) => {
+const Footer = ({
+  cta,
+}: {
+  cta: "none" | "banner" | "newsletter" | "google";
+}) => {
   return (
     <>
       <Box display={{ base: "block", lg: "none" }}>
-        {cta === "newsletter" ? <Newsletter /> : <Banner />}
+        {cta === "newsletter" ? (
+          <Newsletter />
+        ) : (
+          <Banner cta={cta === "google" ? "google" : "native"} />
+        )}
       </Box>
 
       <Box
@@ -21,7 +29,11 @@ const Footer = ({ cta }: { cta: "none" | "banner" | "newsletter" }) => {
         <Container pt={"42px"}>
           {cta !== "none" && (
             <Box display={{ base: "none", lg: "block" }}>
-              {cta === "newsletter" ? <Newsletter /> : <Banner />}
+              {cta === "newsletter" ? (
+                <Newsletter />
+              ) : (
+                <Banner cta={cta === "google" ? "google" : "native"} />
+              )}
             </Box>
           )}
           <Menus mt={{ base: "32px", lg: "62px" }} />

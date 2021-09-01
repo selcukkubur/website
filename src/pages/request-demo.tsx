@@ -5,27 +5,9 @@ import Graphic from "components/pages/request-demo/Graphic";
 import Form from "components/pages/request-demo/Form";
 
 const RequestDemo = () => {
-  const pageTitle = "Request Demo | Courier";
-  const pageDescription = "Request Courier Demo";
-  const pageUrl = "https://www.courier.com/request-demo";
   return (
     <>
-      <NextSeo
-        title={pageTitle}
-        description={pageDescription}
-        canonical={pageUrl}
-        openGraph={{
-          type: "website",
-          title: pageTitle,
-          description: pageDescription,
-          site_name: "Courier",
-          images: [{ url: "https://www.courier.com/images/og-image.png" }],
-        }}
-        twitter={{
-          cardType: "summary",
-          site: "@trycourier",
-        }}
-      />
+      <NextSeo title="Request Demo" description="Request Courier Demo" />
       <Flex direction={{ base: "column", lg: "row" }} minH="100vh">
         <Graphic />
         <Form />

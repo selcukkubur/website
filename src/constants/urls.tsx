@@ -28,6 +28,8 @@ const urls = {
   requestDemo: "/request-demo",
   developersGuideNotifications: "/developers-guide-notifications",
   security: "https://security.courier.com",
+  googleOauth:
+    "https://courier.auth.us-east-1.amazoncognito.com/oauth2/authorize?identity_provider=Google&redirect_uri=https://app.courier.com/login/callback&response_type=CODE&client_id=5f4fmec2qnuscp89qbt8nsuftj&scope=aws.cognito.signin.user.admin%20email%20openid%20profile",
 };
 
 export let {
@@ -60,4 +62,5 @@ export let {
   requestDemo,
   developersGuideNotifications,
   security,
+  googleOauth,
 } = urls;

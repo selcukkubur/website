@@ -34,27 +34,10 @@ export async function getStaticProps(context: any) {
 const Blog = ({ feedContent }: { feedContent: any }) => {
   if (!feedContent) return <p></p>;
   const tagName = menuData.find((e) => e.slug === feedContent.slug)!.name;
-  const pageTitle = `${tagName} | Courier Blog`;
-  const pageDescription = "";
 
   return (
     <>
-      <NextSeo
-        title={pageTitle}
-        description={pageDescription}
-        noindex
-        openGraph={{
-          type: "website",
-          title: pageTitle,
-          description: pageDescription,
-          site_name: "Courier",
-          images: [{ url: "https://www.courier.com/images/og-image.png" }],
-        }}
-        twitter={{
-          cardType: "summary",
-          site: "@trycourier",
-        }}
-      />
+      <NextSeo title={tagName} noindex />
       <Header headerPlain />
       <Hero slug={feedContent.slug} />
       <Newsletter />

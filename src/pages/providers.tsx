@@ -7,28 +7,11 @@ import HeroImage from "components/pages/providers/HeroImage";
 import Footer from "components/Footer/index";
 
 const ProvidersPage = () => {
-  const pageTitle = "Providers | Courier";
-  const pageDescription =
-    "This page contains the list of providers supported by Courier.";
-  const pageUrl = `https://www.courier.com/providers`;
-
   return (
     <>
       <NextSeo
-        title={pageTitle}
-        description={pageDescription}
-        canonical={pageUrl}
-        openGraph={{
-          type: "website",
-          title: pageTitle,
-          description: pageDescription,
-          site_name: "Courier",
-          images: [{ url: "https://www.courier.com/images/og-image.png" }],
-        }}
-        twitter={{
-          cardType: "summary",
-          site: "@trycourier",
-        }}
+        title="Providers"
+        description="This page contains the list of providers supported by Courier."
       />
       <Box
         mb={8}

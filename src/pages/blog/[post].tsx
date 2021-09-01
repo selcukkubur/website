@@ -34,32 +34,20 @@ const Blog = ({ postDetails }: { postDetails: any }) => {
   const {
     title,
     excerpt,
-    slug,
     headerImage,
     metaTitle,
     metaDescription,
   } = postDetails;
-  const pageDescription = `${metaDescription || excerpt}`;
-  const pageTitle = `${metaTitle || title}`;
-  const pageUrl = `https://www.courier.com/blog/${slug}`;
-  const pageHeaderImage = `${headerImage.url}?w=1200&h=600&q=50&fit=pad&f=center`;
 
   return (
     <>
       <NextSeo
-        title={pageTitle}
-        description={pageDescription}
-        canonical={pageUrl}
+        title={metaTitle || title}
+        description={metaDescription || excerpt}
         openGraph={{
-          type: "website",
-          title: pageTitle,
-          description: pageDescription,
-          site_name: "Courier",
-          images: [{ url: pageHeaderImage }],
-        }}
-        twitter={{
-          cardType: "summary_large_image",
-          site: "@trycourier",
+          images: [
+            { url: `${headerImage.url}?w=1200&h=600&q=50&fit=pad&f=center` },
+          ],
         }}
       />
       <Header headerPlain />

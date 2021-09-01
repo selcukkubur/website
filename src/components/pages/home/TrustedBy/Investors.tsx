@@ -1,4 +1,4 @@
-import { SimpleGrid, Box, Text } from "@chakra-ui/react";
+import { SimpleGrid, Box, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import YCombinatorImage from "../../../../../public/images/investors/ycombinator.svg";
 import SlackFundImage from "../../../../../public/images/investors/slackFund.svg";
@@ -11,9 +11,9 @@ const BackedByImage = ({
   imgSrc: StaticImageData;
   altTag: string;
 }) => (
-  <Box opacity="0.5">
+  <Flex opacity="0.5" alignItems="center" justifyContent="center">
     <Image src={imgSrc} alt={altTag} />
-  </Box>
+  </Flex>
 );
 
 const Investors = () => (

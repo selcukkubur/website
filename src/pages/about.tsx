@@ -11,28 +11,11 @@ import Investors from "components/pages/about/Investors";
 import WorkWithUs from "components/pages/about/WorkWithUs";
 
 const About = () => {
-  const pageTitle = "About Us | Courier";
-  const pageDescription =
-    "Our mission is to make software to human communication delightful. Courier’s API and Studio enable to the right user at the right time.";
-  const pageUrl = "https://www.courier.com/about";
-
   return (
     <>
       <NextSeo
-        title={pageTitle}
-        description={pageDescription}
-        canonical={pageUrl}
-        openGraph={{
-          type: "website",
-          title: pageTitle,
-          description: pageDescription,
-          site_name: "Courier",
-          images: [{ url: "https://www.courier.com/images/og-image.png" }],
-        }}
-        twitter={{
-          cardType: "summary",
-          site: "@trycourier",
-        }}
+        title="About Us"
+        description="Our mission is to make software to human communication delightful. Courier’s API and Studio enable to the right user at the right time."
       />
       <Box overflow="hidden">
         <Box

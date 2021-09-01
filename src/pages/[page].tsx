@@ -49,29 +49,11 @@ const GeneratedPage = ({
   widgetsData: Record<string, any>;
 }) => {
   if (!pageDetails) return <p></p>;
-  const { slug, content, title, metaTitle, metaDescription } = pageDetails;
-  const pageTitle = `${metaTitle || title} | Courier`;
-  const pageDescription = `${metaDescription || ""}`;
-  const pageUrl = `https://www.courier.com/${slug}`;
+  const { content, title, metaTitle, metaDescription } = pageDetails;
 
   return (
     <>
-      <NextSeo
-        title={pageTitle}
-        description={pageDescription}
-        canonical={pageUrl}
-        openGraph={{
-          type: "website",
-          title: pageTitle,
-          description: pageDescription,
-          site_name: "Courier",
-          images: [{ url: "https://www.courier.com/images/og-image.png" }],
-        }}
-        twitter={{
-          cardType: "summary",
-          site: "@trycourier",
-        }}
-      />
+      <NextSeo title={metaTitle || title} description={metaDescription} />
       <Header headerPlain />
       <Content content={content} widgetsData={widgetsData} title={title} />
       <Footer cta="none" />

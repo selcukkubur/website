@@ -15,27 +15,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Home = () => {
-  const pageTitle = "Multi-Channel Notification API & Platform | Courier";
-  const pageDescription =
-    "Courier is the smartest way to design and deliver notifications. Design once, and deliver to any channel – email, Slack, SMS, push, and more – through one API.";
-
   return (
     <>
       <NextSeo
-        title={pageTitle}
-        description={pageDescription}
-        canonical={"https://www.courier.com/"}
-        openGraph={{
-          type: "website",
-          title: pageTitle,
-          description: pageDescription,
-          site_name: "Courier",
-          images: [{ url: "https://www.courier.com/images/og-image.png" }],
-        }}
-        twitter={{
-          cardType: "summary",
-          site: "@trycourier",
-        }}
+        title="Multi-Channel Notification API & Platform"
+        description="Courier is the smartest way to design and deliver notifications. Design once, and deliver to any channel – email, Slack, SMS, push, and more – through one API."
       />
       <Box
         mb={8}

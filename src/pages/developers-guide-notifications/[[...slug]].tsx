@@ -37,29 +37,11 @@ export const getStaticProps = (
 const DevelopersGuideNotifications = ({ slug }: { slug?: [PAGE_PATH] }) => {
   const path = slug?.[0] || "";
 
-  const pageTitle = "Startup Guide To Notifications | Courier";
-  const pageDescription = PAGE_DESCRIPTIONS[path];
-  const pageUrl = `https://www.courier.com/developers-guide-notifications${
-    path && `/${path}`
-  }`;
-
   return (
     <>
       <NextSeo
-        title={pageTitle}
-        description={pageDescription}
-        canonical={pageUrl}
-        openGraph={{
-          type: "website",
-          title: pageTitle,
-          description: pageDescription,
-          site_name: "Courier",
-          images: [{ url: "https://www.courier.com/images/og-image.png" }],
-        }}
-        twitter={{
-          cardType: "summary",
-          site: "@trycourier",
-        }}
+        title="Startup Guide To Notifications"
+        description={PAGE_DESCRIPTIONS[path]}
       />
       <Box
         background={`url('${heroPattern.src}') no-repeat, linear-gradient(90deg, #FD5E5F 0%, #C84093 50.52%, #9121C1 100%)`}

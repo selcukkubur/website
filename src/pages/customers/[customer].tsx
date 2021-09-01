@@ -46,18 +46,6 @@ const CustomerStoryPage = ({ customerStory }: CustomerStoryProps) => {
       <NextSeo
         title={customerStory.fields.title}
         description={customerStory.fields.metaDescription}
-        canonical={`https://www.courier.com/customers/${customerStory.fields.slug}`}
-        openGraph={{
-          type: "website",
-          title: customerStory.fields.title,
-          description: customerStory.fields.metaDescription,
-          site_name: "Courier",
-          images: [{ url: "https://www.courier.com/images/og-image.png" }],
-        }}
-        twitter={{
-          cardType: "summary_large_image",
-          site: "@trycourier",
-        }}
       />
 
       <Header headerPlain />
