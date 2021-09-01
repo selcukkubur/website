@@ -33,7 +33,7 @@ const examples: CodeExample[] = [
   "message": {
     "to": {
       "courier_push": "{{user_id}}",
-      "email": "{{email}}",
+      "email": "{{email}}"
     },
     "channels": { "$best": ["courier-push", "email"] },
     "content": {
