@@ -59,7 +59,13 @@ const Hero = () => (
     </Box>
 
     <Box flex="1" minW={0} width={{ base: "100%", lg: undefined }}>
-      <Box mt={{ lg: -12 }} pt={5} pl={{ lg: 5 }} minH="460px" display="flex">
+      <Box
+        mt={{ lg: -12 }}
+        pt={5}
+        pl={{ lg: 5 }}
+        minH={{ lg: "546px" }}
+        display="flex"
+      >
         <CodeBox flexGrow={1} minW={0} examples={codeExamples} />
       </Box>
     </Box>
