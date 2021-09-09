@@ -1,11 +1,12 @@
 import { Box, Heading, Text, Button } from "@chakra-ui/react";
+import Image from "next/image";
 import ButtonCTAGradient from "components/buttons/CTAGradient";
 import { signup, requestDemo } from "constants/urls";
-import CodeBox from "components/common/CodeBox";
 import RightArrow from "components/icons/RightArrow";
-import codeExamples from "./codeExamples";
 import InternalLink from "components/InternalLink";
 import FeatureSection from "components/common/FeatureSection";
+
+import email from "../../../../public/images/pages/email/email.svg";
 
 const Hero = () => (
   <Box
@@ -17,8 +18,8 @@ const Hero = () => (
     <FeatureSection
       graphicAlignment="right"
       graphic={
-        <Box mt={{ lg: -12 }} pt={5} pl={{ lg: 5 }} minH="460px" display="flex">
-          <CodeBox flexGrow={1} minW={0} examples={codeExamples} />
+        <Box pl={{ lg: 5 }}>
+          <Image src={email} alt="Email notification view" />
         </Box>
       }
       pt={{ base: "100px", lg: "160px" }}
@@ -26,11 +27,12 @@ const Hero = () => (
       color="white"
     >
       <Heading as="h1" variant="h1">
-        API For App-To-User Communication
+        The most powerful transactional email API ever built.
       </Heading>
       <Text mt="29px" mb="32px" variant="body1">
-        Courier's API and Studio enable developers to deliver the right message
-        to the right user at the right time.
+        Courier is the notification infrastructure for your application. Manage
+        templates, deliverability, routing, and user preferences all in a single
+        API.
       </Text>
       <ButtonCTAGradient text="Get started for free" link={signup} />
       <div>

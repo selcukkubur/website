@@ -2,7 +2,7 @@ import { Heading, Text, Box } from "@chakra-ui/react";
 import Image from "next/image";
 import FeatureSection from "components/common/FeatureSection";
 
-import workflows from "../../../../public/images/pages/home/workflows/workflows.png";
+import lists from "../../../../public/images/pages/email/lists.svg";
 
 const Workflows = () => (
   <Box mt={{ base: "60px", lg: "120px" }} mb={{ base: "20px", lg: "100px" }}>
@@ -11,27 +11,27 @@ const Workflows = () => (
       graphic={
         <Box display={{ base: "none", lg: "block" }} mt={{ lg: -2 }}>
           <Image
-            src={workflows}
+            src={lists}
             width={526}
             height={364}
-            alt="Notification workflow management view"
+            alt="Email list send view"
           />
         </Box>
       }
       tag={{
-        label: "Workflows",
+        label: "List Sends",
         textColor: "secondary.salmon",
         bgColor: "primary.sand",
       }}
     >
       <Box maxW={{ lg: "480px" }}>
         <Heading as="h3" variant="h3">
-          Reach users at the right time on the right channel
+          Complex Email List Sends
         </Heading>
         <Text variant="body1" mt={6} color="secondary.darkAlpha">
-          Prioritize your channels and use both conditional logic and user
-          preferences, to control who sees what, when, and through which
-          channel.
+          Courier allows you to design and execute dynamic, customized list
+          sends with a single API call. Perfect for product updates, customized
+          newsletters, and more.
         </Text>
       </Box>
     </FeatureSection>

@@ -1,4 +1,3 @@
-import { Box } from "@chakra-ui/react";
 import Header from "components/Header/index";
 import Hero from "components/pages/home/Hero";
 import TrustedBy from "components/pages/home/TrustedBy/index";
@@ -21,27 +20,11 @@ const Home = () => {
         title="Multi-Channel Notification API & Platform"
         description="Courier is a notification API built for developers. Design once, and deliver to any channel – email, Slack, SMS, push, and more – all through a single API."
       />
-      <Box
-        mb={8}
-        background={`url('/banner-pattern.svg') no-repeat, linear-gradient(270deg,#9121c2,#ff5e5e)`}
-        backgroundSize="cover"
-        borderRadius="0 0 40px 40px"
-      >
-        <Header />
-        <Hero />
-      </Box>
+
+      <Header />
+      <Hero />
       <TrustedBy />
-      <Box position="relative">
-        <NotificationSystem />
-        <Box
-          position="absolute"
-          w={"100%"}
-          bottom={0}
-          background="linear-gradient(180deg,#fffffe,#fcede3 80.21%)"
-          zIndex={0}
-          height={"497px"}
-        />
-      </Box>
+      <NotificationSystem />
       <VisualEditor />
       <Workflows />
       <APIOptions />

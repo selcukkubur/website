@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import CommonNotificationSystem from "components/common/NotificationSystem";
 
 const notificationPoints = [
@@ -29,11 +30,13 @@ const notificationPoints = [
 
 const NotificationSystem = () => {
   return (
-    <CommonNotificationSystem
-      title="Your complete notifications system"
-      description="From integrations to insights, we handle all of the heavy lifting"
-      points={notificationPoints}
-    />
+    <Box background="linear-gradient(180deg,#fffffe,#fcede3 80.21%)">
+      <CommonNotificationSystem
+        title="Your complete notifications system"
+        description="From integrations to insights, we handle all of the heavy lifting"
+        points={notificationPoints}
+      />
+    </Box>
   );
 };
 

@@ -1,19 +1,13 @@
 import React from "react";
 import { Box, BoxProps } from "@chakra-ui/react";
 
-interface ContainerProps extends BoxProps {
-  maxWidth?: number;
-}
-
-const Container = ({ children, maxWidth, ...other }: ContainerProps) => (
+const Container = ({ maxWidth, ...other }: BoxProps) => (
   <Box
     padding="0 20px"
     maxWidth={maxWidth ? maxWidth : 1400}
     mx="auto"
     {...other}
-  >
-    {children}
-  </Box>
+  />
 );
 
 export default Container;

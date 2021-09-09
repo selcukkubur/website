@@ -1,8 +1,8 @@
-import { Flex, Heading, Text, Box, Tag } from "@chakra-ui/react";
+import { Heading, Text, Box } from "@chakra-ui/react";
 import InternalLink from "components/InternalLink";
 import TextButton from "components/buttons/TextButton";
-import { documentation } from "constants/urls";
-import Animation from "./animation";
+import { email_providers } from "constants/urls";
+import Animation from "../home/Integrations/animation";
 import FeatureSection from "components/common/FeatureSection";
 
 const Integrations = () => (
@@ -33,7 +33,7 @@ const Integrations = () => (
     >
       <Box>
         <Heading as="h3" variant="h3" maxW={{ lg: "480px" }}>
-          Deploy notifications to different channels from the same location
+          We Support Your Provider
         </Heading>
         <Text
           variant="body1"
@@ -42,11 +42,12 @@ const Integrations = () => (
           color="secondary.darkAlpha"
           maxW={{ lg: "520px" }}
         >
-          With 20+ integrations, you can reach users on the channels they prefer
-          –– all with the simple flip of a switch.
+          Courier supports sending through any provider you choose, even Gmail.
+          We also support sending through SMS, chat, and push providers for
+          multi-channel notifications.
         </Text>
-        <InternalLink to={documentation}>
-          <TextButton> Check out our docs </TextButton>
+        <InternalLink to={email_providers}>
+          <TextButton> View all email providers </TextButton>
         </InternalLink>
       </Box>
     </FeatureSection>

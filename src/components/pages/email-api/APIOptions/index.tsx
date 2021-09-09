@@ -27,12 +27,11 @@ const APIOptions = () => (
     >
       <Box pt={2} maxW={{ lg: "530px" }}>
         <Heading as="h3" variant="h3">
-          All your notifications, just one API
+          Email API With Superpowers
         </Heading>
         <Text mt={6} mb={8} variant="body1" color="secondary.darkAlpha">
-          With just one easy-to-use API, you can access client libraries written
-          in the most popular programming languages, and deploy notifications
-          faster with cleaner code.
+          The Courier API allows you to deliver complex email usecases with a
+          single API call.
         </Text>
         <InternalLink to={documentation}>
           <TextButton> Check out our docs </TextButton>
