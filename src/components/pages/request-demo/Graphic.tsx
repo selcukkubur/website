@@ -26,7 +26,7 @@ const Graphic = () => (
   >
     <Container h="100%" display="flex" flexDir="column">
       <Box mt={6} mb={{ base: 6, lg: "110px" }}>
-        <InternalLink to={getStarted}>
+        <InternalLink to={getStarted} aria-label="Courier Logo">
           <Logo />
         </InternalLink>
       </Box>
@@ -48,7 +48,9 @@ const Graphic = () => (
             </Text>
           </ListItem>
           <ListItem>
-            <Text variant="body2">Create powerful routing and workflow rules</Text>
+            <Text variant="body2">
+              Create powerful routing and workflow rules
+            </Text>
           </ListItem>
         </UnorderedList>
       </Box>

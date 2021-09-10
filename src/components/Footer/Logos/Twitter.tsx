@@ -3,7 +3,7 @@ import ExternalLink from "components/ExternalLink";
 import { twitter } from "constants/urls";
 
 const TwitterIcon = () => (
-  <ExternalLink to={twitter}>
+  <ExternalLink to={twitter} aria-label="Twitter Logo">
     <Flex
       bg="hsla(0,0%,100%,.08)"
       align="center"

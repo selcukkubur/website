@@ -19,6 +19,7 @@ const HeroImage = () => (
           width={756}
           height={488}
           priority
+          alt="Providers"
         />
       </Box>
     </Flex>

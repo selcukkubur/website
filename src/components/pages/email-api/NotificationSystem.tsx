@@ -3,25 +3,25 @@ import CommonNotificationSystem from "components/common/NotificationSystem";
 
 const notificationPoints = [
   {
-    icon: "/images/pages/home/notification-system/integrateIcon.svg",
+    icon: require("../../../../public/images/pages/home/notification-system/integrateIcon.svg"),
     title: "Bring Your Own Provider",
     description:
       "Send transactional emails  through any and all email providers. SendGrid, Postmark, Mailgun, Gmail, we support them all.",
   },
   {
-    icon: "/images/pages/home/notification-system/designIcon.svg",
+    icon: require("../../../../public/images/pages/home/notification-system/designIcon.svg"),
     title: "Email Template Designer",
     description:
       "We beleive transactional emails should still look great. Our designer lets you build beautiful and dynamic email templates.",
   },
   {
-    icon: "/images/pages/home/notification-system/orchestrate.svg",
+    icon: require("../../../../public/images/pages/home/notification-system/orchestrate.svg"),
     title: "Automated Email Workflows",
     description:
       "Design complex automated email workflows with steps that include delay, check data, send to list, and more.",
   },
   {
-    icon: "/images/pages/home/notification-system/collectRealTime.svg",
+    icon: require("../../../../public/images/pages/home/notification-system/collectRealTime.svg"),
     title: "Analyze Detailed Logs",
     description:
       "Courier provides detailed logs of every email sent through our API. This helps identify issues and ensure deliverability. ",

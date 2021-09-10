@@ -1,8 +1,9 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
+import { Flex, Box, Text } from "@chakra-ui/react";
+import Image from "next/image";
 import ExternalLink from "components/ExternalLink";
 
 interface Props {
-  image: string;
+  image: { src: string; height: number; width: number };
   name: string;
   link: string;
 }
@@ -17,7 +18,7 @@ const SingleBox = ({ image, name, link }: Props) => (
       h="176px"
     >
       <Flex align="center" pl="24px" h="128px">
-        <Image src={image} />
+        <Image src={image} alt={name} />
         <Text fontSize="24px" fontWeight="500" ml={"32px"} lineHeight="30px">
           {name}
         </Text>
@@ -32,11 +33,12 @@ const SingleBox = ({ image, name, link }: Props) => (
         <Text color="white" fontSize="18px" fontWeight="600">
           Docs
         </Text>
-        <Image
-          src={"/images/pages/integrations/providers/arrow.svg"}
-          ml={2}
-          pt={"2px"}
-        />
+        <Box ml={2} pt={"2px"}>
+          <Image
+            src={require("../../../../public/images/pages/integrations/providers/arrow.svg")}
+            alt=""
+          />
+        </Box>
       </Flex>
     </Flex>
   </ExternalLink>

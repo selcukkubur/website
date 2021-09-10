@@ -3,7 +3,7 @@ import ExternalLink from "components/ExternalLink";
 import { youtube } from "constants/urls";
 
 const YouTubeIcon = () => (
-  <ExternalLink to={youtube}>
+  <ExternalLink to={youtube} aria-label="YouTube Logo">
     <Flex
       bg="hsla(0,0%,100%,.08)"
       align="center"

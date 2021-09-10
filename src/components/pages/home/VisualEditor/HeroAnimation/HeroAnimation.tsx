@@ -1,47 +1,39 @@
 import React, { useState, useRef, useCallback, useEffect } from "react";
 import Slider, { Settings } from "react-slick";
-import {
-  Box,
-  Text,
-  Image,
-  Flex,
-  CircularProgress,
-  chakra,
-} from "@chakra-ui/react";
+import Image from "next/image";
+import { Box, Text, Flex, CircularProgress, chakra } from "@chakra-ui/react";
 import MessageIcon from "./icons/Message";
 import PushIcon from "./icons/Push";
 import SMSIcon from "./icons/SMS";
 import ChatIcon from "./icons/Chat";
-import NextImage from "next/image";
-import BannerSlideBgImage from "../../../../../../public/images/bannersliderBgNew@2x.png";
 
 const ChakraSlider = chakra(Slider);
 
 const channelImages = [
   {
     name: "Email",
-    image: "/images/pages/home/hero/email.png",
+    image: require("../../../../../../public/images/pages/home/hero/email.png"),
     width: "506px",
     ml: { xl: "90px", "2xl": "100px" },
     mt: "20px",
   },
   {
     name: "SMS",
-    image: "/images/pages/home/hero/sms.png",
+    image: require("../../../../../../public/images/pages/home/hero/sms.png"),
     width: "302px",
     ml: { base: "170px", "2xl": "170px" },
     mt: "0px",
   },
   {
     name: "Push",
-    image: "/images/pages/home/hero/push.png",
+    image: require("../../../../../../public/images/pages/home/hero/push.png"),
     width: "302px",
     ml: { base: "170px", "2xl": "170px" },
     mt: "0px",
   },
   {
     name: "Chat",
-    image: "/images/pages/home/hero/chat.png",
+    image: require("../../../../../../public/images/pages/home/hero/chat.png"),
     width: "544px",
     ml: { base: "70px", "2xl": "80px" },
     mt: "20px",
@@ -62,8 +54,9 @@ const HeroAnimation = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const sliderRef = useRef<Slider>(null);
-  const intervalRef: React.MutableRefObject<NodeJS.Timeout | null> =
-    useRef(null);
+  const intervalRef: React.MutableRefObject<NodeJS.Timeout | null> = useRef(
+    null
+  );
 
   const startProgressBar = useCallback(() => {
     if (intervalRef.current) clearInterval(intervalRef.current);
@@ -122,11 +115,11 @@ const HeroAnimation = () => {
     >
       <Box backgroundSize="100% 100%" mx="auto">
         <Box position="absolute">
-          <NextImage
-            src={BannerSlideBgImage}
-            priority
+          <Image
+            src={require("../../../../../../public/images/bannersliderBgNew@2x.png")}
             width={1063}
             height={648}
+            alt=""
           />
         </Box>
         <Box w="100%" h="648px" pt="19px">
@@ -199,14 +192,14 @@ const HeroAnimation = () => {
                 pt="82px"
               >
                 {channelImages.map((channel) => (
-                  <Image
-                    src={channel.image}
-                    w={channel.width}
-                    maxW={channel.width}
+                  <Box
+                    key={channel.name}
                     ml={channel.ml}
                     mt={channel.mt}
-                    key={channel.name}
-                  />
+                    maxW={channel.width}
+                  >
+                    <Image src={channel.image} alt={channel.name} />
+                  </Box>
                 ))}
               </ChakraSlider>
             </Flex>

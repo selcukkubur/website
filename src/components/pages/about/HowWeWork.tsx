@@ -2,40 +2,33 @@ import { Box, Heading, Text, SimpleGrid, Flex } from "@chakra-ui/react";
 import Image from "next/image";
 import Container from "components/Container";
 
-import lightbulb from "../../../../public/images/pages/about/how-we-work/lightbulb.svg";
-import chat from "../../../../public/images/pages/about/how-we-work/chat.svg";
-import flag from "../../../../public/images/pages/about/how-we-work/flag.svg";
-import heart from "../../../../public/images/pages/about/how-we-work/heart.svg";
-import doc from "../../../../public/images/pages/about/how-we-work/doc.svg";
-import glasses from "../../../../public/images/pages/about/how-we-work/glasses.svg";
-
 const highlights = [
   {
-    icon: glasses,
+    icon: require("../../../../public/images/pages/about/how-we-work/glasses.svg"),
     label: "Zoom Out",
     description:
       "Don't just stay in your lane. Take the blinders off and look at the entire business.",
   },
   {
-    icon: lightbulb,
+    icon: require("../../../../public/images/pages/about/how-we-work/lightbulb.svg"),
     label: "Have An Opinion",
     description:
       "Each team member is an expert on what success will look like for Courier. Nobody else has the answers.",
   },
   {
-    icon: flag,
+    icon: require("../../../../public/images/pages/about/how-we-work/flag.svg"),
     label: "Keep It Real",
     description:
       "Be honest with ourselves about what is going really well, and what isn't. Celebrate wins and have hard conversations.",
   },
   {
-    icon: heart,
+    icon: require("../../../../public/images/pages/about/how-we-work/heart.svg"),
     label: "JFDI",
     description:
       "There will always be more work to do than people to do it. If you see something that needs to get done, just f*cking do it. Don't wait for someone else.",
   },
   {
-    icon: chat,
+    icon: require("../../../../public/images/pages/about/how-we-work/chat.svg"),
     label: "Talk To Customers",
     description:
       "Working with developers isn't a job role here - it is something we all need to do. Hop on a Zoom, reach out in Slack, build a relationship.",
@@ -72,7 +65,7 @@ const HowWeWork = () => (
           {highlights.map((highlight) => (
             <Flex key={highlight.label} alignItems="center">
               <Box flexShrink={0}>
-                <Image layout="fixed" src={highlight.icon} />
+                <Image layout="fixed" src={highlight.icon} alt="" />
               </Box>
 
               <Text ml="18px" mr="33px" variant="body2">

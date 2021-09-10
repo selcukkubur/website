@@ -3,7 +3,7 @@ import ExternalLink from "components/ExternalLink";
 import { linkedin } from "constants/urls";
 
 const LinkedInIcon = () => (
-  <ExternalLink to={linkedin}>
+  <ExternalLink to={linkedin} aria-label="LinkedIn Logo">
     <Flex
       bg="hsla(0,0%,100%,.08)"
       align="center"

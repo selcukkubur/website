@@ -3,7 +3,7 @@ import ExternalLink from "components/ExternalLink";
 import { discord } from "constants/urls";
 
 const DiscordIcon = () => (
-  <ExternalLink to={discord}>
+  <ExternalLink to={discord} aria-label="Discord Logo">
     <Flex
       bg="hsla(0,0%,100%,.08)"
       align="center"

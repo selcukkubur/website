@@ -1,9 +1,10 @@
-import { Box, Heading, Text, Flex, Image } from "@chakra-ui/react";
+import { Box, Heading, Text, Flex } from "@chakra-ui/react";
+import Image from "next/image";
 import Container from "components/Container";
 
 interface NotificationPointProps {
   title: string;
-  icon: string;
+  icon: { src: string; height: number; width: number };
   description: string;
 }
 
@@ -25,7 +26,7 @@ const NotificationPoint = ({
     px={5}
     maxW={{ xl: "360px" }}
   >
-    <Image src={icon} h="66px" />
+    <Image src={icon} alt={title} />
 
     <Heading variant="subh1" mt="32px" mb="10px">
       {title}

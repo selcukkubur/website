@@ -3,7 +3,7 @@ import ExternalLink from "components/ExternalLink";
 import { twitch } from "constants/urls";
 
 const TwitchIcon = () => (
-  <ExternalLink to={twitch}>
+  <ExternalLink to={twitch} aria-label="Twitch Logo">
     <Flex
       bg="hsla(0,0%,100%,.08)"
       align="center"

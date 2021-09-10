@@ -53,6 +53,7 @@ const WorkWithUs = () => (
               src={photo.image}
               width={photo.image.width / 2}
               height={photo.image.height / 2}
+              alt=""
             />
           </Box>
         </Box>

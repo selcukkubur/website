@@ -56,7 +56,7 @@ const Header = ({ headerPlain, noHeaderBoxShadow }: Props) => {
         align="center"
         p="0 20px"
       >
-        <InternalLink to="/">
+        <InternalLink to="/" aria-label="Courier Logo">
           <Icon as={LogoIcon} transition="all .3s ease-in-out" />
         </InternalLink>
         <DesktopMenu />

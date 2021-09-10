@@ -3,7 +3,7 @@ import ExternalLink from "components/ExternalLink";
 import { github } from "constants/urls";
 
 const GitHubIcon = () => (
-  <ExternalLink to={github}>
+  <ExternalLink to={github} aria-label="Github Logo">
     <Flex
       bg="hsla(0,0%,100%,.08)"
       align="center"

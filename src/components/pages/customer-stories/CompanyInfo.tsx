@@ -27,6 +27,7 @@ const CompanyInfo = ({ customerStory }: CompanyInfoProps) => {
             src={`https:${companyLogo.fields.file.url}`}
             width={companyLogo.fields.file.details.image.width}
             height={companyLogo.fields.file.details.image.height}
+            alt="Company Logo"
           />
         </Box>
 

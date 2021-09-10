@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
-import { Box, Heading, Text, Image, Flex, IconButton } from "@chakra-ui/react";
+import Image from "next/image";
+import { Box, Heading, Text, Flex, IconButton } from "@chakra-ui/react";
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 import testimonials from "./data";
 import slideSettings from "./sliderSettings";
@@ -42,7 +43,10 @@ const Testimonials = () => {
           />
 
           <Box display={{ base: "none", xl: "block" }} mr={{ base: 0, xl: 16 }}>
-            <Image src={"/images/testiquote.svg"} />
+            <Image
+              src={require("../../../../../public/images/testiquote.svg")}
+              alt=""
+            />
           </Box>
           <Flex mr={{ base: 0, xl: 16 }}>
             <IconButton
@@ -78,12 +82,14 @@ const Testimonials = () => {
                 position="relative"
               >
                 <Flex>
-                  <Image
-                    src={testimonial.Image.url}
-                    w="72px"
-                    h="72px"
-                    borderRadius="12px"
-                  />
+                  <Box borderRadius="12px" overflow="hidden" display="flex">
+                    <Image
+                      src={testimonial.Image.url}
+                      width={72}
+                      height={72}
+                      alt={testimonial.Name}
+                    />
+                  </Box>
                   <Flex ml={"24px"} direction="column">
                     <Heading variant="subh1" w="fit-content">
                       {testimonial.Name}
@@ -96,14 +102,14 @@ const Testimonials = () => {
                 <Text textAlign="left" mt="32px">
                   {testimonial.Comment}
                 </Text>
-                <Image
-                  src={testimonial.CompanyLogo.url}
-                  mt={"32px"}
-                  position="absolute"
-                  bottom="32px"
-                  width={testimonial.CompanyLogo.width}
-                  height={testimonial.CompanyLogo.height}
-                />
+                <Box position="absolute" bottom="32px" mt={"32px"}>
+                  <Image
+                    src={testimonial.CompanyLogo.url}
+                    width={testimonial.CompanyLogo.width}
+                    height={testimonial.CompanyLogo.height}
+                    alt="Company Logo"
+                  />
+                </Box>
               </Box>
             </Box>
           ))}

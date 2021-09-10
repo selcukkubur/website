@@ -6,7 +6,7 @@ const HomeHeroMobileImage = () => (
   <Box display={{ base: "block", xl: "none" }} mx="auto" padding="0 20px">
     <picture>
       <source srcSet="data;" media="(min-width: 1280px)" />
-      <Image src={HeroMobileImage} />
+      <Image src={HeroMobileImage} alt="" />
     </picture>
   </Box>
 );

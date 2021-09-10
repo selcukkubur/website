@@ -29,7 +29,7 @@ const Investors = () => (
       <Flex opacity="0.5" justify="center" wrap="wrap" mt="64px">
         {images.map((image, index) => (
           <Box key={index} mx={{ base: "20px", lg: "43px" }} mb="40px">
-            <Image layout="fixed" src={image} />
+            <Image layout="fixed" src={image} alt="" />
           </Box>
         ))}
       </Flex>
