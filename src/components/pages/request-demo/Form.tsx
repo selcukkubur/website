@@ -17,6 +17,7 @@ import {
 } from "@chakra-ui/react";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import analyticsJS from "lib/analyticsJS";
 import PurpleBgButton from "components/buttons/PurpleBg";
 import submitHubSpotForm from "scripts/submitHubSpotForm";
 import InternalLink from "components/InternalLink";
@@ -69,6 +70,9 @@ const Form = () => {
               if (body.status !== "error") {
                 form.resetForm();
                 form.setStatus("success");
+
+                analyticsJS()?.track("demo request form submitted", values);
+
                 return;
               }
 
