@@ -5,7 +5,7 @@ import Container from "components/Container";
 import HeroAnimation from "./HeroAnimation";
 
 const VisualEditor = () => (
-  <Box bg="#FCECE2">
+  <Box bg="#FCECE2" overflow="hidden" pos="relative">
     <Container>
       <Box pt={{ base: "92px", lg: "132px" }} textAlign="center">
         <Heading variant="h2" as="h2" color="secondary.dark">

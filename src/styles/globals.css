@@ -51,3 +51,8 @@
 .slick-arrow {
   display: none !important;
 }
+
+/* Fixes blurry rendering on desktop Safari */
+.slick-list {
+  transform: none !important;
+}

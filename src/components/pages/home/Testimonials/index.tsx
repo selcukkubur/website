@@ -39,7 +39,7 @@ const Testimonials = () => {
             left="100%"
             bottom={0}
             w={4}
-            bgGradient="linear(to-r, white, transparent)"
+            bgGradient="linear(to-r, white, #fff0)"
           />
 
           <Box display={{ base: "none", xl: "block" }} mr={{ base: 0, xl: 16 }}>
