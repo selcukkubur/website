@@ -4,6 +4,8 @@ import { NextSeo } from "next-seo";
 import Graphic from "components/pages/request-demo/Graphic";
 import Form from "components/pages/request-demo/Form";
 
+import "slick-carousel/slick/slick.css";
+
 const RequestDemo = () => {
   return (
     <>

@@ -56,3 +56,8 @@
 .slick-list {
   transform: none !important;
 }
+
+/* Fixes wrapping of slider slides */
+.slick-track {
+  display: flex !important;
+}
