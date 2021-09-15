@@ -6,6 +6,7 @@ import RightArrow from "components/icons/RightArrow";
 import codeExamples from "./codeExamples";
 import InternalLink from "components/InternalLink";
 import FeatureSection from "components/common/FeatureSection";
+import Experiment from "components/Experiment";
 
 const Hero = () => (
   <Box
@@ -25,13 +26,27 @@ const Hero = () => (
       pb={{ base: 12, lg: 2 }}
       color="white"
     >
-      <Heading as="h1" variant="h1">
-        API For App-To-User Communication
-      </Heading>
-      <Text mt="29px" mb="32px" variant="body1">
-        Courier's API and Studio enable developers to deliver the right message
-        to the right user at the right time.
-      </Text>
+      <Experiment name="Homepage Hero Copy">
+        <Experiment.Variant>
+          <Heading as="h1" variant="h1">
+            API For App-To-User Communication
+          </Heading>
+          <Text mt="29px" mb="32px" variant="body1">
+            Courier's API and Studio enable developers to deliver the right
+            message to the right user at the right time.
+          </Text>
+        </Experiment.Variant>
+        <Experiment.Variant>
+          <Heading as="h1" variant="h1">
+            Product Notifications Made Easy
+          </Heading>
+          <Text mt="29px" mb="32px" variant="body1">
+            Notifications are hard. They require infrastructure that is
+            reliable, scalable and observable as well as an end user experience
+            that is helpful and respectful. That's why we built Courier.
+          </Text>
+        </Experiment.Variant>
+      </Experiment>
       <ButtonCTAGradient text="Get started for free" link={signup} />
       <div>
         <Button
