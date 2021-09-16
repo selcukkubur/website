@@ -55,15 +55,15 @@ const MarkdownContent = ({
             },
             h2: {
               component: Heading,
-              props: { as: "h2", variant: "h2", mb: "32px" },
+              props: { as: "h2", mb: "32px" },
             },
             h3: {
               component: Heading,
-              props: { as: "h3", variant: "h3", mb: "22px" },
+              props: { as: "h3", size: "lg", mb: "22px" },
             },
             h4: {
               component: Heading,
-              props: { as: "h4", variant: "h4", mb: "22px" },
+              props: { as: "h4", size: "md", mb: "22px" },
             },
             h5: {
               component: Heading,

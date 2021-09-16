@@ -26,6 +26,7 @@ export async function getStaticProps(context: any) {
   const postDetails = await GetBlogPost({ slug: post, isPreview: false });
   return {
     props: { postDetails },
+    revalidate: 60,
   };
 }
 

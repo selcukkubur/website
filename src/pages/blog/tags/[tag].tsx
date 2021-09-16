@@ -28,6 +28,7 @@ export async function getStaticProps(context: any) {
   const feedContent = await GetBlogsForTag({ tag: tag });
   return {
     props: { feedContent },
+    revalidate: 60,
   };
 }
 
