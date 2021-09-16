@@ -1,4 +1,4 @@
-import client from "./contentfulClient";
+import contentfulClient from "./contentfulClient";
 
 export interface Subprocessor {
   fields: {
@@ -12,6 +12,7 @@ export interface Subprocessor {
 }
 
 const GetAllSuprocessors = async (): Promise<Subprocessor[]> => {
+  const client = contentfulClient();
   const response = await client.getEntries({
     content_type: "subprocessor",
     limit: 1000,

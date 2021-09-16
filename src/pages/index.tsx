@@ -17,10 +17,9 @@ const Home = () => {
   return (
     <>
       <NextSeo
-        title="Multi-Channel Notification API & Platform"
+        title="API for Email, SMS, Web & Mobile Push Notifications"
         description="Courier is a notification API built for developers. Design once, and deliver to any channel – email, Slack, SMS, push, and more – all through a single API."
       />
-
       <Header />
       <Hero />
       <TrustedBy />

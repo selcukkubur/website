@@ -44,4 +44,25 @@ module.exports = [
     destination: "/",
     permanent: true,
   },
+  {
+    source: "/developers-guide-notifications",
+    destination: "/guides/user-notification-system",
+    permanent: true,
+  },
+  {
+    source: "/developers-guide-notifications/end-user-experience-requirements",
+    destination: "/guides/user-notification-system",
+    permanent: true,
+  },
+  {
+    source:
+      "/developers-guide-notifications/internal-user-experience-requirements",
+    destination: "/guides/user-notification-system",
+    permanent: true,
+  },
+  {
+    source: "/developers-guide-notifications/technical-requirements",
+    destination: "/guides/user-notification-system",
+    permanent: true,
+  },
 ];

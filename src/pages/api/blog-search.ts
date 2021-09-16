@@ -1,8 +1,9 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import client from "../../scripts/contentfulClient";
+import contentfulClient from "../../scripts/contentfulClient";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { query } = req.query;
+  const client = contentfulClient();
   const response = await client.getEntries({
     query,
     content_type: "post",

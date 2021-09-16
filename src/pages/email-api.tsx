@@ -17,10 +17,9 @@ const EmailApi = () => {
   return (
     <>
       <NextSeo
-        title="Email"
-        description="Programmatically send emails using the Courier API."
+        title="#1 Transactional Email API for Developers"
+        description="Courier is a simple, fast and reliable transactional email API. It's the perfect tool to send transactional emails for your web application."
       />
-
       <Header />
       <Hero />
       <TrustedBy />

@@ -1,4 +1,4 @@
-import client from "./contentfulClient";
+import contentfulClient from "./contentfulClient";
 
 export interface CustomerStory {
   sys: {
@@ -28,6 +28,7 @@ function GetCustomerStories(): Promise<CustomerStory[]>;
 function GetCustomerStories(slug: string): Promise<CustomerStory | void>;
 
 async function GetCustomerStories(slug?: string) {
+  const client = contentfulClient();
   const entries = await client.getEntries({
     content_type: "customerStory",
     ...(slug

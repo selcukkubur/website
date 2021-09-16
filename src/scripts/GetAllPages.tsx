@@ -1,6 +1,7 @@
-import client from "./contentfulClient";
+import contentfulClient from "./contentfulClient";
 
-const GetAllBlogs = async () => {
+const GetAllPages = async () => {
+  const client = contentfulClient();
   const response = await client.getEntries({
     content_type: "textPage",
     limit: 1000,
@@ -8,4 +9,4 @@ const GetAllBlogs = async () => {
   return response.items;
 };
 
-export default GetAllBlogs;
+export default GetAllPages;

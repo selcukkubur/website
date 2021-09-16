@@ -1,9 +1,9 @@
-import client from "./contentfulClient";
 import GetSimilarBlogs from "./GetSimilarBlogs";
+import contentfulMdExtractAssets from "./contentfulMdExtractAssets";
 
 interface Props {
   slug: string;
-  isPreview?: boolean;
+  isPreview: boolean;
 }
 
 async function getBlogPostId({ slug, isPreview }: Props) {
@@ -46,7 +46,7 @@ async function getBlogPostDetails({
   isPreview,
 }: {
   blogPostId: string;
-  isPreview?: boolean;
+  isPreview: boolean;
 }) {
   const response = await fetch(
     `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/`,
@@ -145,25 +145,10 @@ async function getBlogPostDetails({
     };
   }
   blogPostDetails.snippets = blogSnippets;
-
-  // Extract assets from markdown content and fetch their width/height
-  const assetRegex = /\(\/\/images\.(?:ctfassets\.net|contentful\.com)\/(?:.+?)\/(.+?)\/(?:.+?)\/(?:.+?)\)/g;
-  const matches = [...(blogPostDetails.contentMd || "").matchAll(assetRegex)];
-  const assetIds = Array.from(new Set(matches.map((match) => match[1])));
-  const assetsInfo = await Promise.all(
-    assetIds.map((assetId) => client.getAsset(assetId))
-  );
-  const assets = assetsInfo.reduce(
-    (obj, asset) => ({
-      ...obj,
-      [asset.sys.id]: {
-        url: asset.fields.file.url,
-        ...asset.fields.file.details.image,
-      },
-    }),
-    {}
-  );
-  blogPostDetails.assets = assets;
+  blogPostDetails.assets = await contentfulMdExtractAssets({
+    contentMd: blogPostDetails.contentMd,
+    isPreview,
+  });
 
   return blogPostDetails;
 }
