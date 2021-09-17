@@ -27,12 +27,12 @@ const Hero = () => (
       color="white"
     >
       <Heading as="h1" variant="h1">
-        The most powerful transactional email API ever built.
+        Courier gives your transactional email API superpowers
       </Heading>
       <Text mt="29px" mb="32px" variant="body1">
-        Courier is the notification infrastructure for your application. Manage
-        templates, deliverability, routing, and user preferences all in a single
-        API.
+        Courier provides the infrastructure needed to turn your email API
+        into a complete notification system. Manage templates, deliverability, routing, 
+        and user preferences all in a single API.
       </Text>
       <ButtonCTAGradient text="Get started for free" link={signup} />
       <div>
