@@ -39,13 +39,12 @@ const Graphic = () => {
 
           <Box flex={1} mb={8}>
             <Heading as="h1" variant="h2" mb={6}>
-              Request A Demo
+              Product Notifications Made Easy
             </Heading>
-            <Text variant="body2">With Courier you can:</Text>
             <UnorderedList ml={7}>
               <ListItem>
                 <Text variant="body2">
-                  Programmatically deliver notifications across any channel
+                  Programmatically deliver notifications across email, SMS, Push, etc.
                 </Text>
               </ListItem>
               <ListItem>
