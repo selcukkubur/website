@@ -32,6 +32,11 @@ const urls = {
     "https://courier.auth.us-east-1.amazoncognito.com/oauth2/authorize?identity_provider=Google&redirect_uri=https://app.courier.com/login/callback&response_type=CODE&client_id=5f4fmec2qnuscp89qbt8nsuftj&scope=aws.cognito.signin.user.admin%20email%20openid%20profile",
   email_providers: "https://docs.courier.com/docs/email-integrations",
   lists: "https://docs.courier.com/docs/lists",
+  featuresTemplates: "/features/templates",
+  featuresRendering: "/features/rendering-engine",
+  featuresRouting: "/features/routing-engine",
+  featuresProfiles: "/features/preferences",
+  featuresAutomations: "/features/automations",
 };
 
 export let {
@@ -66,4 +71,9 @@ export let {
   security,
   googleOauth,
   email_providers,
+  featuresTemplates,
+  featuresRendering,
+  featuresRouting,
+  featuresProfiles,
+  featuresAutomations,
 } = urls;

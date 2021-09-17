@@ -32,13 +32,8 @@ export async function getStaticProps(context: any) {
 
 const Blog = ({ postDetails }: { postDetails: any }) => {
   if (!postDetails) return <p></p>;
-  const {
-    title,
-    excerpt,
-    headerImage,
-    metaTitle,
-    metaDescription,
-  } = postDetails;
+  const { title, excerpt, headerImage, metaTitle, metaDescription } =
+    postDetails;
 
   return (
     <>

@@ -20,7 +20,8 @@ const ContentfulExtractAssets = async ({
   isPreview: boolean;
 }) => {
   // Extract assets from markdown content and fetch their width/height
-  const assetRegex = /\(\/\/images\.(?:ctfassets\.net|contentful\.com)\/(?:.+?)\/(.+?)\/(?:.+?)\/(?:.+?)\)/g;
+  const assetRegex =
+    /\(\/\/images\.(?:ctfassets\.net|contentful\.com)\/(?:.+?)\/(.+?)\/(?:.+?)\/(?:.+?)\)/g;
   const matches = [...(contentMd || "").matchAll(assetRegex)];
   const assetIds = Array.from(new Set(matches.map((match) => match[1])));
   const assetsInfo = await Promise.all(

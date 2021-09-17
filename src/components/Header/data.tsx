@@ -1,5 +1,10 @@
 import {
   documentation,
+  featuresTemplates,
+  featuresRendering,
+  featuresRouting,
+  featuresProfiles,
+  featuresAutomations,
   blog,
   pricing,
   apiReference,
@@ -7,7 +12,6 @@ import {
   status,
   help,
   providers,
-  developersGuideNotifications,
 } from "constants/urls";
 
 export default [
@@ -16,8 +20,33 @@ export default [
   //     link: "/",
   // },
   {
-    title: "Providers",
-    link: providers,
+    title: "Product",
+    items: [
+      {
+        title: "Templates",
+        link: featuresTemplates,
+        icon: "DocumentationIcon",
+        className: "documentationIcon",
+      },
+      {
+        title: "Preferences",
+        link: featuresProfiles,
+        icon: "APIReferenceIcon",
+        className: "apiReferenceIcon",
+      },
+      {
+        title: "Routing",
+        link: featuresRouting,
+        icon: "CommunityIcon",
+        className: "communityIcon",
+      },
+      {
+        title: "Automations",
+        link: featuresAutomations,
+        icon: "StatusIcon",
+        className: "statusIcon",
+      },
+    ],
   },
   {
     title: "Developers",
@@ -62,10 +91,6 @@ export default [
         isExternalLink: true,
         icon: "HelpCenterIcon",
         className: "helpIcon",
-      },
-      {
-        title: "Developers Guide To Notifications",
-        link: developersGuideNotifications,
       },
     ],
   },

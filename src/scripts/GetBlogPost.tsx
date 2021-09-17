@@ -166,10 +166,8 @@ const GetBlogPost = async ({ slug, isPreview }: Props) => {
   const blogPostId = await getBlogPostId({ slug, isPreview });
   const blogPostDetails = await getBlogPostDetails({ blogPostId, isPreview });
   const mostPopularBlogs = await getMostPopularBlogs();
-  const {
-    name: tagName,
-    slug: tagSlug,
-  } = blogPostDetails.tagsCollection.items[0];
+  const { name: tagName, slug: tagSlug } =
+    blogPostDetails.tagsCollection.items[0];
   const moreBlogs = await GetSimilarBlogs({ slug: tagSlug, excludeSlug: slug });
   blogPostDetails.moreFromTagName = tagName;
   blogPostDetails.moreBlogs = moreBlogs;
