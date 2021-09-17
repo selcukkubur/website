@@ -219,7 +219,7 @@ const Form = () => {
                   as="button"
                   type="submit"
                 >
-                  {isSubmitting ? <Spinner /> : "Send Request"}
+                  {isSubmitting ? <Spinner /> : "Request Demo"}
                 </PurpleBgButton>
               </chakra.form>
             )}
