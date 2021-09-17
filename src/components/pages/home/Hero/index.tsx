@@ -1,12 +1,11 @@
-import { Box, Heading, Text, Button } from "@chakra-ui/react";
+import { Box, Heading, Text } from "@chakra-ui/react";
 import ButtonCTAGradient from "components/buttons/CTAGradient";
-import { signup, requestDemo } from "constants/urls";
+import { signup } from "constants/urls";
 import CodeBox from "components/common/CodeBox";
-import RightArrow from "components/icons/RightArrow";
 import codeExamples from "./codeExamples";
-import InternalLink from "components/InternalLink";
 import FeatureSection from "components/common/FeatureSection";
 import Experiment from "components/Experiment";
+import RequestDemoButton from "./RequestDemoButton";
 
 const Hero = () => (
   <Box
@@ -18,8 +17,16 @@ const Hero = () => (
     <FeatureSection
       graphicAlignment="right"
       graphic={
-        <Box mt={{ lg: -12 }} pt={5} pl={{ lg: 5 }} minH="460px" display="flex">
-          <CodeBox flexGrow={1} minW={0} examples={codeExamples} />
+        <Box h={{ lg: "600px" }}>
+          <Box
+            mt={{ lg: -12 }}
+            pt={5}
+            pl={{ lg: 5 }}
+            minH="460px"
+            display="flex"
+          >
+            <CodeBox flexGrow={1} minW={0} examples={codeExamples} />
+          </Box>
         </Box>
       }
       pt={{ base: "100px", lg: "160px" }}
@@ -35,6 +42,8 @@ const Hero = () => (
             Courier's API and Studio enable developers to deliver the right
             message to the right user at the right time.
           </Text>
+          <ButtonCTAGradient text="Get started for free" link={signup} />
+          <RequestDemoButton />
         </Experiment.Variant>
         <Experiment.Variant>
           <Heading as="h1" variant="h1">
@@ -45,39 +54,10 @@ const Hero = () => (
             reliable, scalable and observable as well as an end user experience
             that is helpful and respectful. That's why we built Courier.
           </Text>
+          <ButtonCTAGradient text="Get started for free" link={signup} />
+          <RequestDemoButton />
         </Experiment.Variant>
       </Experiment>
-      <ButtonCTAGradient text="Get started for free" link={signup} />
-      <div>
-        <Button
-          as={InternalLink}
-          to={requestDemo}
-          mt={4}
-          mb={{ lg: "120px" }}
-          variant="ghost"
-          rightIcon={<RightArrow />}
-          p={0}
-          transition="all .3s cubic-bezier(.645,.045,.355,1)"
-          _hover={{ bg: "transparent" }}
-          _active={{ bg: "transparent" }}
-          sx={{
-            span: {
-              transition: "all .3s ease-in-out",
-            },
-            ":hover span": {
-              transform: "translateX(3px)",
-            },
-          }}
-        >
-          <Text
-            transition="all .3s ease-in-out"
-            variant="body3medium"
-            fontWeight="600"
-          >
-            Request a Demo
-          </Text>
-        </Button>
-      </div>
     </FeatureSection>
   </Box>
 );

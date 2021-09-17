@@ -3,6 +3,7 @@ import ButtonCTAGradient from "components/buttons/CTAGradient";
 import Image from "next/image";
 import { signup } from "constants/urls";
 import FeatureSection from "components/common/FeatureSection";
+import RequestDemoButton from "components/pages/home/Hero/RequestDemoButton";
 
 const Hero = () => (
   <FeatureSection
@@ -41,6 +42,8 @@ const Hero = () => (
     </Box>
 
     <ButtonCTAGradient text="Get started for free" link={signup} />
+
+    <RequestDemoButton />
   </FeatureSection>
 );
 
