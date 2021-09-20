@@ -1,96 +1,77 @@
 import {
   documentation,
   featuresTemplates,
-  featuresRendering,
   featuresRouting,
   featuresProfiles,
   featuresAutomations,
   blog,
   pricing,
-  apiReference,
   discord,
-  status,
   help,
-  providers,
+  about,
 } from "constants/urls";
 
+import TemplatesIcon from "./icons/Templates";
+import PreferencesIcon from "./icons/Preferences";
+import RoutingIcon from "./icons/Routing";
+import AutomationsIcon from "./icons/Automations";
+import StatusIcon from "./icons/Status";
+import CommunityIcon from "./icons/Community";
+import HelpCenterIcon from "./icons/HelpCenter";
+
 export default [
-  // {
-  //     title: "Features",
-  //     link: "/",
-  // },
+  {
+    title: "Blog",
+    link: blog,
+  },
+  {
+    title: "Documentation",
+    link: documentation,
+  },
   {
     title: "Product",
     items: [
       {
         title: "Templates",
         link: featuresTemplates,
-        icon: "DocumentationIcon",
-        className: "documentationIcon",
+        icon: TemplatesIcon,
       },
       {
         title: "Preferences",
         link: featuresProfiles,
-        icon: "APIReferenceIcon",
-        className: "apiReferenceIcon",
+        icon: PreferencesIcon,
       },
       {
         title: "Routing",
         link: featuresRouting,
-        icon: "CommunityIcon",
-        className: "communityIcon",
+        icon: RoutingIcon,
       },
       {
         title: "Automations",
         link: featuresAutomations,
-        icon: "StatusIcon",
-        className: "statusIcon",
-      },
-    ],
-  },
-  {
-    title: "Developers",
-    items: [
-      {
-        title: "Documentation",
-        link: documentation,
-        isExternalLink: true,
-        icon: "DocumentationIcon",
-        className: "documentationIcon",
-      },
-      {
-        title: "API Reference",
-        link: apiReference,
-        isExternalLink: true,
-        icon: "APIReferenceIcon",
-        className: "apiReferenceIcon",
-      },
-      {
-        title: "Community",
-        link: discord,
-        isExternalLink: true,
-        icon: "CommunityIcon",
-        className: "communityIcon",
-      },
-      {
-        title: "Status",
-        link: status,
-        isExternalLink: true,
-        icon: "StatusIcon",
-        className: "statusIcon",
+        icon: AutomationsIcon,
       },
     ],
   },
   {
     title: "Resources",
     items: [
-      { title: "Blog", link: blog, icon: "BlogIcon", className: "blogIcon" },
+      {
+        title: "About",
+        link: about,
+        icon: CommunityIcon,
+      },
       {
         title: "Help Center",
         link: help,
         isExternalLink: true,
-        icon: "HelpCenterIcon",
-        className: "helpIcon",
+        icon: HelpCenterIcon,
+      },
+      {
+        title: "Discord",
+        link: discord,
+        isExternalLink: true,
+        icon: StatusIcon,
       },
     ],
   },

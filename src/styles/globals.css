@@ -23,31 +23,6 @@
   font-display: swap;
 }
 
-/* Header Icons -- onHover */
-.apiReferenceIcon:hover > #apiReferenceIcon > g > rect.gradientIcon {
-  fill: url(#apiReferenceIconGradient);
-}
-
-.statusIcon:hover > #statusIcon > g > rect.gradientIcon {
-  fill: url(#statusIconGradient);
-}
-
-.communityIcon:hover > #communityIcon > g > rect.gradientIcon {
-  fill: url(#communityIconGradient);
-}
-
-.documentationIcon:hover > #documentationIcon > g > rect.gradientIcon {
-  fill: url(#documentationIconGradient);
-}
-
-.blogIcon:hover > #blogIcon > g > rect.gradientIcon {
-  fill: url(#blogIconGradient);
-}
-
-.helpIcon:hover > #helpIcon > g > rect.gradientIcon {
-  fill: url(#helpIconGradient);
-}
-
 .slick-arrow {
   display: none !important;
 }

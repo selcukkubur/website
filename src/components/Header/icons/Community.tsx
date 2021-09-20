@@ -1,7 +1,5 @@
-import { Icon } from "@chakra-ui/react";
-
 const CommunityIcon = () => (
-  <Icon
+  <svg
     width="28px"
     height="28px"
     viewBox="0 0 28 28"
@@ -26,22 +24,15 @@ const CommunityIcon = () => (
     </mask>
     <g mask="url(#maskId)">
       <rect width="28" height="28" fill="currentColor"></rect>
-      <rect
-        className="gradientIcon"
-        width="28"
-        height="28"
-        x="0"
-        y="0"
-        fill="#2C1338"
-      ></rect>
+      <rect width="28" height="28" x="0" y="0" fill="currentColor"></rect>
     </g>
     <defs>
-      <linearGradient id="communityIconGradient" gradientUnits="userSpaceOnUse">
+      <linearGradient id="gradient" gradientUnits="userSpaceOnUse">
         <stop offset="0" stopColor="#FF5E5E"></stop>
         <stop offset="1" stopColor="#9121C2"></stop>
       </linearGradient>
     </defs>
-  </Icon>
+  </svg>
 );
 
 export default CommunityIcon;

@@ -9,12 +9,6 @@ import {
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import MetaLink from "components/MetaLink";
-import DocumentationIcon from "./icons/Documentation";
-import APIReferenceIcon from "./icons/APIReference";
-import HelpCenterIcon from "./icons/HelpCenter";
-import CommunityIcon from "./icons/Community";
-import StatusIcon from "./icons/Status";
-import BlogIcon from "./icons/Blog";
 import data from "./data";
 
 interface CustomMenuProps {
@@ -34,34 +28,16 @@ const DesktopMenu = () => {
       fontWeight={500}
       fontSize="13px"
       lineHeight={"19.5px"}
-      _hover={{ backgroundColor: "rgba(44,19,56,.04)" }}
+      _hover={{
+        backgroundColor: "rgba(44,19,56,.04)",
+        "[fill=currentColor]": { fill: "url('#gradient')" },
+        "[stroke=currentColor]": { stroke: "url('#gradient')" },
+      }}
       style={{ transition: "all .3s ease-in-out" }}
     >
       {children}
     </MenuItem>
   );
-
-  const ChildMenuIcon = ({ iconName }: { iconName: string }) => {
-    if (iconName === "DocumentationIcon") {
-      return <DocumentationIcon />;
-    }
-    if (iconName === "APIReferenceIcon") {
-      return <APIReferenceIcon />;
-    }
-    if (iconName === "CommunityIcon") {
-      return <CommunityIcon />;
-    }
-    if (iconName === "StatusIcon") {
-      return <StatusIcon />;
-    }
-    if (iconName === "BlogIcon") {
-      return <BlogIcon />;
-    }
-    if (iconName === "HelpCenterIcon") {
-      return <HelpCenterIcon />;
-    }
-    return <p />;
-  };
 
   return (
     <Flex display={{ base: "none", lg: "flex" }}>
@@ -95,13 +71,9 @@ const DesktopMenu = () => {
                     }
                     key={childMenu.title}
                   >
-                    <CustomMenuItem
-                      py={3}
-                      className={childMenu.className}
-                      menuTitle={childMenu.title}
-                    >
-                      <ChildMenuIcon iconName={childMenu.icon} /> &nbsp;{" "}
-                      {childMenu.title}
+                    <CustomMenuItem py={3} menuTitle={childMenu.title}>
+                      {childMenu.icon && React.createElement(childMenu.icon)}{" "}
+                      &nbsp; {childMenu.title}
                     </CustomMenuItem>
                   </MetaLink>
                 ))}
