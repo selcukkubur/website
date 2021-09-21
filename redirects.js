@@ -30,6 +30,12 @@ module.exports = [
     permanent: true,
   },
   {
+    source: "/shellhacks",
+    destination:
+      "https://app.courier.com/signup?utm_campaign=Developer%20Relations&utm_source=shellhacks&utm_medium=signup",
+    permanent: true,
+  },
+  {
     source: "/careers",
     destination: "https://jobs.lever.co/trycourier/",
     permanent: true,
