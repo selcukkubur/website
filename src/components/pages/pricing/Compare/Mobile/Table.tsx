@@ -88,7 +88,7 @@ const CompareTableMobile = ({ planNameKey }: { planNameKey: PlanNameType }) => {
                 <Text variant="body3" color="rgba(0,0,0,.72)">
                   {feature.label}
                 </Text>
-                {feature.tag && (
+                {/* {feature.tag && (
                   <Tag
                     sx={{
                       background: "rgba(145,33,194,.16)",
@@ -105,11 +105,11 @@ const CompareTableMobile = ({ planNameKey }: { planNameKey: PlanNameType }) => {
                   >
                     SOON
                   </Tag>
-                )}
+                )} */}
               </Flex>
               <Box alignSelf="center">
                 <RightText planNameKey={planNameKey as PlanNameType}>
-                  {feature[planNameKey]}
+                  {feature[planNameKey as keyof typeof feature]}
                 </RightText>
               </Box>
             </Flex>

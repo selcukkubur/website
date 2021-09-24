@@ -18,7 +18,6 @@ type PlanName =
 const plansData = [
   { title: "Developer", planNameKey: "developerData" },
   { title: "Starter", planNameKey: "starterData" },
-  { title: "Growth", planNameKey: "growthData" },
   { title: "Enterprise", planNameKey: "enterpriseData" },
 ];
 

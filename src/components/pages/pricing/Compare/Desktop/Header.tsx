@@ -14,7 +14,7 @@ const Header = () => (
       }}
     >
       <Box w={"30%"} />
-      <Box w={"17.5%"}>
+      <Box w={"25%"}>
         <Heading variant="subh2">Developer</Heading>
         <Flex my={"20px"}>
           <Heading
@@ -38,8 +38,8 @@ const Header = () => (
           </Text>
         </Flex>
       </Box>
-      <Box w={"17.5%"}>
-        <Heading variant="subh2">Starter</Heading>
+      <Box w={"25%"}>
+        <Heading variant="subh2">Business</Heading>
         <Flex my={"20px"}>
           <Heading
             fontSize={{ base: "32px", md: "24px", xl: "32px" }}
@@ -53,22 +53,7 @@ const Header = () => (
           </Text>
         </Flex>
       </Box>
-      <Box w={"17.5%"}>
-        <Heading variant="subh2">Growth</Heading>
-        <Flex my={"20px"}>
-          <Heading
-            fontSize={{ base: "32px", md: "24px", xl: "32px" }}
-            fontWeight="700"
-            lineHeight={{ base: "32px", md: "24px", xl: "32px" }}
-          >
-            $2,000
-          </Heading>
-          <Text fontSize={{ base: "18px", md: "16px", xl: "18px" }} pt={"5px"}>
-            / month
-          </Text>
-        </Flex>
-      </Box>
-      <Box w={"17.5%"}>
+      <Box w={"25%"}>
         <Heading variant="subh2">Enterprise</Heading>
         <Text variant="body2" mt={"27px"} mb={"23.5px"}>
           Custom pricing
@@ -77,7 +62,7 @@ const Header = () => (
     </Flex>
     <Flex>
       <Box w={"30%"} />
-      <Box w={"17.5%"}>
+      <Box w={"25%"}>
         <DarkGradientBg
           width={{ base: "144px", xl: "180px" }}
           height={"40px"}
@@ -86,7 +71,7 @@ const Header = () => (
           Try for free
         </DarkGradientBg>
       </Box>
-      <Box w={"17.5%"}>
+      <Box w={"25%"}>
         <PurpleBgButton
           width={{ base: "144px", xl: "180px" }}
           height={"40px"}
@@ -95,16 +80,7 @@ const Header = () => (
           Try for free
         </PurpleBgButton>
       </Box>
-      <Box w={"17.5%"}>
-        <PurpleBgButton
-          width={{ base: "144px", xl: "180px" }}
-          height={"40px"}
-          link={"/"}
-        >
-          Try for free
-        </PurpleBgButton>
-      </Box>
-      <Box w={"17.5%"}>
+      <Box w={"25%"}>
         <WhiteBgSimple
           width={{ base: "144px", xl: "180px" }}
           height={"40px"}

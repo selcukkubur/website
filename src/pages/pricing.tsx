@@ -26,6 +26,7 @@ const Pricing = () => {
       </Box>
       <Plans />
       <TrustedBy />
+      <Compare />
       <FAQ />
       <Footer />
     </>

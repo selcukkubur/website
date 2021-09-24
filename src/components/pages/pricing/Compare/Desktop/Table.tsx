@@ -61,7 +61,7 @@ const CompareTable = () => (
               <Text variant="body3" color="rgba(0,0,0,.72)">
                 {feature.label}
               </Text>
-              {feature.tag && (
+              {/* {feature.tag && (
                 <Tag
                   sx={{
                     background: "rgba(145,33,194,.16)",
@@ -78,18 +78,15 @@ const CompareTable = () => (
                 >
                   SOON
                 </Tag>
-              )}
+              )} */}
             </Flex>
-            <Box w={"17.5%"} alignSelf="center">
+            <Box w={"25%"} alignSelf="center">
               <RightText rowIndex={1}>{feature.developerData}</RightText>
             </Box>
-            <Box w={"17.5%"} alignSelf="center">
+            <Box w={"25%"} alignSelf="center">
               <RightText rowIndex={2}>{feature.starterData}</RightText>
             </Box>
-            <Box w={"17.5%"} alignSelf="center">
-              <RightText rowIndex={3}>{feature.growthData}</RightText>
-            </Box>
-            <Box w={"17.5%"} alignSelf="center">
+            <Box w={"25%"} alignSelf="center">
               <RightText rowIndex={4}>{feature.enterpriseData}</RightText>
             </Box>
           </Flex>

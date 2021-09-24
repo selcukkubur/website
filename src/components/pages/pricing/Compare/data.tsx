@@ -3,46 +3,31 @@ export default [
     title: "Platform",
     features: [
       {
-        label: "Team members",
-        developerData: "Unlimited",
-        starterData: "Unlimited",
-        growthData: "Unlimited",
-        enterpriseData: "Unlimited",
-      },
-      {
-        label: "Notification templates",
-        tooltipInfo: `Create an unlimited number of notifications 
-          templates, with support for as many channels as you need.`,
-        developerData: "Unlimited",
-        starterData: "Unlimited",
-        growthData: "Unlimited",
-        enterpriseData: "Unlimited",
-      },
-      {
-        label: "Channels & integrations",
-        tooltipInfo: `Create an unlimited number of notifications 
-          templates, with support for as many channels as you need.`,
-        developerData: "Unlimited",
-        starterData: "Unlimited",
-        growthData: "Unlimited",
-        enterpriseData: "Unlimited",
-      },
-      {
-        label: "API access & client libraries",
-        tooltipInfo: `Create an unlimited number of notifications 
-          templates, with support for as many channels as you need.`,
-        developerData: "selected",
+        label: "Removal of 'Powered By Courier' footer",
+        developerData: "nodata",
         starterData: "selected",
-        growthData: "selected",
         enterpriseData: "selected",
       },
       {
-        label: "Environments",
+        label: "Multiple Outbound Webhooks",
         tooltipInfo: `Create an unlimited number of notifications 
           templates, with support for as many channels as you need.`,
-        developerData: "selected",
-        starterData: "selected",
-        growthData: "selected",
+        developerData: "nodata",
+        starterData: "nodata",
+        enterpriseData: "selected",
+      },
+      {
+        label: "End-to-end Testing Capability",
+        tooltipInfo: `Test notification workflows without actually triggering send from the provider.`,
+        developerData: "nodata",
+        starterData: "nodata",
+        enterpriseData: "selected",
+      },
+      {
+        label: "Internationalization",
+        tooltipInfo: `Test notification workflows without actually triggering send from the provider.`,
+        developerData: "nodata",
+        starterData: "nodata",
         enterpriseData: "selected",
       },
     ],
@@ -56,7 +41,6 @@ export default [
           templates, with support for as many channels as you need.`,
         developerData: "selected",
         starterData: "selected",
-        growthData: "selected",
         enterpriseData: "selected",
       },
       {
@@ -65,70 +49,63 @@ export default [
           templates, with support for as many channels as you need.`,
         developerData: "selected",
         starterData: "selected",
-        growthData: "selected",
         enterpriseData: "selected",
       },
       {
         label: "Whitelabeling",
         tooltipInfo: `Create an unlimited number of notifications 
           templates, with support for as many channels as you need.`,
-        developerData: "10 custom brands",
-        starterData: "Unlimited",
-        growthData: "Unlimited",
-        enterpriseData: "Unlimited",
-      },
-    ],
-  },
-  {
-    title: "Automation & workflows",
-    features: [
-      {
-        label: "Lists",
-        tooltipInfo: `Create an unlimited number of notifications 
-          templates, with support for as many channels as you need.`,
         developerData: "nodata",
-        starterData: "selected",
-        growthData: "selected",
-        enterpriseData: "selected",
-      },
-      {
-        label: "Batch sends",
-        tooltipInfo: `Create an unlimited number of notifications 
-          templates, with support for as many channels as you need.`,
-        developerData: "selected",
-        starterData: "selected",
-        growthData: "selected",
-        enterpriseData: "selected",
-      },
-      {
-        label: "Time delayed sends",
-        tooltipInfo: `Create an unlimited number of notifications 
-          templates, with support for as many channels as you need.`,
-        developerData: "selected",
-        starterData: "selected",
-        growthData: "selected",
-        enterpriseData: "selected",
-      },
-      {
-        label: "User preferences management",
-        tooltipInfo: `Create an unlimited number of notifications 
-          templates, with support for as many channels as you need.`,
-        developerData: "selected",
-        starterData: "selected",
-        growthData: "selected",
-        enterpriseData: "selected",
-      },
-      {
-        label: "Intelligent retries",
-        tooltipInfo: `Create an unlimited number of notifications 
-          templates, with support for as many channels as you need.`,
-        developerData: "selected",
-        starterData: "selected",
-        growthData: "selected",
+        starterData: "nodata",
         enterpriseData: "selected",
       },
     ],
   },
+  // {
+  //   title: "Automation & workflows",
+  //   features: [
+  //     {
+  //       label: "Lists",
+  //       tooltipInfo: `Create an unlimited number of notifications
+  //         templates, with support for as many channels as you need.`,
+  //       developerData: "nodata",
+  //       starterData: "selected",
+  //       enterpriseData: "selected",
+  //     },
+  //     {
+  //       label: "Batch sends",
+  //       tooltipInfo: `Create an unlimited number of notifications
+  //         templates, with support for as many channels as you need.`,
+  //       developerData: "selected",
+  //       starterData: "selected",
+  //       enterpriseData: "selected",
+  //     },
+  //     {
+  //       label: "Time delayed sends",
+  //       tooltipInfo: `Create an unlimited number of notifications
+  //         templates, with support for as many channels as you need.`,
+  //       developerData: "selected",
+  //       starterData: "selected",
+  //       enterpriseData: "selected",
+  //     },
+  //     {
+  //       label: "User preferences management",
+  //       tooltipInfo: `Create an unlimited number of notifications
+  //         templates, with support for as many channels as you need.`,
+  //       developerData: "selected",
+  //       starterData: "selected",
+  //       enterpriseData: "selected",
+  //     },
+  //     {
+  //       label: "Intelligent retries",
+  //       tooltipInfo: `Create an unlimited number of notifications
+  //         templates, with support for as many channels as you need.`,
+  //       developerData: "selected",
+  //       starterData: "selected",
+  //       enterpriseData: "selected",
+  //     },
+  //   ],
+  // },
   {
     title: "Logs & analytics",
     features: [
@@ -138,7 +115,6 @@ export default [
           templates, with support for as many channels as you need.`,
         developerData: "selected",
         starterData: "selected",
-        growthData: "selected",
         enterpriseData: "selected",
       },
       {
@@ -147,7 +123,6 @@ export default [
           templates, with support for as many channels as you need.`,
         developerData: "selected",
         starterData: "selected",
-        growthData: "selected",
         enterpriseData: "selected",
       },
       {
@@ -156,7 +131,6 @@ export default [
           templates, with support for as many channels as you need.`,
         developerData: "selected",
         starterData: "selected",
-        growthData: "selected",
         enterpriseData: "selected",
       },
       {
@@ -165,7 +139,6 @@ export default [
           templates, with support for as many channels as you need.`,
         developerData: "72 hours",
         starterData: "7 days",
-        growthData: "30 days",
         enterpriseData: "Custom",
       },
     ],
@@ -179,49 +152,26 @@ export default [
           templates, with support for as many channels as you need.`,
         developerData: "selected",
         starterData: "selected",
-        growthData: "selected",
         enterpriseData: "selected",
       },
       {
         label: "Single-sign on (SSO)",
         tooltipInfo: `Create an unlimited number of notifications 
           templates, with support for as many channels as you need.`,
-        developerData: "selected",
-        starterData: "selected",
-        growthData: "selected",
-        enterpriseData: "selected",
-      },
-      {
-        label: "Domain allow list",
-        tooltipInfo: `Create an unlimited number of notifications 
-          templates, with support for as many channels as you need.`,
-        developerData: "selected",
-        starterData: "selected",
-        growthData: "selected",
+        developerData: "nodata",
+        starterData: "nodata",
         enterpriseData: "selected",
       },
       {
         label: "Role-based access control",
         developerData: "nodata",
         starterData: "nodata",
-        growthData: "selected",
-        enterpriseData: "selected",
-      },
-      {
-        label: "Custom roles & permissions",
-        tooltipInfo: `Create an unlimited number of notifications 
-          templates, with support for as many channels as you need.`,
-        tag: "SOON",
-        developerData: "nodata",
-        starterData: "nodata",
-        growthData: "nodata",
         enterpriseData: "selected",
       },
       {
         label: "Data encryption",
         developerData: "selected",
         starterData: "selected",
-        growthData: "selected",
         enterpriseData: "selected",
       },
     ],
@@ -231,9 +181,8 @@ export default [
     features: [
       {
         label: "SOC 2 Type I certification",
-        developerData: "selected",
-        starterData: "selected",
-        growthData: "selected",
+        developerData: "nodata",
+        starterData: "nodata",
         enterpriseData: "selected",
       },
       {
@@ -242,7 +191,6 @@ export default [
           templates, with support for as many channels as you need.`,
         developerData: "selected",
         starterData: "selected",
-        growthData: "Option to sign DPA",
         enterpriseData: "Option to sign DPA",
       },
       {
@@ -251,7 +199,22 @@ export default [
           templates, with support for as many channels as you need.`,
         developerData: "nodata",
         starterData: "nodata",
-        growthData: "selected",
+        enterpriseData: "selected",
+      },
+      {
+        label: "Custom template publication policies and workflows",
+        tooltipInfo: `Create an unlimited number of notifications 
+          templates, with support for as many channels as you need.`,
+        developerData: "nodata",
+        starterData: "nodata",
+        enterpriseData: "selected",
+      },
+      {
+        label: "Custom data retention policy",
+        tooltipInfo: `Create an unlimited number of notifications 
+          templates, with support for as many channels as you need.`,
+        developerData: "nodata",
+        starterData: "nodata",
         enterpriseData: "selected",
       },
     ],
@@ -265,7 +228,6 @@ export default [
           templates, with support for as many channels as you need.`,
         developerData: "selected",
         starterData: "selected",
-        growthData: "selected",
         enterpriseData: "selected",
       },
       {
@@ -274,28 +236,39 @@ export default [
           templates, with support for as many channels as you need.`,
         developerData: "nodata",
         starterData: "selected",
-        growthData: "selected",
         enterpriseData: "selected",
       },
+      {
+        label: "Dedicated Slack channel",
+        tooltipInfo: `Create an unlimited number of notifications 
+          templates, with support for as many channels as you need.`,
+        developerData: "nodata",
+        starterData: "nodata",
+        enterpriseData: "selected",
+      },
+
       {
         label: "Dedicated account manager",
         developerData: "nodata",
         starterData: "nodata",
-        growthData: "selected",
         enterpriseData: "selected",
       },
       {
         label: "Onboarding & training",
         developerData: "nodata",
         starterData: "nodata",
-        growthData: "nodata",
+        enterpriseData: "selected",
+      },
+      {
+        label: "Guaranteed support SLA",
+        developerData: "nodata",
+        starterData: "nodata",
         enterpriseData: "selected",
       },
       {
         label: "Guaranteed uptime SLA",
         developerData: "nodata",
         starterData: "nodata",
-        growthData: "selected",
         enterpriseData: "selected",
       },
     ],
