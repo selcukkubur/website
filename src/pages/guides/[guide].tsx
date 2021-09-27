@@ -6,13 +6,30 @@ import { NextSeo } from "next-seo";
 import GetGuideData from "scripts/GetGuideData";
 import heroPattern from "../../../public/images/pages/guides/hero-pattern.svg";
 import Hero from "components/pages/guides/Hero";
+import getAllGuides from "scripts/GetAllGuides";
 
-export async function getServerSideProps(context: any) {
+export async function getStaticPaths() {
+  const allGuides = await getAllGuides();
+  const allGuidesPaths = [];
+  for (let index = 0; index < allGuides.length; index++) {
+    const guides = allGuides[index];
+    allGuidesPaths.push({
+      params: { guide: guides.fields.slug },
+    });
+  }
+  return {
+    paths: allGuidesPaths,
+    fallback: true,
+  };
+}
+
+export async function getStaticProps(context: any) {
   const { params } = context;
   const { guide } = params;
   const data = await GetGuideData({ slug: guide, isPreview: false });
   return {
     props: { data },
+    revalidate: 60,
   };
 }
 
