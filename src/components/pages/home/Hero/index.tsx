@@ -33,31 +33,16 @@ const Hero = () => (
       pb={{ base: 12, lg: 2 }}
       color="white"
     >
-      <Experiment name="Homepage Hero Copy">
-        <Experiment.Variant>
-          <Heading as="h1" variant="h1">
-            API For App-To-User Communication
-          </Heading>
-          <Text mt="29px" mb="32px" variant="body1">
-            Courier's API and Studio enable developers to deliver the right
-            message to the right user at the right time.
-          </Text>
-          <ButtonCTAGradient text="Get started for free" link={signup} />
-          <RequestDemoButton />
-        </Experiment.Variant>
-        <Experiment.Variant>
-          <Heading as="h1" variant="h1">
-            Product Notifications Made Easy
-          </Heading>
-          <Text mt="29px" mb="32px" variant="body1">
-            Notifications are hard. They require infrastructure that is
-            reliable, scalable and observable as well as an end user experience
-            that is helpful and respectful. That's why we built Courier.
-          </Text>
-          <ButtonCTAGradient text="Get started for free" link={signup} />
-          <RequestDemoButton />
-        </Experiment.Variant>
-      </Experiment>
+      <Heading as="h1" variant="h1">
+        Product Notifications Made Easy
+      </Heading>
+      <Text mt="29px" mb="32px" variant="body1">
+        Notifications are hard. They require infrastructure that is reliable,
+        scalable and observable as well as an end user experience that is
+        helpful and respectful. That's why we built Courier.
+      </Text>
+      <ButtonCTAGradient text="Get started for free" link={signup} />
+      <RequestDemoButton />
     </FeatureSection>
   </Box>
 );
