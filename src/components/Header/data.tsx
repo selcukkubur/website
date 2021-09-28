@@ -29,7 +29,7 @@ export default [
     link: documentation,
   },
   {
-    title: "Product",
+    title: "Features",
     items: [
       {
         title: "Templates",
