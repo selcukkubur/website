@@ -25,16 +25,15 @@ const Web = () => (
           Visual workflow builder
         </Heading>
         <Text variant="body1" mt={6} color="secondary.darkAlpha">
-          Users have the option of building out their workflows from within the
-          Courier UI. No programming knowledge needed and no need to redeploy
-          your app.
+          Build out complex notification workflows in minutes with a drag-and-drop builder.
+          No programming knowledge needed and no need to redeploy your app.
         </Text>
         <UnorderedList mt={4} ml={7} color="secondary.darkAlpha">
           <ListItem>
-            <Text variant="body1">Visual builder feature 1</Text>
+            <Text variant="body1">Use predefined steps and automations templates or create your own</Text>
           </ListItem>
           <ListItem>
-            <Text variant="body1">Visual builder feature 2</Text>
+            <Text variant="body1">Trigger automations off of Segment events or directly from an API call</Text>
           </ListItem>
         </UnorderedList>
       </Box>
