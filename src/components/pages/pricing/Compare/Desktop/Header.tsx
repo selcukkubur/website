@@ -46,10 +46,10 @@ const Header = () => (
             fontWeight="700"
             lineHeight={{ base: "32px", md: "24px", xl: "32px" }}
           >
-            $99
+            $.005
           </Heading>
           <Text fontSize={{ base: "18px", md: "16px", xl: "18px" }} pt={"5px"}>
-            / month
+            / message
           </Text>
         </Flex>
       </Box>
