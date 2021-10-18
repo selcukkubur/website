@@ -39,22 +39,20 @@ const Graphic = () => {
 
           <Box flex={1} mb={8}>
             <Heading as="h1" variant="h2" mb={6}>
-              Product Notifications Made Easy
+              Product notifications done right
             </Heading>
             <UnorderedList ml={7}>
               <ListItem>
                 <Text variant="body2">
-                  Programmatically deliver notifications across email, SMS, Push, etc.
+                  An API for every notification channel and use case
                 </Text>
               </ListItem>
               <ListItem>
-                <Text variant="body2">
-                  Edit notification templates without touching code
-                </Text>
+                <Text variant="body2">Security and compliance built in</Text>
               </ListItem>
               <ListItem>
                 <Text variant="body2">
-                  Create powerful routing and workflow rules
+                  Scale to billions of notifications per month
                 </Text>
               </ListItem>
             </UnorderedList>
