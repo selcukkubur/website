@@ -1,13 +1,17 @@
 import { Text, Button } from "@chakra-ui/react";
-import { requestDemo } from "constants/urls";
 import RightArrow from "components/icons/RightArrow";
 import InternalLink from "components/InternalLink";
 
-const RequestDemoButton = () => (
+interface CTASecondaryProps {
+  text: string;
+  link: string;
+}
+
+const CTASecondary = ({ text, link }: CTASecondaryProps) => (
   <div>
     <Button
       as={InternalLink}
-      to={requestDemo}
+      to={link}
       mt={4}
       variant="ghost"
       rightIcon={<RightArrow />}
@@ -29,10 +33,10 @@ const RequestDemoButton = () => (
         variant="body3medium"
         fontWeight="600"
       >
-        Request a Demo
+        {text}
       </Text>
     </Button>
   </div>
 );
 
-export default RequestDemoButton;
+export default CTASecondary;

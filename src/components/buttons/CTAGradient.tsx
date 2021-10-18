@@ -17,7 +17,7 @@ const CTAGradient = ({ text, link, marginBottom }: Props) => {
         background="#FFFFFF"
         color="linear-gradient(270deg, #9121C2 0%, #FF5E5E 99.38%, #9121C2 151.08%, #FF5E5E 200.75%)"
         fontSize="14px"
-        width="208px"
+        px="24px"
         height="50px"
         mb={marginBottom ? marginBottom : "0"}
         sx={{

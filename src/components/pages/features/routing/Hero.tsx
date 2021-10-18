@@ -1,9 +1,9 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
 import ButtonCTAGradient from "components/buttons/CTAGradient";
+import ButtonCTASecondary from "components/buttons/CTASecondary";
 import Image from "next/image";
-import { signup } from "constants/urls";
+import { signup, requestDemo } from "constants/urls";
 import FeatureSection from "components/common/FeatureSection";
-import RequestDemoButton from "components/pages/home/Hero/RequestDemoButton";
 
 const Hero = () => (
   <FeatureSection
@@ -43,7 +43,7 @@ const Hero = () => (
 
     <ButtonCTAGradient text="Get started for free" link={signup} />
 
-    <RequestDemoButton />
+    <ButtonCTASecondary text="Request a Demo" link={requestDemo} />
   </FeatureSection>
 );
 

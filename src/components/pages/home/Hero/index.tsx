@@ -1,11 +1,10 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
 import ButtonCTAGradient from "components/buttons/CTAGradient";
-import { signup } from "constants/urls";
+import ButtonCTASecondary from "components/buttons/CTASecondary";
+import { signup, requestDemo } from "constants/urls";
 import CodeBox from "components/common/CodeBox";
 import codeExamples from "./codeExamples";
 import FeatureSection from "components/common/FeatureSection";
-import Experiment from "components/Experiment";
-import RequestDemoButton from "./RequestDemoButton";
 
 const Hero = () => (
   <Box
@@ -42,7 +41,7 @@ const Hero = () => (
         helpful and respectful. That's why we built Courier.
       </Text>
       <ButtonCTAGradient text="Get started for free" link={signup} />
-      <RequestDemoButton />
+      <ButtonCTASecondary text="Request a Demo" link={requestDemo} />
     </FeatureSection>
   </Box>
 );
