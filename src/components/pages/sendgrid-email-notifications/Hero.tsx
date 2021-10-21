@@ -40,7 +40,7 @@ const Hero = () => (
 
         <Text mt={6} mb={10} variant="body1" color="whiteAlpha.900">
           Courier integrates directly with SendGrid to provide a complete email
-          notification sysyem. Simply plugin your SendGrid API key and
+          notification system. Simply plugin your SendGrid API key and
           supercharge your notification system with templates, unified logs,
           automated sequences, and more.
         </Text>
