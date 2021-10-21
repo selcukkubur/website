@@ -1,14 +1,19 @@
 module.exports = [
-    {
-        source: '/(.*)?', // Matches all pages
-        headers: [
-            {
-                key: 'X-Frame-Options',
-                value: 'SAMEORIGIN',
-            },
-            {
-                key: 'Content-Security-Policy',
-                value: "base-uri 'self'; \
+  {
+    source: "/(.*)?", // Matches all pages
+    headers: [
+      {
+        key: "Access-Control-Allow-Origin",
+        value: "https://www.courier.com",
+      },
+      {
+        key: "X-Frame-Options",
+        value: "SAMEORIGIN",
+      },
+      {
+        key: "Content-Security-Policy",
+        value:
+          "base-uri 'self'; \
                 connect-src 'self' api.segment.io api-iam.intercom.io forms.hubspot.com www.google-analytics.com heapanalytics.com wss://nexus-websocket-a.intercom.io api.hubapi.com www.google.com stats.g.doubleclick.net api.hsforms.com vitals.vercel-insights.com; \
                 default-src 'self' api-iam.intercom.io api.segment.io cdn.heapanalytics.com cdn.segment.io fonts.googleapis.com fonts.gstatic.com forms.hubspot.com heapanalytics.com  js-na1.hs-scripts.com js.hs-analytics.net js.hs-banner.com js.hscollectedforms.net js.intercomcdn.com self track.hubspot.com widget.intercom.io www.google-analytics.com www.googletagmanager.com null images.ctfassets.net wss://nexus-websocket-a.intercom.io api.hubapi.com connect.facebook.net js.hsadspixel.net px.ads.linkedin.com snap.licdn.com www.facebook.com www.google.com www.google.dk downloads.intercomcdn.com messenger-apps.intercom.io static.intercomassets.com www.google.co.in www.google.co.nz www.google.ca www.google.com.br www.google.com.do www.google.es www.youtube.com wss www.google.fr www.google.hu www.google.lu www.linkedin.com; \
                 font-src 'self' data: fonts.gstatic.com js.intercomcdn.com www.slant.co storage.googleapis.com; \
@@ -23,8 +28,8 @@ module.exports = [
                 script-src-elem 'self' 'unsafe-inline' widget.intercom.io www.google-analytics.com www.googletagmanager.com cdn.heapanalytics.com cdn.segment.com js-na1.hs-scripts.com js.hs-analytics.net js.hs-banner.com js.hscollectedforms.net js.intercomcdn.com js.hsadspixel.net snap.licdn.com www.google.com analytics.twitter.com static.ads-twitter.com www.googleadservices.com googleads.g.doubleclick.net stats.g.doubleclick.net js.hsleadflows.net vitals.vercel-insights.com; \
                 style-src 'self' 'unsafe-inline' fonts.googleapis.com; \
                 style-src-elem 'self' 'unsafe-inline' fonts.googleapis.com; \
-                worker-src 'self';"
-            }
-        ]
-    }
-]
+                worker-src 'self';",
+      },
+    ],
+  },
+];
