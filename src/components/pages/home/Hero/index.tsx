@@ -36,7 +36,7 @@ const Hero = () => (
       <Experiment name="Homepage Hero Copy">
         <Experiment.Variant>
           <Heading as="h1" variant="h1">
-            Product Notifications Made Easy
+            Production ready product notification system
           </Heading>
 
           <Text mt="29px" mb="32px" variant="body1">
@@ -50,7 +50,7 @@ const Hero = () => (
 
         <Experiment.Variant>
           <Heading as="h1" variant="h1">
-            Production ready product notification system
+            Product Notifications Made Easy
           </Heading>
 
           <Text mt="29px" mb="32px" variant="body1">
