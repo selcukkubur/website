@@ -33,7 +33,7 @@ const ApiCalls = () => (
         </Heading>
         <Text mt={6} mb={8} variant="body1" color="secondary.darkAlpha">
           Courier's API allows developers to set routing logic from within the
-          API call, providing fine-grainde control over your user's messaging
+          API call, providing fine-grain control over your user's messaging
           experience.
         </Text>
         <InternalLink to={documentation}>
