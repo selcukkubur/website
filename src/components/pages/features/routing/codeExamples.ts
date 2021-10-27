@@ -2,136 +2,73 @@ import { CodeExample } from "components/common/CodeBox";
 
 const examples: CodeExample[] = [
   {
-    languageName: "Node.js",
-    languageCode: "javascript",
+    languageName: "Welcome Email",
+    languageCode: "json",
     code: `
-import { CourierClient } from "@trycourier/courier";
-const courier = CourierClient({ authorizationToken: "******************" });
-
-// Example: send a message supporting email & SMS
-const { messageId } = await courier.send({
-  eventId: "courier-quickstart",
-  recipientId: "37e2c08c-3958-449a-8266-dea286807f65",
-  profile: { },
-  data: {
-    blueiables: "awesomeness",
-  },
-});
-`,
-  },
-  {
-    languageName: "Ruby",
-    languageCode: "ruby",
-    code: `
-require "trycourier"
-
-begin
-  client = Courier::Client.new "******************"
-  res = client.send({
-    event => "courier-quickstart",
-    recipient => "9ea9ac85-3a52-48ca-bcdf-0f39e7001f9e",
-    profile => { },
-    data => {
-      favoriteAdjective => "awesomeness",
+// Send an email welcoming a new user to your product.
+{
+  "message": {
+    "to": {
+      "email": "{{email}}"
+    },
+    "content": {
+      "title": "Welcome {{first_name}}!",
+      "body": "It's so great to have you here!"
+    },
+    "data": {
+      "email": "user@company.com",
+      "first_name": "Nick"
     }
-  })
-  puts res.code # the HTTP response code
-  puts res.message_id # if 200, this will be the Courier message ID for this notification
-rescue Courier::ResponseError => re
-  puts re.message
-rescue Courier::InputError => ie
-  puts ie.message
-end
-`,
-  },
-  {
-    languageName: "Python",
-    languageCode: "python",
-    code: `
-from trycourier import Courier
-
-client = Courier(auth_token = "******************")
-
-resp = client.send(
-  event = "courier-quickstart",
-  recipient = "9ea9ac85-3a52-48ca-bcdf-0f39e7001f9e",
-  profile = {},
-  data = {
-    favoriteAdjective: "awesomeness",
-  },
-)
-
-print (resp['messageId'])
-`,
-  },
-  {
-    languageName: "Go",
-    languageCode: "go",
-    code: `
-import "github.com/trycourier/courier-go"
-
-func send() {
-  type Data struct {
-    FavoriteAdjective string \`json:"favoriteAdjective"\`
   }
-  type Profile struct {
-  }
-
-  profile := &Profile {
-  }
-  data := &Data {
-    FavoriteAdjective string "awesomeness",
-  }
-
-  client := courier.CreateClient("*************", nil)
-  messageID, err := client.Send(
-    context.Background(),
-    "courier-quickstart",
-    "9ea9ac85-3a52-48ca-bcdf-0f39e7001f9e"
-    profile
-    data
-  )
-
-  if err != nil {
-    log.Fatalln(err)
-  }
-  log.Println(messageID)
 }
 `,
   },
   {
-    languageName: "PHP",
-    languageCode: "php",
+    languageName: "Multi-Channel Notification",
+    languageCode: "json",
     code: `
-<?php
-use Digs\Courier\Courier;
-
-$courier = new Courier(getenv("COURIER_AUTH_TOKEN"));
-
-$result = $courier->sendNotification(
-  "courier-quickstart",
-  "9ea9ac85-3a52-48ca-bcdf-0f39e7001f9e",
-  [ ],
-  ['favoriteAdjective' => "awesomeness"]
-);
-
-$messageId = $result->messageId;
-echo($messageId);
-echo($messageId);
-?>
+// Send an in-app toast notification to a user if they are 
+// in your app, if not fallback to sending an email.   
+{
+  "message": {
+    "to": {
+      "courier_push": "{{user_id}}",
+      "email": "{{email}}"
+    },
+    "channels": { "$best": ["courier-push", "email"] },
+    "content": {
+      "title": "{{collaborator}} mentioned your in a comment.",
+      "body": "{{comment_summary}}",
+      "button": "View",
+      "href": "{{comment_url}}"
+    },
+    "data": {
+      "user_id": "3jdu4he2938",
+      "email": "user@company.com",
+      "first_name": "Nick"
+    }
+  }
+}
 `,
   },
   {
-    languageName: "cURL",
-    languageCode: "bash",
+    languageName: "Weekly Digest",
+    languageCode: "json",
     code: `
-curl --request POST \\
-     --url https://api.courier.com/send \\
-     --header 'Authorization: Bearer ******************' \\
-     --data-urlencode event= courier-quickstart \\
-     --data-urlencode recipient= 9ea9ac85-3a52-48ca-bcdf-0f39e7001f9e \\
-     --data-urlencode 'data={"favoriteAdjective":"awesomeness"}' \\
-     --data-urlencode 'profile={}' \\
+// Send a weekly product usage email to a list of users, 
+// pulling the data for each user from an endpoint.
+{
+  "message": {
+    "to": {
+      "list_id": "weekly_subscribers",
+      "template": "weekly_product_digest",
+      "data_source":  {
+        "action": "fetch-data",
+        "webhook": { "url": "https://main.app/digest" }
+      }
+    }
+  }
+}
 `,
   },
 ];
