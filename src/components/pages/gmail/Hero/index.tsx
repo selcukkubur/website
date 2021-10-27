@@ -25,10 +25,10 @@ const Hero = () => {
         >
           <Box maxW={{ base: "440px", xl: "unset" }} mx="auto">
             <Heading as="h1" variant="h1">
-              The Power of API + The Ease of Gmail
+              Product notifications powered by Gmail
             </Heading>
             <Text variant="body1" my={7}>
-              Start sending email programmatically in 3 steps.
+              Start sending email notifications programmatically in 3 steps.
               <br />
               No DKIM, no SPF, no WTF.
             </Text>
