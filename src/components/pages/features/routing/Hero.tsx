@@ -32,11 +32,12 @@ const Hero = () => (
   >
     <Box mr={4}>
       <Heading as="h1" variant="h1">
-        Message routing infrastructure for your application.
+        Deliver the right notification through the best channel.
       </Heading>
 
       <Text mt={6} mb={10} variant="body1" color="whiteAlpha.900">
-        Courier's Routing Engine ensures you always deliver the right message,
+        Courier's Routing Engine provides the infrastructure and tooling you need
+        to ensure your app always delivers the right notification,
         to the right user, through the right channel, at the right time.
       </Text>
     </Box>
