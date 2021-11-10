@@ -1,17 +1,21 @@
 const withPWA = require("next-pwa");
-const redirects = require('./redirects');
-const headers = require('./headers');
+const redirects = require("./redirects");
+const rewrites = require("./rewrites");
+const headers = require("./headers");
 
 module.exports = withPWA({
   async redirects() {
-    return redirects
+    return redirects;
   },
   async headers() {
-    return process.env.NODE_ENV === "development" ? [] : headers
+    return process.env.NODE_ENV === "development" ? [] : headers;
+  },
+  async rewrites() {
+    return rewrites;
   },
   poweredByHeader: false,
   images: {
-    domains: ['images.ctfassets.net'],
+    domains: ["images.ctfassets.net"],
   },
   pwa: {
     disable:
@@ -26,13 +30,13 @@ module.exports = withPWA({
         use: [
           options.defaultLoaders.babel,
           {
-            loader: '@mdx-js/loader',
+            loader: "@mdx-js/loader",
             options: pluginOptions.options,
           },
         ],
-      })
-  
-      return config
+      });
+
+      return config;
     },
   },
   target: "serverless",
