@@ -1,6 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 // @ts-expect-error
 import * as snippet from "@segment/snippet";
+import { ENABLE_ANALYTICS } from "../lib/analyticsJS";
 const APP_NAME = "Courier";
 
 class MyDocument extends Document {
@@ -41,9 +42,11 @@ class MyDocument extends Document {
           <script
             dangerouslySetInnerHTML={{ __html: this.renderAnalyticsSnippet() }}
           />
-          <script
-            dangerouslySetInnerHTML={{ __html: this.renderIntercomSnippet() }}
-          />
+          {ENABLE_ANALYTICS && (
+            <script
+              dangerouslySetInnerHTML={{ __html: this.renderIntercomSnippet() }}
+            />
+          )}
           <link
             rel="preload"
             href="/fonts/Gellix/Gellix-ExtraBold.ttf"
