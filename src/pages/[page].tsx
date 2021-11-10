@@ -25,20 +25,25 @@ export async function getStaticPaths() {
 export async function getStaticProps(context: any) {
   const { params } = context;
   const { page } = params;
-  const pageDetails = await GetPageData({ slug: page });
-  const widgetsData: Record<string, any> = {};
-  await Promise.all(
-    pageDetails.content.links.entries.block.map(async (block) => {
-      if (!block.key || !widgetQueries[block.key]) return;
 
-      const data = await widgetQueries[block.key]();
-      widgetsData[block.key] = data;
-    })
-  );
+  try {
+    const pageDetails = await GetPageData({ slug: page });
+    const widgetsData: Record<string, any> = {};
+    await Promise.all(
+      pageDetails.content.links.entries.block.map(async (block) => {
+        if (!block.key || !widgetQueries[block.key]) return;
 
-  return {
-    props: { pageDetails, widgetsData },
-  };
+        const data = await widgetQueries[block.key]();
+        widgetsData[block.key] = data;
+      })
+    );
+
+    return {
+      props: { pageDetails, widgetsData },
+    };
+  } catch {
+    return { notFound: true };
+  }
 }
 
 const GeneratedPage = ({

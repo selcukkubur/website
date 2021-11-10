@@ -58,7 +58,7 @@ const Automations = () => (
         </Box>
       }
       tag={{
-        label: "SendGrid email sequences",
+        label: "Mailgun email sequences",
         textColor: "secondary.salmon",
         bgColor: "primary.sand",
       }}
@@ -69,7 +69,7 @@ const Automations = () => (
         </Heading>
         <Text variant="body1" mt={6} color="secondary.darkAlpha">
           Courier allows you to build complex email sequences on top of the
-          SendGrid API. You can use our API or drag-and-drop editor to fetch
+          Mailgun API. You can use our API or drag-and-drop editor to fetch
           data, delay steps, send to lists, and more.
         </Text>
         <ButtonCTASecondary

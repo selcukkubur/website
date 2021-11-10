@@ -23,11 +23,16 @@ export async function getStaticPaths() {
 export async function getStaticProps(context: any) {
   const { params } = context;
   const { post } = params;
-  const postDetails = await GetBlogPost({ slug: post, isPreview: false });
-  return {
-    props: { postDetails },
-    revalidate: 60,
-  };
+
+  try {
+    const postDetails = await GetBlogPost({ slug: post, isPreview: false });
+    return {
+      props: { postDetails },
+      revalidate: 60,
+    };
+  } catch {
+    return { notFound: true };
+  }
 }
 
 const Blog = ({ postDetails }: { postDetails: any }) => {

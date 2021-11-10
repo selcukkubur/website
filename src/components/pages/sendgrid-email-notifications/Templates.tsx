@@ -21,7 +21,7 @@ const Templates = () => (
           mx={{ base: "32px", md: "auto" }}
         >
           <Image
-            src={require("../../../../public/images/pages/sendgrid-email-notifications/templates-bg.png")}
+            src={require("../../../../public/images/pages/providers-common/templates-bg.png")}
             alt=""
           />
 
@@ -36,7 +36,7 @@ const Templates = () => (
             boxShadow="0px 12px 40px rgba(44, 19, 56, 0.16)"
           >
             <Image
-              src={require("../../../../public/images/pages/sendgrid-email-notifications/templates.gif")}
+              src={require("../../../../public/images/pages/providers-common/templates.gif")}
               alt=""
             />
           </Box>

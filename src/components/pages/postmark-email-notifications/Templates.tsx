@@ -2,14 +2,13 @@ import { Box, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import FeatureSection from "components/common/FeatureSection";
 import ButtonCTASecondary from "components/buttons/CTASecondary";
-import { featuresAutomations } from "constants/urls";
+import { featuresTemplates } from "constants/urls";
 
-const Automations = () => (
+const Templates = () => (
   <Box
-    pt={{ base: "60px", lg: "150px" }}
-    pb={{ base: "180px", lg: "150px" }}
+    pt={{ base: "60px", lg: "180px" }}
+    pb={{ base: "120px", sm: "180px", lg: "140px" }}
     overflow="hidden"
-    mb="-156px"
   >
     <FeatureSection
       graphicAlignment="right"
@@ -18,67 +17,66 @@ const Automations = () => (
           pos="relative"
           ml="36px"
           maxW="508px"
-          mt={{ lg: "-30px" }}
+          mt={{ lg: "-60px" }}
           mx={{ base: "32px", md: "auto" }}
         >
+          <Image
+            src={require("../../../../public/images/pages/providers-common/templates-bg.png")}
+            alt=""
+          />
+
           <Box
+            pos="absolute"
+            top="15%"
+            left="-9%"
+            right="29%"
             display="flex"
             overflow="hidden"
             borderRadius="16px"
             boxShadow="0px 12px 40px rgba(44, 19, 56, 0.16)"
           >
             <Image
-              src={require("../../../../public/images/pages/providers-common/automations-bg.png")}
-              alt=""
-            />
-          </Box>
-
-          <Box pos="absolute" top="11%" left="1%" right="1%" display="flex">
-            <Image
-              src={require("../../../../public/images/pages/providers-common/automations.gif")}
+              src={require("../../../../public/images/pages/providers-common/templates.gif")}
               alt=""
             />
           </Box>
 
           <Box
             pos="absolute"
-            left="43%"
+            left="51%"
             right="-8%"
-            bottom="-11%"
+            bottom="-24%"
             display="flex"
             overflow="hidden"
             borderRadius="12px"
             boxShadow="0px 12px 40px rgba(44, 19, 56, 0.16)"
           >
             <Image
-              src={require("../../../../public/images/pages/providers-common/automations-fg.png")}
+              src={require("../../../../public/images/pages/postmark-email-notifications/templates-fg.png")}
               alt=""
             />
           </Box>
         </Box>
       }
       tag={{
-        label: "SendGrid email sequences",
+        label: "Postmark templates",
         textColor: "secondary.salmon",
         bgColor: "primary.sand",
       }}
     >
       <Box maxW={{ lg: "480px" }}>
         <Heading as="h3" variant="h3">
-          Automated email sequences
+          Powerful email templating
         </Heading>
         <Text variant="body1" mt={6} color="secondary.darkAlpha">
-          Courier allows you to build complex email sequences on top of the
-          SendGrid API. You can use our API or drag-and-drop editor to fetch
-          data, delay steps, send to lists, and more.
+          Courier provides a powerful drag-and-drop template builder with
+          options for white-labeling. Preview and test your Postmark emails in a
+          fully rendered format right in the browser.
         </Text>
-        <ButtonCTASecondary
-          text="More On Automations"
-          link={featuresAutomations}
-        />
+        <ButtonCTASecondary text="More on Templates" link={featuresTemplates} />
       </Box>
     </FeatureSection>
   </Box>
 );
 
-export default Automations;
+export default Templates;

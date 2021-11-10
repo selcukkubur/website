@@ -21,7 +21,7 @@ const Logs = () => (
         </Box>
       }
       tag={{
-        label: "SendGrid logs",
+        label: "Mailgun logs",
         textColor: "#791EB3",
         bgColor: "rgba(121, 30, 179, 0.16)",
       }}
@@ -38,7 +38,7 @@ const Logs = () => (
         >
           Tracking down what went wrong with a missed or accidentally sent
           notification is a huge pain. Courier’s unified logs tie together
-          everything that happens before you call the SendGrid API with
+          everything that happens before you call the Mailgun API with
           everything that happens after, making this process easier for
           engineering and support.
         </Text>
