@@ -33,6 +33,10 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
               content:
                 "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover",
             },
+            {
+              name: "facebook-domain-verification",
+              content: "ufpt58y0neb21h55jdw62ldw8tnewq",
+            },
           ]}
         />
         <Box margin="0 auto" transition="0.5s ease-out">
