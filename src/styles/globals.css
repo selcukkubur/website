@@ -36,3 +36,9 @@
 .slick-track {
   display: flex !important;
 }
+
+/* Removes border around video element on iOS Safari */
+video {
+  mask-image: -webkit-radial-gradient(white, black);
+  backface-visibility: hidden;
+}

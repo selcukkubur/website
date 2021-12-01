@@ -44,6 +44,7 @@ const FeatureSection = ({
       width={graphic ? undefined : "100%"}
     >
       <Box
+        h="100%"
         pl={{ lg: graphicAlignment === "right" || !graphic ? undefined : 20 }}
       >
         {tag && (
