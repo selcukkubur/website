@@ -43,10 +43,10 @@ const Hero = () => (
         </Heading>
 
         <Text mt={6} mb={10} variant="body1" color="whiteAlpha.900">
-          Courier takes the pain out creating, editing, triggering, and
-          delivering transactional product notifications. With a full featured
+          Courier makes it easy to add the key social notifications your app needs
+           to keep users engaged and in the loop. With a full featured
           API, SDKs for all major languages, and a direct integration with
-          Segment, there’s multiple ways Courier can power your transactional
+          Segment, there’s multiple ways Courier can power your social
           notifications.
         </Text>
       </Box>
