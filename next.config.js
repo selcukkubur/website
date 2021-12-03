@@ -14,6 +14,7 @@ module.exports = withPWA({
     return rewrites;
   },
   poweredByHeader: false,
+  trailingSlash: true,
   images: {
     domains: ["images.ctfassets.net"],
   },
