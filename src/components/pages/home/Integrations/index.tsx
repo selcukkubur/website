@@ -1,7 +1,7 @@
 import { Flex, Heading, Text, Box, Tag } from "@chakra-ui/react";
 import InternalLink from "components/InternalLink";
 import TextButton from "components/buttons/TextButton";
-import { documentation } from "constants/urls";
+import { docs } from "constants/urls";
 import Animation from "./animation";
 import FeatureSection from "components/common/FeatureSection";
 
@@ -45,7 +45,7 @@ const Integrations = () => (
           With 20+ integrations, you can reach users on the channels they prefer
           –– all with the simple flip of a switch.
         </Text>
-        <InternalLink to={documentation}>
+        <InternalLink to={docs}>
           <TextButton> Check out our docs </TextButton>
         </InternalLink>
       </Box>

@@ -20,9 +20,9 @@ const UserActivityNotifications = () => {
       />
       <Header />
       <Hero />
-      <Testimonials />
       <Experience />
       <Api />
+      <Testimonials />
       <Banner />
       <Animations />
       <Integrations />

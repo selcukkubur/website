@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import {
   Drawer,
   DrawerOverlay,
@@ -13,7 +14,7 @@ import HamburgerButton from "components/buttons/MobileHamburger";
 import ColoredLogo from "components/LogoColored";
 import SingleItem from "./SingleItem";
 import ItemWithChildren from "./ItemWithChildren";
-import data from "../data";
+import createItems from "../data";
 
 interface MobileMenuProps {
   stickyHeader: boolean;
@@ -21,6 +22,8 @@ interface MobileMenuProps {
 
 const MobileMenu = ({ stickyHeader }: MobileMenuProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const items = useMemo(() => createItems(), []);
+
   return (
     <>
       <Box display={{ base: "block", lg: "none" }}>
@@ -58,21 +61,33 @@ const MobileMenu = ({ stickyHeader }: MobileMenuProps) => {
             </DrawerHeader>
             <DrawerBody>
               <Accordion w={{ base: "100%" }} mt={"62px"} allowToggle>
-                {data.map((menu) => {
-                  if (menu.items) {
+                {items.map((item) => {
+                  if (item.dropdown) {
                     return (
                       <ItemWithChildren
-                        title={menu.title}
-                        items={menu.items}
-                        key={menu.title}
+                        label={item.label}
+                        items={[
+                          ...(item.dropdown.topHighlight
+                            ? [item.dropdown.topHighlight]
+                            : []),
+                          ...(item.dropdown.items || []),
+                          ...(item.dropdown.sidebar?.items || []),
+                          ...(item.dropdown.columns?.flatMap(
+                            (col) => col.items
+                          ) || []),
+                          ...(item.dropdown.bottomHighlight
+                            ? [item.dropdown.bottomHighlight]
+                            : []),
+                        ]}
+                        key={item.label}
                       />
                     );
                   } else {
                     return (
                       <SingleItem
-                        title={menu.title}
-                        link={menu.link}
-                        key={menu.title}
+                        label={item.label}
+                        link={item.link || "/"}
+                        key={item.label}
                       />
                     );
                   }

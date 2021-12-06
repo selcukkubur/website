@@ -1,13 +1,18 @@
+import { forwardRef } from "react";
 import { ReactNode } from "react";
+import { chakra, LinkProps } from "@chakra-ui/react";
 
-interface ExternalLinkProps {
+interface ExternalLinkProps extends LinkProps {
   to: string;
-  children: ReactNode;
 }
 
-const ExternalLink = ({ to, children, ...otherProps }: ExternalLinkProps) => {
-  return (
-    <a
+const ExternalLink = forwardRef(
+  (
+    { to, children, ...otherProps }: ExternalLinkProps,
+    ref: React.ForwardedRef<HTMLAnchorElement>
+  ) => (
+    <chakra.a
+      ref={ref}
       href={to}
       target="_blank"
       rel="noopener noreferrer"
@@ -15,8 +20,8 @@ const ExternalLink = ({ to, children, ...otherProps }: ExternalLinkProps) => {
       style={{ color: "inherit", textDecoration: "none" }}
     >
       {children}
-    </a>
-  );
-};
+    </chakra.a>
+  )
+);
 
 export default ExternalLink;

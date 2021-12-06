@@ -3,7 +3,7 @@ import FeatureSection from "components/common/FeatureSection";
 import CodeBox from "components/common/CodeBox";
 import TextButton from "components/buttons/TextButton";
 import InternalLink from "components/InternalLink";
-import { documentation } from "constants/urls";
+import { docs } from "constants/urls";
 
 import codeExamples from "./codeExamples";
 
@@ -42,7 +42,7 @@ const PreferencesApi = () => (
           control user's preferences, while Courier's Routing functionality
           automatically respects those preferences.
         </Text>
-        <InternalLink to={documentation}>
+        <InternalLink to={docs}>
           <TextButton> Check out our docs </TextButton>
         </InternalLink>
       </Box>

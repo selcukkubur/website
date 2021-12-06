@@ -1,22 +1,26 @@
+import { forwardRef } from "react";
+import { LinkProps, chakra } from "@chakra-ui/react";
 import InternalLink from "components/InternalLink";
 import ExternalLink from "components/ExternalLink";
 
-interface MetaLinkProps {
+interface MetaLinkProps extends LinkProps {
   to: string;
-  children: React.ReactNode;
-  linkType: string;
 }
 
-const MetaLink = ({
-  to,
-  children,
-  linkType,
-  ...otherProps
-}: MetaLinkProps): JSX.Element => {
-  if (linkType === "internal") {
-    return <InternalLink to={to} children={children} {...otherProps} />;
+const MetaLink = forwardRef(
+  (
+    { to, ...props }: MetaLinkProps,
+    ref: React.ForwardedRef<HTMLAnchorElement>
+  ): JSX.Element => {
+    // As /docs is a rewrite we need to do full navigation, otherwise it shows an error on dev
+    if (to.startsWith("/docs")) {
+      return <chakra.a href={to} ref={ref} {...props} />;
+    }
+    if (/^https?:\/\//i.test(to)) {
+      return <ExternalLink to={to} ref={ref} {...props} />;
+    }
+    return <InternalLink to={to} ref={ref} {...props} />;
   }
-  return <ExternalLink to={to} children={children} {...otherProps} />;
-};
+);
 
 export default MetaLink;

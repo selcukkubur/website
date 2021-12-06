@@ -21,8 +21,8 @@ const RightArrowIcon = ({ gradient }: { gradient?: boolean }) => {
           y2="7"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#9121C2"></stop>
-          <stop offset="1" stop-color={stopColor}></stop>
+          <stop stopColor="#9121C2"></stop>
+          <stop offset="1" stopColor={stopColor}></stop>
         </linearGradient>
       </defs>
     </Icon>

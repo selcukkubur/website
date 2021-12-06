@@ -9,12 +9,12 @@ interface Props {
   [x: string]: any;
 }
 
-const WhiteBgSimple = ({ width, height, link, children, ...other }: Props) => (
+const WhiteBg = ({ width, height, link, children, ...other }: Props) => (
   <InternalLink to={link}>
     <Flex
       background="#FFFFFF"
       color="primary.violet"
-      borderRadius="8px"
+      borderRadius="6px"
       fontSize="14px"
       {...other}
       width={width}
@@ -25,16 +25,19 @@ const WhiteBgSimple = ({ width, height, link, children, ...other }: Props) => (
       justify="center"
       align="center"
       transition="all .8s"
+      _hover={{
+        div: {
+          backgroundImage:
+            "linear-gradient(270deg, #9121C2 -119.03%, #FF5E5E 8.24%, #9121C2 50.97%, #FF5E5E 91.41%)",
+        },
+      }}
     >
       <Box
-        _hover={{
-          transition: "all .8s",
-          border: "2px linear-gradient(270deg, #9121C2 0%, #FF5E5E 100%)",
-          backgroundImage: "linear-gradient(270deg, #9121C2 0%, #FF5E5E 100%)",
+        sx={{
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
-          zIndex: 200000,
         }}
+        bgImage="linear-gradient(270deg, #9121C2 0%, #FF5E5E 99.38%, #9121C2 151.08%, #FF5E5E 200.75%)"
       >
         {children}
       </Box>
@@ -42,4 +45,4 @@ const WhiteBgSimple = ({ width, height, link, children, ...other }: Props) => (
   </InternalLink>
 );
 
-export default WhiteBgSimple;
+export default WhiteBg;

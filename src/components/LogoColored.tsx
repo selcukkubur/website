@@ -23,8 +23,8 @@ const LogoIcon = () => (
         y2="11.603"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#9121C2"></stop>
-        <stop offset="1" stop-color="#FF5E5E"></stop>
+        <stop stopColor="#9121C2"></stop>
+        <stop offset="1" stopColor="#FF5E5E"></stop>
       </linearGradient>
     </defs>
   </Icon>

@@ -18,6 +18,7 @@ const customTheme = extendTheme({
       darkAlpha: "rgb(44, 19, 56, 0.8)",
       salmon: "#FD897A",
       violet: "#a931de",
+      text: "#747B95",
     },
   },
   components: {

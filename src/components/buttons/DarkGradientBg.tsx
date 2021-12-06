@@ -14,7 +14,7 @@ const DarkGradientBg = ({ width, height, link, children, ...other }: Props) => (
     <Flex
       background="linear-gradient(270deg, #9121C2 0%, #FF5E5E 100%)"
       color="#FFFFFF"
-      borderRadius="8px"
+      borderRadius="6px"
       fontSize="14px"
       {...other}
       _hover={{

@@ -3,7 +3,7 @@ import FeatureSection from "components/common/FeatureSection";
 import CodeBox from "components/common/CodeBox";
 import TextButton from "components/buttons/TextButton";
 import InternalLink from "components/InternalLink";
-import { documentation } from "constants/urls";
+import { docs } from "constants/urls";
 
 import codeExamples from "./codeExamples";
 
@@ -36,7 +36,7 @@ const ApiCalls = () => (
           API call, providing fine-grain control over your user's messaging
           experience.
         </Text>
-        <InternalLink to={documentation}>
+        <InternalLink to={docs}>
           <TextButton> Check out our docs </TextButton>
         </InternalLink>
       </Box>

@@ -3,7 +3,7 @@ import Image from "next/image";
 import FeatureSection from "components/common/FeatureSection";
 
 import ButtonCTAColor from "components/buttons/CTAColor";
-import { signup, documentation } from "constants/urls";
+import { signup, docs } from "constants/urls";
 
 const Scale = () => (
   <Box
@@ -49,7 +49,7 @@ const Scale = () => (
           hoverColor="secondary.darkAlpha"
           outline
           mt="16px"
-          link={documentation}
+          link={docs}
         >
           Documentation
         </ButtonCTAColor>

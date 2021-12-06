@@ -30,7 +30,6 @@ const CTAColor = ({
       bgColor={outline ? "transparent" : color}
       color={outline ? color : "white"}
       fontSize={14}
-      borderRadius={8}
       rightIcon={<RightArrow />}
       border="2px solid"
       borderColor={color}

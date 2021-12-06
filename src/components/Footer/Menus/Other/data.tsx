@@ -1,6 +1,6 @@
 import {
   pricing,
-  documentation,
+  docs,
   blog,
   about,
   careers,
@@ -8,7 +8,7 @@ import {
   discord,
   updates,
   status,
-  apiReference,
+  docsApiReference,
   providers,
   libraries,
   security,
@@ -25,27 +25,27 @@ export default [
   {
     title: "Developers",
     items: [
-      { title: "Documentation", link: documentation, linkType: "external" },
-      { title: "API", link: apiReference },
-      { title: "Libraries", link: libraries, linkType: "external" },
-      { title: "Status", link: status, linkType: "external" },
+      { title: "Documentation", link: docs },
+      { title: "API", link: docsApiReference },
+      { title: "Libraries", link: libraries },
+      { title: "Status", link: status },
     ],
   },
   {
     title: "Resources",
     items: [
       { title: "Blog", link: blog },
-      { title: "Help Center", link: help, linkType: "external" },
-      { title: "Community", link: discord, linkType: "external" },
-      { title: "Product Updates", link: updates, linkType: "external" },
+      { title: "Help Center", link: help },
+      { title: "Community", link: discord },
+      { title: "Product Updates", link: updates },
     ],
   },
   {
     title: "Company",
     items: [
       { title: "About", link: about },
-      { title: "Careers", link: careers, linkType: "external" },
-      { title: "Security", link: security, linkType: "external" },
+      { title: "Careers", link: careers },
+      { title: "Security", link: security },
     ],
   },
 ];

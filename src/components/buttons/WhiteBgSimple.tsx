@@ -18,7 +18,7 @@ const WhiteBgSimple = ({ width, height, link, children, ...other }: Props) => (
     <Flex
       background="transparent"
       color="primary.violet"
-      borderRadius="8px"
+      borderRadius="6px"
       border="2px solid #9121C2"
       fontSize="14px"
       {...other}

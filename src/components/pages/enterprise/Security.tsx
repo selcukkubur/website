@@ -11,7 +11,7 @@ import FeatureSection from "components/common/FeatureSection";
 
 import ButtonCTASecondary from "components/buttons/CTASecondary";
 import ButtonCTAColor from "components/buttons/CTAColor";
-import { requestDemo, security, documentation } from "constants/urls";
+import { requestDemo, security, docs } from "constants/urls";
 
 const Security = () => (
   <Box
@@ -73,7 +73,7 @@ const Security = () => (
             <ListItem>Custom publishing policies</ListItem>
           </UnorderedList>
 
-          <ButtonCTASecondary text="Check out our docs" link={documentation} />
+          <ButtonCTASecondary text="Check out our docs" link={docs} />
         </Box>
       </Flex>
 

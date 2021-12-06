@@ -4,7 +4,7 @@ import FeatureSection from "components/common/FeatureSection";
 import CodeBox from "components/common/CodeBox";
 import ButtonCTASecondary from "components/buttons/CTASecondary";
 import ButtonCTAColor from "components/buttons/CTAColor";
-import { signup, documentation } from "constants/urls";
+import { signup, docs } from "constants/urls";
 
 import codeExamples from "./codeExamples";
 
@@ -93,7 +93,7 @@ const Api = () => {
             hoverColor="secondary.salmon"
             outline
             mt="16px"
-            link={documentation}
+            link={docs}
           >
             Documentation
           </ButtonCTAColor>

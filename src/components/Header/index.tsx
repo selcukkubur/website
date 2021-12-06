@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Icon, Flex } from "@chakra-ui/react";
+import { Icon, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
 import LogoIcon from "components/Logo";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import InternalLink from "components/InternalLink";
 import PurpleBgButton from "components/buttons/PurpleBg";
 import WhiteBgButton from "components/buttons/WhiteBg";
-import WhiteBgSimpleButton from "components/buttons/WhiteBgSimple";
-import TransparentButton from "components/buttons/Transparent";
 import { login, signup } from "constants/urls";
+import Experiment from "components/Experiment";
 
 interface Props {
   headerPlain?: boolean;
@@ -33,6 +32,25 @@ const Header = ({ headerPlain, noHeaderBoxShadow }: Props) => {
     }
     window.addEventListener("scroll", listenScrollEvent);
   });
+
+  const signupLabel = useBreakpointValue({
+    base: "Sign Up",
+    lg: "Get started for free",
+  });
+  const loginButton = (
+    <Text
+      as={InternalLink}
+      to={login}
+      variant="body3"
+      fontWeight={600}
+      py={1}
+      transition="0.3s box-shadow"
+      boxShadow="0 2px transparent"
+      _hover={{ boxShadow: "0 2px currentColor" }}
+    >
+      Log In
+    </Text>
+  );
 
   return (
     <Flex
@@ -60,47 +78,67 @@ const Header = ({ headerPlain, noHeaderBoxShadow }: Props) => {
           <Icon as={LogoIcon} transition="all .3s ease-in-out" />
         </InternalLink>
         <DesktopMenu />
-        <Flex>
-          {stickyHeader || plainHeader ? (
-            <WhiteBgSimpleButton
-              width={{ base: "78px", lg: "88px" }}
-              height={{ base: "32px", lg: "40px" }}
-              link={login}
-              ml={4}
+
+        <Experiment name="Header Sign Up Copy">
+          <Experiment.Variant key="a">
+            <Flex
+              alignItems="center"
+              justifyContent="flex-end"
+              w={{ lg: "236px" }}
             >
-              Log In
-            </WhiteBgSimpleButton>
-          ) : (
-            <TransparentButton
-              width={{ base: "78px", lg: "88px" }}
-              height={{ base: "32px", lg: "40px" }}
-              link={login}
-              ml={4}
+              {loginButton}
+              {stickyHeader || plainHeader ? (
+                <PurpleBgButton
+                  width={{ base: "78px", lg: "88px" }}
+                  height={{ base: "32px", lg: "40px" }}
+                  link={signup}
+                  ml="22px"
+                >
+                  Sign Up
+                </PurpleBgButton>
+              ) : (
+                <WhiteBgButton
+                  width={{ base: "78px", lg: "88px" }}
+                  height={{ base: "32px", lg: "40px" }}
+                  link={signup}
+                  ml="22px"
+                >
+                  Sign Up
+                </WhiteBgButton>
+              )}
+              <MobileMenu stickyHeader={stickyHeader || plainHeader} />
+            </Flex>
+          </Experiment.Variant>
+          <Experiment.Variant key="b">
+            <Flex
+              alignItems="center"
+              justifyContent="flex-end"
+              w={{ lg: "236px" }}
             >
-              Log In
-            </TransparentButton>
-          )}
-          {stickyHeader || plainHeader ? (
-            <PurpleBgButton
-              width={{ base: "78px", lg: "88px" }}
-              height={{ base: "32px", lg: "40px" }}
-              link={signup}
-              ml={4}
-            >
-              Sign Up
-            </PurpleBgButton>
-          ) : (
-            <WhiteBgButton
-              width={{ base: "78px", lg: "88px" }}
-              height={{ base: "32px", lg: "40px" }}
-              link={signup}
-              ml={4}
-            >
-              Sign Up
-            </WhiteBgButton>
-          )}
-          <MobileMenu stickyHeader={stickyHeader || plainHeader} />
-        </Flex>
+              {loginButton}
+              {stickyHeader || plainHeader ? (
+                <PurpleBgButton
+                  width={{ base: "78px", lg: "172px" }}
+                  height={{ base: "32px", lg: "40px" }}
+                  link={signup}
+                  ml="22px"
+                >
+                  {signupLabel}
+                </PurpleBgButton>
+              ) : (
+                <WhiteBgButton
+                  width={{ base: "78px", lg: "172px" }}
+                  height={{ base: "32px", lg: "40px" }}
+                  link={signup}
+                  ml="22px"
+                >
+                  {signupLabel}
+                </WhiteBgButton>
+              )}
+              <MobileMenu stickyHeader={stickyHeader || plainHeader} />
+            </Flex>
+          </Experiment.Variant>
+        </Experiment>
       </Flex>
     </Flex>
   );

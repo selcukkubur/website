@@ -1,7 +1,7 @@
 import { Heading, Text, Box } from "@chakra-ui/react";
 import TextButton from "components/buttons/TextButton";
 import InternalLink from "components/InternalLink";
-import { documentation } from "constants/urls";
+import { docs } from "constants/urls";
 import CodeBox from "components/common/CodeBox";
 import data from "./data";
 import FeatureSection from "components/common/FeatureSection";
@@ -33,7 +33,7 @@ const APIOptions = () => (
           The Courier API allows you to deliver complex email usecases with a
           single API call.
         </Text>
-        <InternalLink to={documentation}>
+        <InternalLink to={docs}>
           <TextButton> Check out our docs </TextButton>
         </InternalLink>
       </Box>

@@ -19,7 +19,7 @@ const PurpleBg = ({ width, height, link, children, ...other }: Props) => {
           <Flex
             background="linear-gradient(270deg, #9121C2 99.83%, #FF5E5E 155.77%)"
             color="#FFFFFF"
-            borderRadius="8px"
+            borderRadius="6px"
             fontSize="14px"
             {...other}
             _hover={{ background: "#791eb3" }}
@@ -38,7 +38,7 @@ const PurpleBg = ({ width, height, link, children, ...other }: Props) => {
         <Flex
           background="linear-gradient(270deg, #9121C2 99.83%, #FF5E5E 155.77%)"
           color="#FFFFFF"
-          borderRadius="8px"
+          borderRadius="6px"
           fontSize="14px"
           {...other}
           _hover={{ background: "#791eb3" }}

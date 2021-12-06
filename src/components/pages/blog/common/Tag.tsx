@@ -7,7 +7,7 @@ interface ColorProps {
   };
 }
 
-const colorMap: ColorProps = {
+export const colorMap: ColorProps = {
   INTEGRATIONS: { color: "#F07978", bg: "#FCE9E9" },
   ENGINEERING: { color: "#F07978", bg: "#FCE9E9" },
   COURIER: { color: "#9122C2", bg: "#EEE0F7" },

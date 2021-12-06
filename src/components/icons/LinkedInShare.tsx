@@ -28,8 +28,8 @@ const LinkedInShareIcon = () => (
         y2="20"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#9121C2" />
-        <stop offset="1" stop-color="#FF5E5E" />
+        <stop stopColor="#9121C2" />
+        <stop offset="1" stopColor="#FF5E5E" />
       </linearGradient>
       <linearGradient
         id="paint1_linear"
@@ -39,8 +39,8 @@ const LinkedInShareIcon = () => (
         y2="19.583"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#9121C2" />
-        <stop offset="1" stop-color="#FF5E5E" />
+        <stop stopColor="#9121C2" />
+        <stop offset="1" stopColor="#FF5E5E" />
       </linearGradient>
     </defs>
   </Icon>

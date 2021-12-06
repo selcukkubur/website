@@ -3,7 +3,6 @@ import MetaLink from "components/MetaLink";
 
 interface Items {
   link: string;
-  linkType?: string;
   title: string;
 }
 
@@ -17,11 +16,7 @@ const LinkMenu = ({ title, items }: Props) => (
     <Heading variant="subh1">{title}</Heading>
     <SimpleGrid mt={"32px"} spacingY={3}>
       {items.map((item) => (
-        <MetaLink
-          to={item.link}
-          linkType={item.linkType ? item.linkType : "internal"}
-          key={item.title}
-        >
+        <MetaLink to={item.link} key={item.title}>
           <Text color="hsla(0,0%,100%,.8)" variant="body3">
             {item.title}
           </Text>
