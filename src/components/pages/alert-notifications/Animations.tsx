@@ -7,7 +7,7 @@ import CodeBox from "components/common/CodeBox";
 import { requestDemo, signup } from "constants/urls";
 
 const Animations = () => (
-   <Box bgColor="#fcf1eb" py={{ base: "60px", lg: "100px" }}>
+  <Box bgColor="#fcf1eb" py={{ base: "60px", lg: "100px" }}>
     <Container textAlign="center">
       <Flex flexDirection={{ base: "column", lg: "row" }}>
         <Flex w={{ lg: "50%" }} flexDirection="column" alignItems="center">

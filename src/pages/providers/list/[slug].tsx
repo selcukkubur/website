@@ -1,18 +1,34 @@
 import { Box } from "@chakra-ui/react";
 import Header from "components/Header/index";
 import Footer from "components/Footer";
-import Content from "components/pages/guides/Content";
+import Content from "components/pages/providers/alternatives/Content";
 import { NextSeo } from "next-seo";
-import GetGuideData from "scripts/GetGuideData";
 import heroPattern from "../../../../public/images/pages/guides/hero-pattern.svg";
 import Hero from "components/pages/guides/Hero";
+import getCategoryListData from "scripts/providers/generate-page-data/list";
+const listOfCategories = ["transactional-email"];
 
-export async function getServerSideProps(context: any) {
+export async function getStaticPaths() {
+  const getListPaths = [];
+  for (let index = 0; index < listOfCategories.length; index++) {
+    const slug = listOfCategories[index];
+    getListPaths.push({
+      params: { slug },
+    });
+  }
+  return {
+    paths: getListPaths,
+    fallback: true,
+  };
+}
+
+export async function getStaticProps(context: any) {
   const { params } = context;
-  const { guide } = params;
-  const data = await GetGuideData({ slug: guide, isPreview: true });
+  const { slug } = params;
+  const data = await getCategoryListData({ slug });
   return {
     props: { data },
+    revalidate: 60,
   };
 }
 
@@ -22,9 +38,13 @@ const GuidePage = ({ data }: { data: any }) => {
     title,
     metaTitle,
     metaDescription,
-    content,
-    tableOfContents,
-    assets,
+    introduction,
+    prosAndCons,
+    conclusion,
+    pricing,
+    companyInfo,
+    features,
+    recap,
   } = data;
 
   return (
@@ -40,9 +60,13 @@ const GuidePage = ({ data }: { data: any }) => {
         <Hero title={title} />
       </Box>
       <Content
-        contentMd={content}
-        tableOfContents={tableOfContents}
-        assets={assets}
+        introduction={introduction}
+        prosAndCons={prosAndCons}
+        conclusion={conclusion}
+        pricing={pricing}
+        companyInfo={companyInfo}
+        features={features}
+        recap={recap}
       />
       <Footer />
     </>

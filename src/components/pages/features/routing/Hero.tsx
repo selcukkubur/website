@@ -36,9 +36,9 @@ const Hero = () => (
       </Heading>
 
       <Text mt={6} mb={10} variant="body1" color="whiteAlpha.900">
-        Courier's Routing Engine provides the infrastructure and tooling you need
-        to ensure your app always delivers the right notification,
-        to the right user, through the right channel, at the right time.
+        Courier's Routing Engine provides the infrastructure and tooling you
+        need to ensure your app always delivers the right notification, to the
+        right user, through the right channel, at the right time.
       </Text>
     </Box>
 

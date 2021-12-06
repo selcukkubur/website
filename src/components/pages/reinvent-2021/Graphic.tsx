@@ -39,7 +39,7 @@ const Graphic = () => {
 
           <Box flex={1} mb={8}>
             <Heading as="h1" variant="h2" mb={6}>
-             Visit the Courier Lounge at re:Invent 2021
+              Visit the Courier Lounge at re:Invent 2021
             </Heading>
             <UnorderedList ml={7}>
               <ListItem>
@@ -48,7 +48,10 @@ const Graphic = () => {
                 </Text>
               </ListItem>
               <ListItem>
-                <Text variant="body2">Learn how Courier works along with SES, SNS, Serverless and more</Text>
+                <Text variant="body2">
+                  Learn how Courier works along with SES, SNS, Serverless and
+                  more
+                </Text>
               </ListItem>
               <ListItem>
                 <Text variant="body2">

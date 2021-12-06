@@ -1,32 +1,31 @@
 import { Box } from "@chakra-ui/react";
 import Header from "components/Header/index";
 import Footer from "components/Footer";
-import Content from "components/pages/guides/Content";
+import Content from "components/pages/providers/alternatives/Content";
 import { NextSeo } from "next-seo";
-import GetGuideData from "scripts/GetGuideData";
-import heroPattern from "../../../public/images/pages/guides/hero-pattern.svg";
+import heroPattern from "../../../../public/images/pages/guides/hero-pattern.svg";
 import Hero from "components/pages/guides/Hero";
-import getAllGuides from "scripts/GetAllGuides";
+import getAlternativesData from "scripts/providers/generate-page-data/alternatives";
+import providersData from "scripts/providers/data/email/core";
 
 export async function getStaticPaths() {
-  const allGuides = await getAllGuides();
-  const allGuidesPaths = [];
-  for (let index = 0; index < allGuides.length; index++) {
-    const guides = allGuides[index];
-    allGuidesPaths.push({
-      params: { guide: guides.fields.slug },
+  const allAlternativePagesPaths = [];
+  for (let index = 0; index < providersData.length; index++) {
+    const { slug } = providersData[index];
+    allAlternativePagesPaths.push({
+      params: { slug },
     });
   }
   return {
-    paths: allGuidesPaths,
+    paths: allAlternativePagesPaths,
     fallback: true,
   };
 }
 
 export async function getStaticProps(context: any) {
   const { params } = context;
-  const { guide } = params;
-  const data = await GetGuideData({ slug: guide, isPreview: false });
+  const { slug } = params;
+  const data = await getAlternativesData({ slug });
   return {
     props: { data },
     revalidate: 60,
@@ -39,9 +38,13 @@ const GuidePage = ({ data }: { data: any }) => {
     title,
     metaTitle,
     metaDescription,
-    content,
-    tableOfContents,
-    assets,
+    introduction,
+    prosAndCons,
+    conclusion,
+    pricing,
+    companyInfo,
+    features,
+    recap,
   } = data;
 
   return (
@@ -57,9 +60,13 @@ const GuidePage = ({ data }: { data: any }) => {
         <Hero title={title} />
       </Box>
       <Content
-        contentMd={content}
-        tableOfContents={tableOfContents}
-        assets={assets}
+        introduction={introduction}
+        prosAndCons={prosAndCons}
+        conclusion={conclusion}
+        pricing={pricing}
+        recap={recap}
+        companyInfo={companyInfo}
+        features={features}
       />
       <Footer />
     </>

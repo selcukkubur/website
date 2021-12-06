@@ -1,7 +1,7 @@
 import { Heading, Text } from "@chakra-ui/react";
 import Container from "components/Container";
 
-const Hero = ({ title, subTitle }: { title: string; subTitle: string }) => (
+const Hero = ({ title }: { title: string }) => (
   <Container
     textAlign="center"
     color="white"
@@ -11,12 +11,15 @@ const Hero = ({ title, subTitle }: { title: string; subTitle: string }) => (
     flexDir="column"
     alignItems="center"
   >
-    <Heading as="h1" size="2xl" lineHeight="1.3" maxW="800px">
+    <Heading
+      as="h1"
+      size="2xl"
+      lineHeight="1.3"
+      maxW="800px"
+      pt={{ base: "32px", lg: "0px" }}
+    >
       {title}
     </Heading>
-    <Text mt={8} fontSize={{ base: "22px", lg: "23px" }} maxW="720px">
-      {subTitle}
-    </Text>
   </Container>
 );
 

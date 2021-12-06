@@ -1,30 +1,48 @@
 import { Box } from "@chakra-ui/react";
 import Header from "components/Header/index";
 import Footer from "components/Footer";
-import Content from "components/pages/guides/Content";
+import Content from "components/pages/providers/pricing/Content";
 import { NextSeo } from "next-seo";
-import GetGuideData from "scripts/GetGuideData";
 import heroPattern from "../../../../public/images/pages/guides/hero-pattern.svg";
+import getPricingData from "scripts/providers/generate-page-data/pricing";
 import Hero from "components/pages/guides/Hero";
 
-export async function getServerSideProps(context: any) {
-  const { params } = context;
-  const { guide } = params;
-  const data = await GetGuideData({ slug: guide, isPreview: true });
+const listOfCategories = ["transactional-email"];
+
+export async function getStaticPaths() {
+  const getListPaths = [];
+  for (let index = 0; index < listOfCategories.length; index++) {
+    const slug = listOfCategories[index];
+    getListPaths.push({
+      params: { slug },
+    });
+  }
   return {
-    props: { data },
+    paths: getListPaths,
+    fallback: true,
   };
 }
 
-const GuidePage = ({ data }: { data: any }) => {
+export async function getStaticProps(context: any) {
+  const { params } = context;
+  const { slug } = params;
+  const data = await getPricingData({ category: slug });
+  return {
+    props: { data },
+    revalidate: 60,
+  };
+}
+
+const PricingGuide = ({ data }: { data: any }) => {
   if (!data) return <p></p>;
   const {
     title,
     metaTitle,
     metaDescription,
-    content,
-    tableOfContents,
-    assets,
+    introduction,
+    conclusion,
+    pricing,
+    recap,
   } = data;
 
   return (
@@ -40,13 +58,14 @@ const GuidePage = ({ data }: { data: any }) => {
         <Hero title={title} />
       </Box>
       <Content
-        contentMd={content}
-        tableOfContents={tableOfContents}
-        assets={assets}
+        introduction={introduction}
+        pricing={pricing}
+        conclusion={conclusion}
+        recap={recap}
       />
       <Footer />
     </>
   );
 };
 
-export default GuidePage;
+export default PricingGuide;

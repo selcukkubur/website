@@ -15,7 +15,7 @@ export default [
       {
         name: "Mailjet",
         link: "/docs/guides/providers/email/mailjet",
-        image: require("../../../../public/images/pages/integrations/providers/mailget.svg"),
+        image: require("../../../../public/images/pages/integrations/providers/mailjet.svg"),
       },
       {
         name: "Mandrill",
