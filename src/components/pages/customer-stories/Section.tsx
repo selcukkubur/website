@@ -1,4 +1,4 @@
-import { Box, BoxProps, Heading, Text, Flex } from "@chakra-ui/react";
+import { Box, BoxProps, Heading, Text, Flex, Link } from "@chakra-ui/react";
 import Markdown from "markdown-to-jsx";
 import Container from "components/Container";
 import DarkGradientBg from "components/buttons/DarkGradientBg";
@@ -22,6 +22,14 @@ const markdownOptions = {
     p: {
       component: Text,
       props: { variant: "body1", my: 8, fontWeight: 300 },
+    },
+    a: {
+      component: Link,
+      props: {
+        target: "_blank",
+        textDecoration: "underline",
+        _hover: { textDecoration: "none" },
+      },
     },
   },
 };
