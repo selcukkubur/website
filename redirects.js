@@ -71,4 +71,9 @@ module.exports = [
     destination: "/guides/user-notification-system",
     permanent: true,
   },
+  {
+    source: "/blog/no-code-segment-product-notifications",
+    destination: "/blog/courier-segment-integration-product-notifications",
+    permanent: true,
+  },
 ];
