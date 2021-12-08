@@ -46,19 +46,13 @@ const DesktopMenu = () => {
     )
       return;
 
-    const { offsetWidth: width, offsetHeight: height } =
-      activeDropdownRef.current;
-    const { offsetLeft: left } = activeMenuItemRef.current.parentElement;
-
-    backgroundRef.current.style.width = `${width}px`;
-    backgroundRef.current.style.height = `${height}px`;
-    backgroundRef.current.style.transform = `translateX(${left - width / 4}px)`;
+    backgroundRef.current.style.width = `${activeDropdownRef.current.offsetWidth}px`;
+    backgroundRef.current.style.height = `${activeDropdownRef.current.offsetHeight}px`;
   }, [activeDropdown]);
 
   return (
     <Flex
       display={{ base: "none", lg: "flex" }}
-      pos="relative"
       onMouseLeave={() => {
         setActiveDropdown(null);
       }}
@@ -76,7 +70,6 @@ const DesktopMenu = () => {
             }}
             boxShadow={`0 2px ${active ? "currentColor" : "transparent"}`}
             _hover={{ boxShadow: "0 2px currentColor" }}
-            py={1}
             transition="0.3s box-shadow"
             pos="relative"
             _after={
@@ -98,6 +91,8 @@ const DesktopMenu = () => {
               to={item.link || "/"}
               ref={active ? activeMenuItemRef : undefined}
               cursor="pointer"
+              display="block"
+              py={1}
             >
               {item.label}
             </MetaLink>
@@ -109,7 +104,9 @@ const DesktopMenu = () => {
         bgColor="white"
         borderRadius={16}
         pos="absolute"
-        top="64px"
+        top="79px"
+        left="50%"
+        transform="translateX(-50%)"
         ref={backgroundRef}
         opacity={activeDropdown ? 1 : 0}
         visibility={activeDropdown ? "visible" : "hidden"}
