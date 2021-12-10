@@ -1,6 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import AnalyticsContext from "components/AnalyticsContext";
 import { Box } from "@chakra-ui/react";
+import stringHash from "@sindresorhus/string-hash";
 
 interface VariantProps {
   children: React.ReactNode;
@@ -20,7 +21,8 @@ const Experiment = ({ name, children }: ExperimentProps) => {
   useEffect(() => {
     if (!experimentId) return;
 
-    const variantIndex = Math.floor(experimentId * children.length);
+    const variantIndex =
+      stringHash(name.slice(name.length * experimentId)) % children.length;
 
     setActiveVariant(variantIndex);
     setExperimentVariant(
