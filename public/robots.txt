@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://www.courier.com
-
-# Sitemaps
-Sitemap: https://www.courier.com/sitemap.xml
