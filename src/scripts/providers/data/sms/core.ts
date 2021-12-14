@@ -43,15 +43,15 @@ const providers: Providers = [
     when_to_use: postmark.when_to_use,
     ratings: {
       trustpilot: 3.8,
-      g2: 4.6,
+      g2: 4.2,
     },
     features: getEmailFeatures({ provider: "postmark" }),
     pricing: getEmailPricing({ provider: "postmark" }),
   },
   {
-    name: "AWS SNS",
-    id: "aws-sns-sms",
-    slug: "aws-sns-sms",
+    name: "Amazon SNS",
+    id: "amazon-sns-sms",
+    slug: "amazon-sns-sms",
     category: "sms",
     competitors: emailProviders,
     website_url: "https://aws.amazon.com/sns/",
@@ -106,7 +106,7 @@ const providers: Providers = [
     when_to_use: sendgrid.when_to_use,
     ratings: {
       trustpilot: 1.3,
-      g2: 4.0,
+      g2: 4.1,
     },
     features: getEmailFeatures({ provider: "sendgrid" }),
     pricing: getEmailPricing({ provider: "sendgrid" }),
@@ -138,7 +138,7 @@ const providers: Providers = [
     when_to_use: amazonSes.when_to_use,
     ratings: {
       trustpilot: 3.5,
-      g2: 4.2,
+      g2: 4.0,
     },
     features: getEmailFeatures({ provider: "amazonSes" }),
     pricing: getEmailPricing({ provider: "amazonSes" }),
@@ -169,7 +169,7 @@ const providers: Providers = [
     when_to_use: sparkpost.when_to_use,
     ratings: {
       trustpilot: 3.6,
-      g2: 4.0,
+      g2: 4.5,
     },
     features: getEmailFeatures({ provider: "sparkpost" }),
     pricing: getEmailPricing({ provider: "sparkpost" }),
@@ -200,7 +200,7 @@ const providers: Providers = [
     when_to_use: onesignalEmail.when_to_use,
     ratings: {
       trustpilot: 3.7,
-      g2: 4.7,
+      g2: 4.2,
     },
     features: getEmailFeatures({ provider: "onesignalEmail" }),
     pricing: getEmailPricing({ provider: "onesignalEmail" }),
@@ -231,7 +231,7 @@ const providers: Providers = [
     when_to_use: mailjet.when_to_use,
     ratings: {
       trustpilot: 3.8,
-      g2: 3.9,
+      g2: 4.8,
     },
     features: getEmailFeatures({ provider: "mailjet" }),
     pricing: getEmailPricing({ provider: "mailjet" }),
@@ -262,7 +262,7 @@ const providers: Providers = [
     when_to_use: mandrill.when_to_use,
     ratings: {
       trustpilot: 1.4,
-      g2: 4.2,
+      g2: 4.5,
     },
     features: getEmailFeatures({ provider: "mandrill" }),
     pricing: getEmailPricing({ provider: "mandrill" }),
