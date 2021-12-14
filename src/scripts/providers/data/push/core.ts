@@ -26,7 +26,7 @@ const providers: Providers = [
     courier_url: "https://www.courier.com/docs/guides/providers/push/airship/",
     images: {
       company_logo:
-        "https://courier-website-images.s3.amazonaws.com/postmarkapp.png",
+        "https://courier-website-images.s3.amazonaws.com/airship.png",
       app_screenshot:
         "https://public-assets.postmarkapp.com/manual/activity_feed.png",
     },
@@ -57,8 +57,7 @@ const providers: Providers = [
     courier_url:
       "https://www.courier.com/docs/guides/providers/push/apple-push-notification/",
     images: {
-      company_logo:
-        "https://courier-website-images.s3.amazonaws.com/mailgun.png",
+      company_logo: "https://courier-website-images.s3.amazonaws.com/apple.png",
       app_screenshot:
         "https://documentation.mailgun.com/en/latest/_images/validation_control_panel.png",
     },
@@ -89,7 +88,7 @@ const providers: Providers = [
     courier_url: "https://www.courier.com/docs/guides/providers/push/aws-sns/",
     images: {
       company_logo:
-        "https://courier-website-images.s3.amazonaws.com/sendgrid.png",
+        "https://courier-website-images.s3.amazonaws.com/amazon-sns.png",
       app_screenshot:
         "https://imgr.search.brave.com/5mX68V2oh_rt8Mbl4xKrc6m6FC7J7QW8vw1LtEg7tYI/fit/1160/823/ce/1/aHR0cHM6Ly9kMXc4/MmY1eGM3OHdqdS5j/bG91ZGZyb250Lm5l/dC91cGxvYWRzL3Rh/cmdldHdhcmUvaW1h/Z2UvZmlsZS85NDg1/L3NlbmRncmlkLm1h/c3Rlci5wbmc",
     },
@@ -120,7 +119,7 @@ const providers: Providers = [
     courier_url: "https://www.courier.com/docs/guides/providers/push/beamer/",
     images: {
       company_logo:
-        "https://courier-website-images.s3.amazonaws.com/aws-ses.png",
+        "https://courier-website-images.s3.amazonaws.com/beamer.png",
       app_screenshot:
         "https://imgr.search.brave.com/5mX68V2oh_rt8Mbl4xKrc6m6FC7J7QW8vw1LtEg7tYI/fit/1160/823/ce/1/aHR0cHM6Ly9kMXc4/MmY1eGM3OHdqdS5j/bG91ZGZyb250Lm5l/dC91cGxvYWRzL3Rh/cmdldHdhcmUvaW1h/Z2UvZmlsZS85NDg1/L3NlbmRncmlkLm1h/c3Rlci5wbmc",
     },
@@ -150,8 +149,7 @@ const providers: Providers = [
     website_url: "https://www.drift.com/",
     courier_url: "https://www.courier.com/docs/guides/providers/push/drift/",
     images: {
-      company_logo:
-        "https://courier-website-images.s3.amazonaws.com/sparkpost.png",
+      company_logo: "https://courier-website-images.s3.amazonaws.com/drift.png",
       app_screenshot:
         "https://imgr.search.brave.com/5mX68V2oh_rt8Mbl4xKrc6m6FC7J7QW8vw1LtEg7tYI/fit/1160/823/ce/1/aHR0cHM6Ly9kMXc4/MmY1eGM3OHdqdS5j/bG91ZGZyb250Lm5l/dC91cGxvYWRzL3Rh/cmdldHdhcmUvaW1h/Z2UvZmlsZS85NDg1/L3NlbmRncmlkLm1h/c3Rlci5wbmc",
     },
@@ -181,8 +179,7 @@ const providers: Providers = [
     website_url: "https://docs.expo.dev/push-notifications/overview/",
     courier_url: "https://www.courier.com/docs/guides/providers/push/expo/",
     images: {
-      company_logo:
-        "https://courier-website-images.s3.amazonaws.com/onesignal.png",
+      company_logo: "https://courier-website-images.s3.amazonaws.com/expo.png",
       app_screenshot:
         "https://imgr.search.brave.com/5mX68V2oh_rt8Mbl4xKrc6m6FC7J7QW8vw1LtEg7tYI/fit/1160/823/ce/1/aHR0cHM6Ly9kMXc4/MmY1eGM3OHdqdS5j/bG91ZGZyb250Lm5l/dC91cGxvYWRzL3Rh/cmdldHdhcmUvaW1h/Z2UvZmlsZS85NDg1/L3NlbmRncmlkLm1h/c3Rlci5wbmc",
     },
@@ -214,7 +211,7 @@ const providers: Providers = [
       "https://www.courier.com/docs/guides/providers/push/firebase-fcm/",
     images: {
       company_logo:
-        "https://courier-website-images.s3.amazonaws.com/mailjet.png",
+        "https://courier-website-images.s3.amazonaws.com/firebase.png",
       app_screenshot:
         "https://imgr.search.brave.com/5mX68V2oh_rt8Mbl4xKrc6m6FC7J7QW8vw1LtEg7tYI/fit/1160/823/ce/1/aHR0cHM6Ly9kMXc4/MmY1eGM3OHdqdS5j/bG91ZGZyb250Lm5l/dC91cGxvYWRzL3Rh/cmdldHdhcmUvaW1h/Z2UvZmlsZS85NDg1/L3NlbmRncmlkLm1h/c3Rlci5wbmc",
     },
@@ -246,7 +243,7 @@ const providers: Providers = [
       "https://www.courier.com/docs/guides/providers/push/magicbell/",
     images: {
       company_logo:
-        "https://courier-website-images.s3.amazonaws.com/mandrill.png",
+        "https://courier-website-images.s3.amazonaws.com/magicbell.png",
       app_screenshot:
         "https://imgr.search.brave.com/5mX68V2oh_rt8Mbl4xKrc6m6FC7J7QW8vw1LtEg7tYI/fit/1160/823/ce/1/aHR0cHM6Ly9kMXc4/MmY1eGM3OHdqdS5j/bG91ZGZyb250Lm5l/dC91cGxvYWRzL3Rh/cmdldHdhcmUvaW1h/Z2UvZmlsZS85NDg1/L3NlbmRncmlkLm1h/c3Rlci5wbmc",
     },
@@ -278,7 +275,7 @@ const providers: Providers = [
       "https://www.courier.com/docs/guides/providers/push/onesignal-push/",
     images: {
       company_logo:
-        "https://courier-website-images.s3.amazonaws.com/mandrill.png",
+        "https://courier-website-images.s3.amazonaws.com/onesignal.png",
       app_screenshot:
         "https://imgr.search.brave.com/5mX68V2oh_rt8Mbl4xKrc6m6FC7J7QW8vw1LtEg7tYI/fit/1160/823/ce/1/aHR0cHM6Ly9kMXc4/MmY1eGM3OHdqdS5j/bG91ZGZyb250Lm5l/dC91cGxvYWRzL3Rh/cmdldHdhcmUvaW1h/Z2UvZmlsZS85NDg1/L3NlbmRncmlkLm1h/c3Rlci5wbmc",
     },
@@ -310,7 +307,7 @@ const providers: Providers = [
       "https://www.courier.com/docs/guides/providers/push/ops-genie/",
     images: {
       company_logo:
-        "https://courier-website-images.s3.amazonaws.com/mandrill.png",
+        "https://courier-website-images.s3.amazonaws.com/opsgenie.png",
       app_screenshot:
         "https://imgr.search.brave.com/5mX68V2oh_rt8Mbl4xKrc6m6FC7J7QW8vw1LtEg7tYI/fit/1160/823/ce/1/aHR0cHM6Ly9kMXc4/MmY1eGM3OHdqdS5j/bG91ZGZyb250Lm5l/dC91cGxvYWRzL3Rh/cmdldHdhcmUvaW1h/Z2UvZmlsZS85NDg1/L3NlbmRncmlkLm1h/c3Rlci5wbmc",
     },
@@ -342,7 +339,7 @@ const providers: Providers = [
       "https://www.courier.com/docs/guides/providers/push/pagerduty/",
     images: {
       company_logo:
-        "https://courier-website-images.s3.amazonaws.com/mandrill.png",
+        "https://courier-website-images.s3.amazonaws.com/pagerduty.png",
       app_screenshot:
         "https://imgr.search.brave.com/5mX68V2oh_rt8Mbl4xKrc6m6FC7J7QW8vw1LtEg7tYI/fit/1160/823/ce/1/aHR0cHM6Ly9kMXc4/MmY1eGM3OHdqdS5j/bG91ZGZyb250Lm5l/dC91cGxvYWRzL3Rh/cmdldHdhcmUvaW1h/Z2UvZmlsZS85NDg1/L3NlbmRncmlkLm1h/c3Rlci5wbmc",
     },
@@ -374,7 +371,7 @@ const providers: Providers = [
       "https://www.courier.com/docs/guides/providers/push/pushbullet/",
     images: {
       company_logo:
-        "https://courier-website-images.s3.amazonaws.com/mandrill.png",
+        "https://courier-website-images.s3.amazonaws.com/pushbullet.png",
       app_screenshot:
         "https://imgr.search.brave.com/5mX68V2oh_rt8Mbl4xKrc6m6FC7J7QW8vw1LtEg7tYI/fit/1160/823/ce/1/aHR0cHM6Ly9kMXc4/MmY1eGM3OHdqdS5j/bG91ZGZyb250Lm5l/dC91cGxvYWRzL3Rh/cmdldHdhcmUvaW1h/Z2UvZmlsZS85NDg1/L3NlbmRncmlkLm1h/c3Rlci5wbmc",
     },
@@ -406,7 +403,7 @@ const providers: Providers = [
       "https://www.courier.com/docs/guides/providers/push/splunk-on-call/",
     images: {
       company_logo:
-        "https://courier-website-images.s3.amazonaws.com/mandrill.png",
+        "https://courier-website-images.s3.amazonaws.com/splunk.png",
       app_screenshot:
         "https://imgr.search.brave.com/5mX68V2oh_rt8Mbl4xKrc6m6FC7J7QW8vw1LtEg7tYI/fit/1160/823/ce/1/aHR0cHM6Ly9kMXc4/MmY1eGM3OHdqdS5j/bG91ZGZyb250Lm5l/dC91cGxvYWRzL3Rh/cmdldHdhcmUvaW1h/Z2UvZmlsZS85NDg1/L3NlbmRncmlkLm1h/c3Rlci5wbmc",
     },
