@@ -41,6 +41,7 @@ const urls = {
   useCaseTransactional: "/transactional-notifications",
   useCaseUserActivity: "/user-activity-notifications",
   useCaseAlert: "/alert-notifications",
+  useCaseAction: "/action-notifications",
   enterprise: "/enterprise",
 };
 
@@ -86,5 +87,6 @@ export let {
   useCaseTransactional,
   useCaseUserActivity,
   useCaseAlert,
+  useCaseAction,
   enterprise,
 } = urls;

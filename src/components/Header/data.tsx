@@ -14,6 +14,7 @@ import {
   useCaseTransactional,
   useCaseUserActivity,
   useCaseAlert,
+  useCaseAction,
   blog,
   about,
   discord,
@@ -94,12 +95,13 @@ const createItems = (blogPosts: BlogPost[] = []): MenuItem[] => [
               icon: require("./icons/use-cases/user-activity.svg"),
               link: useCaseUserActivity,
             },
-            // {
-            //   label: "Action Requested",
-            //   description: "A short to the point one liner goes here.",
-            //   icon: require("./icons/use-cases/action-requested.svg"),
-            //   link: getStarted,
-            // },
+            {
+              label: "Action",
+              description:
+                "Proactively notify users when their action is required.",
+              icon: require("./icons/use-cases/action-requested.svg"),
+              link: useCaseAction,
+            },
             // {
             //   label: "Digest",
             //   description: "A short to the point one liner goes here.",
