@@ -137,7 +137,7 @@ const MarkdownContent = ({
             pre: {
               component: (props) => {
                 return (
-                  <Box mt="10px">
+                  <Box mt="10px" maxW={{ base: "300px", md: "700px" }}>
                     <CopyBlock
                       text={props.children.props.children}
                       language={(props.children.props.className || "").replace(
