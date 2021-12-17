@@ -39,7 +39,7 @@ const Hero = () => (
     >
       <Box>
         <Heading as="h1" variant="h1">
-          Modern product notifications without the overhead
+          Mission critical notification infrastructure
         </Heading>
 
         <Text mt={6} mb={10} variant="body1" color="whiteAlpha.900">
