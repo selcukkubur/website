@@ -21,6 +21,8 @@
     "@segment/analytics.js-core": "^4.1.11",
     "@segment/snippet": "^4.13.2",
     "@sindresorhus/string-hash": "^2.0.0",
+    "@trycourier/react-provider": "^1.2.0",
+    "@trycourier/react-toast": "^1.2.0",
     "@types/cookie": "^0.4.1",
     "@types/react-slick": "^0.23.4",
     "contentful": "^8.3.7",
