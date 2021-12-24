@@ -1,18 +1,18 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
 import ButtonCTAGradient from "components/buttons/CTAGradient";
-import Image from "next/image";
+import VideoAnimation from "components/common/VideoAnimation";
 import { requestDemo } from "constants/urls";
 import FeatureSection from "components/common/FeatureSection";
 
 const Hero = () => (
   <Box
-    background={`url('/banner-pattern.svg') no-repeat, linear-gradient(270deg,#9121c2,#ff5e5e)`}
+    bgColor="secondary.dark"
     backgroundSize="cover"
     borderRadius="0 0 40px 40px"
     overflow="hidden"
   >
     <FeatureSection
-      pt={{ base: "100px", lg: "180px" }}
+      pt={{ base: "100px", lg: "160px" }}
       pb={{ lg: "90px" }}
       color="white"
       graphicAlignment="right"
@@ -24,15 +24,14 @@ const Hero = () => (
       graphic={
         <Box
           mt="-30px"
-          ml="96px"
-          mr="-24x"
+          ml="36px"
+          mr="-72px"
           display={{ base: "none", lg: "block" }}
         >
-          <Image
-            src={require("../../../../public/images/pages/enterprise/hero.png")}
-            width={512}
-            height={546}
-            alt=""
+          <VideoAnimation
+            url="/videos/pages/enterprise/hero.mp4"
+            width={528}
+            height={544}
           />
         </Box>
       }
