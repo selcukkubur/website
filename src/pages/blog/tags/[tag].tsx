@@ -1,10 +1,11 @@
+import { GetStaticPropsContext } from "next";
 import Header from "components/Header/index";
 import Footer from "components/Footer";
-import Content from "components/pages/blog/tag/Content";
-import Hero from "components/pages/blog/tag/Hero";
+import Content from "components/pages/blog/common/Content";
+import Hero from "components/pages/blog/common/Hero";
 import { NextSeo } from "next-seo";
-import GetBlogsForTag from "scripts/GetBlogsForTag";
-import menuData from "components/pages/blog/common/Menu/data";
+import GetBlogTag, { BlogPostTag } from "scripts/GetBlogTag";
+import GetBlogPosts, { BlogPost } from "scripts/GetBlogPosts";
 import Newsletter from "components/common/Newsletter";
 
 export async function getStaticPaths() {
@@ -18,31 +19,40 @@ export async function getStaticPaths() {
   ];
   return {
     paths: allTagPaths,
-    fallback: true,
+    fallback: false,
   };
 }
 
-export async function getStaticProps(context: any) {
+export async function getStaticProps(
+  context: GetStaticPropsContext<{ tag: string }>
+) {
   const { params } = context;
-  const { tag } = params;
-  const feedContent = await GetBlogsForTag({ tag: tag });
+  const blogTag = params?.tag ? await GetBlogTag(params?.tag) : null;
+
+  if (!blogTag) return { notFound: true };
+
+  const blogPosts = await GetBlogPosts({ limit: 7, tagId: blogTag.sys.id });
+
   return {
-    props: { feedContent },
+    props: { blogPosts, tag: blogTag },
     revalidate: 60,
   };
 }
 
-const Blog = ({ feedContent }: { feedContent: any }) => {
-  if (!feedContent) return <p></p>;
-  const tagName = menuData.find((e) => e.slug === feedContent.slug)!.name;
-
+const Blog = ({
+  blogPosts,
+  tag,
+}: {
+  blogPosts: BlogPost[];
+  tag: BlogPostTag;
+}) => {
   return (
     <>
-      <NextSeo title={tagName} noindex />
+      <NextSeo title={tag.fields.name} noindex />
       <Header headerPlain />
-      <Hero slug={feedContent.slug} />
+      <Hero slug={tag.fields.slug} />
       <Newsletter />
-      <Content feedContent={feedContent.items} slug={feedContent.slug} />
+      <Content blogPosts={blogPosts} slug={tag.fields.slug} />
       <Footer />
     </>
   );

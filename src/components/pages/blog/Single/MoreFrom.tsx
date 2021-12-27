@@ -1,11 +1,12 @@
 import React from "react";
 import { Heading, Box, SimpleGrid, Text, Avatar, Flex } from "@chakra-ui/react";
+import { BlogPost } from "scripts/GetBlogPosts";
 import ParseData from "components/pages/blog/common/ParseData";
 import InternalLink from "components/InternalLink";
 import BlogTag from "components/pages/blog/common/Tag";
 import Image from "next/image";
 
-const PostSummary = ({ data, tagName }: { data: any; tagName: any }) => {
+const PostSummary = ({ data, tagName }: { data: BlogPost; tagName: any }) => {
   const {
     id,
     authorName,

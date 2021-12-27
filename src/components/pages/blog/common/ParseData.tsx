@@ -1,6 +1,7 @@
 import dayjs from "dayjs";
+import type { BlogPost } from "scripts/GetBlogPosts";
 
-const ParseData = ({ data }: { data: any }) => {
+const ParseData = ({ data }: { data: BlogPost }) => {
   const { sys, fields } = data;
   const {
     tags,

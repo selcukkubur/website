@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import { Flex, Text, Box } from "@chakra-ui/react";
 import MetaLink from "components/MetaLink";
-import { BlogPost } from "scripts/GetAllBlogs";
+import type { BlogPost } from "scripts/GetBlogPosts";
 
 import Dropdown, { DropdownProps } from "./Dropdown";
 

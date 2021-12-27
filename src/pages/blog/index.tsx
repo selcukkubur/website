@@ -1,22 +1,20 @@
 import Header from "components/Header/index";
 import Footer from "components/Footer";
-import Content from "components/pages/blog/home/Content";
-import Hero from "components/pages/blog/home/Hero";
+import Content from "components/pages/blog/common/Content";
+import Hero from "components/pages/blog/common/Hero";
 import Newsletter from "components/common/Newsletter";
 import { NextSeo } from "next-seo";
-import GetBlogsHomeFeed from "scripts/GetBlogsHomeFeed";
+import getBlogPosts, { BlogPost } from "scripts/GetBlogPosts";
 
-export async function getStaticProps(context: any) {
-  const feedContent = await GetBlogsHomeFeed();
+export async function getStaticProps() {
+  const blogPosts = await getBlogPosts({ limit: 8 });
   return {
-    props: { feedContent },
+    props: { blogPosts },
     revalidate: 60,
   };
 }
 
-const Blog = ({ feedContent }: { feedContent: any }) => {
-  if (!feedContent) return <p></p>;
-
+const Blog = ({ blogPosts }: { blogPosts: BlogPost[] }) => {
   return (
     <>
       <NextSeo
@@ -26,7 +24,7 @@ const Blog = ({ feedContent }: { feedContent: any }) => {
       <Header headerPlain />
       <Hero />
       <Newsletter />
-      <Content feedContent={feedContent} />
+      <Content blogPosts={blogPosts} />
       <Footer />
     </>
   );

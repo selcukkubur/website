@@ -22,7 +22,7 @@ import {
 } from "constants/urls";
 
 import { DropdownProps } from "./DesktopMenu/Dropdown";
-import { BlogPost } from "scripts/GetAllBlogs";
+import type { BlogPost } from "scripts/GetBlogPosts";
 import { colorMap } from "components/pages/blog/common/Tag";
 
 interface MenuItem {

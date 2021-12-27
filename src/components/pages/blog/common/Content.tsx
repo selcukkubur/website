@@ -1,13 +1,14 @@
 import { Flex } from "@chakra-ui/react";
+import { BlogPost } from "scripts/GetBlogPosts";
 import Menu from "../common/Menu";
 import Feed from "./Feed";
 
 const Content = ({
-  feedContent,
+  blogPosts,
   slug,
 }: {
-  feedContent: any[];
-  slug: string;
+  blogPosts: BlogPost[];
+  slug?: string;
 }) => (
   <Flex
     maxW="1240px"
@@ -15,8 +16,8 @@ const Content = ({
     mt={{ base: "92px", lg: "92px", xl: "142px" }}
     direction={{ base: "column", xl: "row" }}
   >
-    <Menu slug={slug} />
-    <Feed feedContent={feedContent} />
+    <Menu slug={slug || "home"} />
+    <Feed blogPosts={blogPosts} showHighlights={!slug} />
   </Flex>
 );
 

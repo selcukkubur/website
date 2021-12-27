@@ -1,5 +1,7 @@
 import contentfulClient from "./contentfulClient";
 
+import type { BlogPostTag } from "./GetBlogTag";
+
 interface Asset {
   sys: {
     id: string;
@@ -18,16 +20,6 @@ interface Asset {
       fileName: string;
       contentType: string;
     };
-  };
-}
-
-interface BlogPostTag {
-  sys: {
-    id: string;
-  };
-  fields: {
-    name: string;
-    slug: string;
   };
 }
 
@@ -63,16 +55,24 @@ export interface BlogPost {
   };
 }
 
-const GetAllBlogs = async (
-  { limit } = { limit: 1000 }
+const GetBlogPosts = async (
+  {
+    limit,
+    tagId,
+    exclude,
+  }: { limit: number; tagId?: string; exclude?: string } = {
+    limit: 1000,
+  }
 ): Promise<BlogPost[]> => {
   const client = contentfulClient();
   const response = await client.getEntries({
     content_type: "post",
     limit,
     order: "-sys.createdAt",
+    ...(tagId ? { "fields.tags.sys.id": tagId } : {}),
+    ...(exclude ? { "sys.id[ne]": exclude } : {}),
   });
   return response.items;
 };
 
-export default GetAllBlogs;
+export default GetBlogPosts;

@@ -1,4 +1,4 @@
-import GetSimilarBlogs from "./GetSimilarBlogs";
+import GetBlogPosts from "./GetBlogPosts";
 import contentfulMdExtractAssets from "./contentfulMdExtractAssets";
 
 interface Props {
@@ -80,7 +80,7 @@ async function getBlogPostDetails({
                         }
                     },
                     tagsCollection {
-                        items { name slug }
+                        items { sys { id } name slug }
                     }
                     headerImage {
                         title
@@ -166,9 +166,15 @@ const GetBlogPost = async ({ slug, isPreview }: Props) => {
   const blogPostId = await getBlogPostId({ slug, isPreview });
   const blogPostDetails = await getBlogPostDetails({ blogPostId, isPreview });
   const mostPopularBlogs = await getMostPopularBlogs();
-  const { name: tagName, slug: tagSlug } =
-    blogPostDetails.tagsCollection.items[0];
-  const moreBlogs = await GetSimilarBlogs({ slug: tagSlug, excludeSlug: slug });
+  const {
+    name: tagName,
+    sys: { id: tagId },
+  } = blogPostDetails.tagsCollection.items[0];
+  const moreBlogs = await GetBlogPosts({
+    limit: 2,
+    tagId,
+    exclude: blogPostId,
+  });
   blogPostDetails.moreFromTagName = tagName;
   blogPostDetails.moreBlogs = moreBlogs;
   blogPostDetails.mostPopular = mostPopularBlogs;

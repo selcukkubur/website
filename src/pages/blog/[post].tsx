@@ -3,10 +3,10 @@ import Footer from "components/Footer";
 import Content from "components/pages/blog/Single";
 import { NextSeo } from "next-seo";
 import GetBlogPost from "scripts/GetBlogPost";
-import getAllBlogs from "scripts/GetAllBlogs";
+import getBlogPosts from "scripts/GetBlogPosts";
 
 export async function getStaticPaths() {
-  const allBlogs = await getAllBlogs();
+  const allBlogs = await getBlogPosts();
   const allBlogPaths = [];
   for (let index = 0; index < allBlogs.length; index++) {
     const blog = allBlogs[index];
