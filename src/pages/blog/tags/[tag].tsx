@@ -31,10 +31,19 @@ export async function getStaticProps(
 
   if (!blogTag) return { notFound: true };
 
-  const blogPosts = await GetBlogPosts({ limit: 7, tagId: blogTag.sys.id });
+  const blogPostsResponse = await GetBlogPosts({
+    limit: 7,
+    tagId: blogTag.sys.id,
+  });
 
   return {
-    props: { blogPosts, tag: blogTag },
+    props: {
+      blogPosts: blogPostsResponse.items,
+      tag: blogTag,
+      enablePagination:
+        blogPostsResponse.skip + blogPostsResponse.limit >=
+        blogPostsResponse.total,
+    },
     revalidate: 60,
   };
 }
@@ -42,9 +51,11 @@ export async function getStaticProps(
 const Blog = ({
   blogPosts,
   tag,
+  enablePagination,
 }: {
   blogPosts: BlogPost[];
   tag: BlogPostTag;
+  enablePagination: boolean;
 }) => {
   return (
     <>
@@ -52,7 +63,13 @@ const Blog = ({
       <Header headerPlain />
       <Hero slug={tag.fields.slug} />
       <Newsletter />
-      <Content blogPosts={blogPosts} slug={tag.fields.slug} />
+      <Content
+        key={tag.sys.id}
+        blogPosts={blogPosts}
+        slug={tag.fields.slug}
+        tagId={tag.sys.id}
+        enablePagination={enablePagination}
+      />
       <Footer />
     </>
   );

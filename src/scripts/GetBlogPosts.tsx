@@ -55,24 +55,34 @@ export interface BlogPost {
   };
 }
 
-const GetBlogPosts = async (
-  {
-    limit,
-    tagId,
-    exclude,
-  }: { limit: number; tagId?: string; exclude?: string } = {
-    limit: 1000,
-  }
-): Promise<BlogPost[]> => {
+interface GetBlogPostsResponse {
+  total: number;
+  skip: number;
+  limit: number;
+  items: BlogPost[];
+}
+
+const GetBlogPosts = async ({
+  limit,
+  skip,
+  tagId,
+  exclude,
+}: {
+  limit?: number;
+  skip?: number;
+  tagId?: string;
+  exclude?: string;
+} = {}): Promise<GetBlogPostsResponse> => {
   const client = contentfulClient();
   const response = await client.getEntries({
     content_type: "post",
-    limit,
+    limit: limit || 1000,
+    skip: skip || 0,
     order: "-sys.createdAt",
     ...(tagId ? { "fields.tags.sys.id": tagId } : {}),
     ...(exclude ? { "sys.id[ne]": exclude } : {}),
   });
-  return response.items;
+  return response;
 };
 
 export default GetBlogPosts;

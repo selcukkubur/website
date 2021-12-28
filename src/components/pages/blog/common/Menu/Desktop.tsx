@@ -1,20 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Box, Text, Spinner } from "@chakra-ui/react";
 import Search from "./Search";
 import InternalLink from "components/InternalLink";
-import { useRouter } from "next/router";
 
 const Desktop = ({ data, slug }: { data: any[]; slug: string }) => {
   const [selectedMenu, setSelectedMenu] = useState("");
-  const router = useRouter();
-
-  useEffect(() => {
-    router.events.on("routeChangeComplete", handleRouteChanged);
-  }, []);
-
-  function handleRouteChanged() {
-    setSelectedMenu("");
-  }
 
   return (
     <Box
@@ -37,6 +27,7 @@ const Desktop = ({ data, slug }: { data: any[]; slug: string }) => {
               borderRadius="6px"
             >
               <Text
+                as="div"
                 sx={{
                   "&":
                     slug == menu.slug

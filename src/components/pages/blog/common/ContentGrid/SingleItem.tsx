@@ -1,5 +1,5 @@
 import { Box, Heading, Text, Flex, Avatar } from "@chakra-ui/react";
-import { BlogPost } from "scripts/GetBlogPosts";
+import type { BlogPost } from "scripts/GetBlogPosts";
 import InternalLink from "components/InternalLink";
 import ParseData from "../../common/ParseData";
 import BlogTag from "../../common/Tag";

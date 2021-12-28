@@ -1,5 +1,5 @@
 import { SimpleGrid } from "@chakra-ui/react";
-import { BlogPost } from "scripts/GetBlogPosts";
+import type { BlogPost } from "scripts/GetBlogPosts";
 import SingleItem from "../../common/ContentGrid/SingleItem";
 
 const ContentGrid = ({

@@ -9,7 +9,7 @@ const Menu = ({ slug }: { slug: string }) => (
       <DesktopMenu data={data} slug={slug} />
     </Box>
     <Box display={{ base: "block", xl: "none" }}>
-      <MobileMenu data={data} />
+      <MobileMenu data={data} slug={slug} />
     </Box>
   </>
 );

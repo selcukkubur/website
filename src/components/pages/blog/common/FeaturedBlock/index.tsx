@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import { BlogPost } from "scripts/GetBlogPosts";
+import type { BlogPost } from "scripts/GetBlogPosts";
 import MainArticle from "../../common/FeaturedBlock/MainArticle";
 import ContentGrid from "../../common/ContentGrid";
 

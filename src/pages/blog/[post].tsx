@@ -6,16 +6,11 @@ import GetBlogPost from "scripts/GetBlogPost";
 import getBlogPosts from "scripts/GetBlogPosts";
 
 export async function getStaticPaths() {
-  const allBlogs = await getBlogPosts();
-  const allBlogPaths = [];
-  for (let index = 0; index < allBlogs.length; index++) {
-    const blog = allBlogs[index];
-    allBlogPaths.push({
-      params: { post: blog.fields.slug },
-    });
-  }
+  const blogPostsResponse = await getBlogPosts();
   return {
-    paths: allBlogPaths,
+    paths: blogPostsResponse.items.map((blogPost) => ({
+      params: { post: blogPost.fields.slug },
+    })),
     fallback: true,
   };
 }

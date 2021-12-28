@@ -170,13 +170,13 @@ const GetBlogPost = async ({ slug, isPreview }: Props) => {
     name: tagName,
     sys: { id: tagId },
   } = blogPostDetails.tagsCollection.items[0];
-  const moreBlogs = await GetBlogPosts({
+  const moreBlogsResponse = await GetBlogPosts({
     limit: 2,
     tagId,
     exclude: blogPostId,
   });
   blogPostDetails.moreFromTagName = tagName;
-  blogPostDetails.moreBlogs = moreBlogs;
+  blogPostDetails.moreBlogs = moreBlogsResponse.items;
   blogPostDetails.mostPopular = mostPopularBlogs;
   return blogPostDetails;
 };

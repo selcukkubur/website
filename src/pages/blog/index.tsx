@@ -7,14 +7,25 @@ import { NextSeo } from "next-seo";
 import getBlogPosts, { BlogPost } from "scripts/GetBlogPosts";
 
 export async function getStaticProps() {
-  const blogPosts = await getBlogPosts({ limit: 8 });
+  const blogPostsResponse = await getBlogPosts({ limit: 8 });
   return {
-    props: { blogPosts },
+    props: {
+      blogPosts: blogPostsResponse.items,
+      enablePagination:
+        blogPostsResponse.skip + blogPostsResponse.limit >=
+        blogPostsResponse.total,
+    },
     revalidate: 60,
   };
 }
 
-const Blog = ({ blogPosts }: { blogPosts: BlogPost[] }) => {
+const Blog = ({
+  blogPosts,
+  enablePagination,
+}: {
+  blogPosts: BlogPost[];
+  enablePagination: boolean;
+}) => {
   return (
     <>
       <NextSeo
@@ -24,7 +35,7 @@ const Blog = ({ blogPosts }: { blogPosts: BlogPost[] }) => {
       <Header headerPlain />
       <Hero />
       <Newsletter />
-      <Content blogPosts={blogPosts} />
+      <Content blogPosts={blogPosts} enablePagination={enablePagination} />
       <Footer />
     </>
   );
