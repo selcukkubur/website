@@ -16,7 +16,6 @@ interface Props {
 
 const Header = ({ headerPlain, noHeaderBoxShadow }: Props) => {
   const [stickyHeader, setStickyHeader] = useState(false);
-  const [plainHeader, setPlainHeader] = useState(false);
 
   const listenScrollEvent = () => {
     if (window.scrollY > 60) {
@@ -27,15 +26,20 @@ const Header = ({ headerPlain, noHeaderBoxShadow }: Props) => {
   };
 
   useEffect(() => {
-    if (headerPlain) {
-      setPlainHeader(true);
-    }
     window.addEventListener("scroll", listenScrollEvent);
   });
 
   const signupLabel = useBreakpointValue({
     base: "Sign Up",
     lg: "Get started for free",
+  });
+  const mobileMenu = useBreakpointValue({
+    base: <MobileMenu stickyHeader={stickyHeader || !!headerPlain} />,
+    lg: <div />,
+  });
+  const desktopMenu = useBreakpointValue({
+    base: null,
+    lg: <DesktopMenu />,
   });
   const loginButton = (
     <Text
@@ -55,7 +59,7 @@ const Header = ({ headerPlain, noHeaderBoxShadow }: Props) => {
   return (
     <Flex
       w={"100%"}
-      color={stickyHeader || plainHeader ? "secondary.dark" : "white"}
+      color={stickyHeader || headerPlain ? "secondary.dark" : "white"}
       justify="center"
       backgroundColor={stickyHeader ? "white" : "transparent"}
       position="fixed"
@@ -77,7 +81,7 @@ const Header = ({ headerPlain, noHeaderBoxShadow }: Props) => {
         <InternalLink to="/" aria-label="Courier Logo">
           <Icon as={LogoIcon} transition="all .3s ease-in-out" />
         </InternalLink>
-        <DesktopMenu />
+        {desktopMenu}
 
         <Experiment name="Header Sign Up Copy">
           <Experiment.Variant key="a">
@@ -87,7 +91,7 @@ const Header = ({ headerPlain, noHeaderBoxShadow }: Props) => {
               w={{ lg: "236px" }}
             >
               {loginButton}
-              {stickyHeader || plainHeader ? (
+              {stickyHeader || headerPlain ? (
                 <PurpleBgButton
                   width={{ base: "78px", lg: "88px" }}
                   height={{ base: "32px", lg: "40px" }}
@@ -106,7 +110,7 @@ const Header = ({ headerPlain, noHeaderBoxShadow }: Props) => {
                   Sign Up
                 </WhiteBgButton>
               )}
-              <MobileMenu stickyHeader={stickyHeader || plainHeader} />
+              {mobileMenu}
             </Flex>
           </Experiment.Variant>
           <Experiment.Variant key="b">
@@ -116,7 +120,7 @@ const Header = ({ headerPlain, noHeaderBoxShadow }: Props) => {
               w={{ lg: "236px" }}
             >
               {loginButton}
-              {stickyHeader || plainHeader ? (
+              {stickyHeader || headerPlain ? (
                 <PurpleBgButton
                   width={{ base: "78px", lg: "172px" }}
                   height={{ base: "32px", lg: "40px" }}
@@ -135,7 +139,7 @@ const Header = ({ headerPlain, noHeaderBoxShadow }: Props) => {
                   {signupLabel}
                 </WhiteBgButton>
               )}
-              <MobileMenu stickyHeader={stickyHeader || plainHeader} />
+              {mobileMenu}
             </Flex>
           </Experiment.Variant>
         </Experiment>

@@ -1,4 +1,4 @@
-import { ChakraProvider, Box } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { DefaultSeo } from "next-seo";
@@ -39,11 +39,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
             },
           ]}
         />
-        <Box margin="0 auto" transition="0.5s ease-out">
-          <Box as="main">
-            <Component {...pageProps} />
-          </Box>
-        </Box>
+        <Component {...pageProps} />
       </AnalyticsContextProvider>
     </ChakraProvider>
   );

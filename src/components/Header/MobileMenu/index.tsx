@@ -26,7 +26,7 @@ const MobileMenu = ({ stickyHeader }: MobileMenuProps) => {
 
   return (
     <>
-      <Box display={{ base: "block", lg: "none" }}>
+      <Box>
         <HamburgerButton
           width="40px"
           height="32px"

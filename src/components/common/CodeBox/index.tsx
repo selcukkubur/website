@@ -48,6 +48,7 @@ const CodeBox = ({ examples, fontSize, ...props }: CodeBoxProps) => {
         flexDir="column"
         flexGrow={1}
         minW={0}
+        isLazy
       >
         <TabList
           bg="#2D1339"

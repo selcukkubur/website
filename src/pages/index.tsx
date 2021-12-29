@@ -5,13 +5,13 @@ import NotificationSystem from "components/pages/home/NotificationSystem";
 import VisualEditor from "components/pages/home/VisualEditor/index";
 import Workflows from "components/pages/home/Workflows";
 import APIOptions from "components/pages/home/APIOptions";
-import Integrations from "components/pages/home/Integrations";
+// import Integrations from "components/pages/home/Integrations";
 import Insights from "components/pages/home/Insights";
-import Testimonials from "components/pages/home/Testimonials";
+// import Testimonials from "components/pages/home/Testimonials";
 import Footer from "components/Footer/index";
 import { NextSeo } from "next-seo";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 const Home = () => {
   return (
@@ -27,9 +27,9 @@ const Home = () => {
       <VisualEditor />
       <Workflows />
       <APIOptions />
-      <Integrations />
+      {/* <Integrations /> */}
       <Insights />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Footer />
     </>
   );
